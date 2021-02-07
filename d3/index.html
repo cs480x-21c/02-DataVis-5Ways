@@ -2,7 +2,10 @@
 <!-- <script src="d3.js"></script> -->
 
 <script>
-    console.log(d3)
+    d3.csv("../cars-sample.csv", function(data) {
+        console.log(data.Car)
+    })
 </script>
 
 Hey there
+
