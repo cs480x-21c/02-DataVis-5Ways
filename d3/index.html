@@ -53,34 +53,35 @@
     .text("MPG")
 
     d3.csv("../cars-sample.csv", function(data) {
-        if (data.MPG !== "NA") {
-            svg.append('g')
-            .selectAll("dot")
-            .data(data)
-            .enter()
-            .append("circle")
-            .attr("cx", function (d) { 
-                return x(d.Weight); 
-            } )
-            .attr("cy", function (d) { return y(d.MPG); } )
-            .attr("r", function (d) { return d.Weight/400 } )
-            .style("opacity", 0.5)
-            .style("fill", function (d) {
-                switch(d.Manufacturer) {
-                    case "bmw":
-                        return bmwColor
-                    case "ford":
-                        return fordColor
-                    case "honda":
-                        return hondaColor
-                    case "mercedes":
-                        return mercedesColor
-                    case "toyota":
-                        return toyotaColor
-                    default:
-                        return "#FFFFFF"
-                }
-            })
-        }
+
+        var filteredData = data.filter(function (d) {
+            return d.MPG !== "NA"
+        })
+
+        svg.append('g')
+        .selectAll("dot")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return x(d.Weight) })
+        .attr("cy", function (d) { return y(d.MPG) })
+        .attr("r", function (d) { return d.Weight/400 } )
+        .style("opacity", 0.5)
+        .style("fill", function (d) {
+            switch(d.Manufacturer) {
+                case "bmw":
+                    return bmwColor
+                case "ford":
+                    return fordColor
+                case "honda":
+                    return hondaColor
+                case "mercedes":
+                    return mercedesColor
+                case "toyota":
+                    return toyotaColor
+                default:
+                    return "#FFFFFF"
+            }
+        })
     })
 </script> 
