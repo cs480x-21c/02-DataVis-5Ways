@@ -9,6 +9,13 @@
     var width = 550 - margin.right - margin.left
     var height = 440 - margin.top - margin.bottom
 
+    var bmwColor = "#f1b1ae"
+    var fordColor = "#cccd8d"
+    var hondaColor = "#8fd5b7"
+    var mercedesColor = "#92d3f4"
+    var toyotaColor = "#eaadee"
+
+
     var svg = d3.select("#vis")
     .append("svg")
     .attr("width", width + margin.right + margin.left)
@@ -56,7 +63,24 @@
                 return x(d.Weight); 
             } )
             .attr("cy", function (d) { return y(d.MPG); } )
-            .attr("r", 1.5)
+            .attr("r", function (d) { return d.Weight/400 } )
+            .style("opacity", 0.5)
+            .style("fill", function (d) {
+                switch(d.Manufacturer) {
+                    case "bmw":
+                        return bmwColor
+                    case "ford":
+                        return fordColor
+                    case "honda":
+                        return hondaColor
+                    case "mercedes":
+                        return mercedesColor
+                    case "toyota":
+                        return toyotaColor
+                    default:
+                        return "#FFFFFF"
+                }
+            })
         }
     })
 </script> 
