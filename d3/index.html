@@ -9,13 +9,31 @@
     var width = 550 - margin.right - margin.left
     var height = 440 - margin.top - margin.bottom
 
-    var bmwColor = "#f1b1ae"
-    var fordColor = "#cccd8d"
-    var hondaColor = "#8fd5b7"
-    var mercedesColor = "#92d3f4"
-    var toyotaColor = "#eaadee"
+    var bmwColor = "#E46962"
+    var fordColor = "#A9AA4B"
+    var hondaColor = "#4EBC8C"
+    var mercedesColor = "#33ADEB"
+    var toyotaColor = "#DC78E3"
 
+    // Determine fill color based on manufactuer
+    function addColor(manufactuer) {
+        switch(manufactuer) {
+            case "bmw":
+                return bmwColor
+            case "ford":
+                return fordColor
+            case "honda":
+                return hondaColor
+            case "mercedes":
+                return mercedesColor
+            case "toyota":
+                return toyotaColor
+            default:
+                return "#FFFFFF"
+        }
+    }
 
+    // Create SVG and nested G objects
     var svg = d3.select("#vis")
     .append("svg")
     .attr("width", width + margin.right + margin.left)
@@ -23,27 +41,27 @@
     .append("g")
     .attr("transform", "translate(" + margin.left + ", " + margin.top +")")
 
-    var x = d3.scaleLinear()
-    .domain([1500, 5100])
-    .range([0, width])
-        
-    var y = d3.scaleLinear()
-    .domain([8, 47])
-    .range([height, 0])
+    // Set x + y linear scales
+    var x = d3.scaleLinear().domain([1500, 5100]).range([0, width])  
+    var y = d3.scaleLinear().domain([8, 47]).range([height, 0])
 
+    // x axis
     svg.append("g")
     .attr("transform", "translate(0, "+ height + ")")
     .call(d3.axisBottom(x).tickValues([2000, 3000, 4000, 5000]).tickFormat(d3.format("d")))
 
+    // y axis
     svg.append("g")
     .call(d3.axisLeft(y).tickValues([10, 20, 30, 40]))
 
+    // x axis label
     svg.append("text")
     .attr("x", width/2)
     .attr("y", height + margin.bottom - 5)
     .style("text-anchor", "middle")
     .text("Weight")
 
+    // y axis label
     svg.append("text")
     .attr("y", 0 - margin.left)
     .attr("x",0 - (height / 2))
@@ -52,12 +70,13 @@
     .style("text-anchor", "middle")
     .text("MPG")
 
+    // Read in data from csv
     d3.csv("../cars-sample.csv", function(data) {
 
-        var filteredData = data.filter(function (d) {
-            return d.MPG !== "NA"
-        })
+        // Remove 2 entries with no MPG data
+        var filteredData = data.filter(function (d) { return d.MPG !== "NA" })
 
+        // Add data point for each entry
         svg.append('g')
         .selectAll("dot")
         .data(filteredData)
@@ -67,21 +86,6 @@
         .attr("cy", function (d) { return y(d.MPG) })
         .attr("r", function (d) { return d.Weight/400 } )
         .style("opacity", 0.5)
-        .style("fill", function (d) {
-            switch(d.Manufacturer) {
-                case "bmw":
-                    return bmwColor
-                case "ford":
-                    return fordColor
-                case "honda":
-                    return hondaColor
-                case "mercedes":
-                    return mercedesColor
-                case "toyota":
-                    return toyotaColor
-                default:
-                    return "#FFFFFF"
-            }
-        })
+        .style("fill", function (d) { return addColor(d.Manufacturer) })
     })
 </script> 
