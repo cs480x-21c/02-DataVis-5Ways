@@ -13,11 +13,11 @@ colors = {'ford': '#a6e39f', 'bmw': 'red', 'honda': 'green', 'mercedes': '#92e0f
 
 plt.xlabel("Weight")
 plt.ylabel("MPG")
-plt.scatter(data["Weight"], data["MPG"], s=None, alpha=0.5, c=data["Manufacturer"].map(colors))
+plt.scatter(data["Weight"], data["MPG"], s=(data["Weight"] / 25), alpha=0.5, c=data["Manufacturer"].map(colors))
 
 plt.show()
 
-print(df)
+
 
 
 

@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/danyabaron/Desktop/CS480x/02-DataVis-5Ways/venv/bin/python3.9",
+    "python.pythonPath": "venv/bin/python",
     "r.bracketedPaste": true,
     "r.rterm.mac": "*Path to radian executable*", //Use this only for a Mac
     "r.lsp.path": "*Path to your R executable*",
