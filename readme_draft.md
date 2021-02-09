@@ -27,6 +27,13 @@ Creating the plot was mostly simple, but I found a few parts cumbersome. Removin
 
 ![tablesaw](java/javaplot.png)
 
+# Flourish
+Flourish is a web application for creating visualizations.
+
+To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values were easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
+
+![flourish](flourish/flourish_vis.png)
+
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
 - **Solved AI Forever**: ...
