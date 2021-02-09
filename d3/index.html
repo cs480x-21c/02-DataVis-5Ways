@@ -14,7 +14,7 @@
 
     async function initVis() {
 
-        let data = await d3.csv('cars-sample.csv');
+        let data = await d3.csv('../cars-sample.csv');
         let svg = d3.select('#svg');
         svg.style('height', visHeight);
         svg.style('width', visWidth);
