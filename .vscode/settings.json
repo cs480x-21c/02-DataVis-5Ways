@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "/Users/danyabaron/Desktop/CS480x/02-DataVis-5Ways/venv/bin/python3.9",
+    "r.bracketedPaste": true,
+    "r.rterm.mac": "*Path to radian executable*", //Use this only for a Mac
+    "r.lsp.path": "*Path to your R executable*",
+    "r.lsp.debug": true,
+    "r.lsp.diagnostics": true,
+    "r.rterm.option": [
+    "--no-save",
+    "--no-restore",
+    "--r-binary=*Path to R executable*"
+    ],
+}
