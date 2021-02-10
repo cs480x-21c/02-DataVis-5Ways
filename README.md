@@ -3,13 +3,6 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
 features to preserve
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
@@ -32,30 +25,21 @@ Improvements are also welcome as part of Technical and Design achievements.
 Libraries, Tools, Languages
 ---
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+done
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+- R + ggplot2
+- Flourish
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+next
 
-I have marked a few that are strongly suggested.
-
-yes
-
-- R + ggplot2 `<- definitely worth trying`
 - Excel
 - d3 `<- since the rest of the class uses this, we're requiring it`
 - Matplotlib
 
-choose
+maybe
 
 - p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Flourish <- `<- popular last year`
+- Tableau <- `<- popular last year`
 
 Tips
 ---
@@ -93,6 +77,12 @@ Other Requirements
 Plots
 ---
 
+# R + ggplot2
+
+Without much experience in R I was quite hesitant to pick up this library, oh man I’m glad I did. The documentation is amazing (https://ggplot2.tidyverse.org/reference/index.html) and was the only thing I needed to replicate this graph in record time, aside from the usual “how make library and code go brrr”. The few lines of code required consisted of exactly, load library, load data, make super crazy all in one amazing plot, and save image. Just like that, legends for the attributes and gridlines built in, I see now why this is such a powerful tool. Especially with a target in mind, finding the functions I needed was a breeze. I do think I would get a little caught up if I did not have such a clear-cut idea of what I wanted to create; thought with some great documentation it looks to be fun to explore.
+
+![ggplot2](img/Rggplot2.png)
+
 # Flourish
 
 I looked up Flourish to check it out not realizing that I would be done replicating the plot within the next 5min! Without having to write a single line of code it was only a dozen or so clicks to get the data loaded and plotted just the way I needed. This is a great tool for getting something done in a snap. Although it is quite fast there is a lot of flexibility taken away from having this check box approach. Even something as simple as placing the legend on the right of the graph did not seem possible without writing something yourself and without access to the HTML (unless paid for) there is no room to expand upon what the tool creates for you.
@@ -102,24 +92,6 @@ Personally, I would not use this tool very much as I would prefer the flexibilit
 <a href="https://public.flourish.studio/visualisation/5258253/" target="_blank">Flourish vis</a>
 
 ![Flourish](img/5waysFlourish.png)
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
 
 
 ## Technical Achievements
