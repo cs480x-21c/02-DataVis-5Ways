@@ -1,7 +1,7 @@
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
 <!-- Create the place where the graph is to be rendered on the page -->
-<svg id="vis"></svg>
+<svg id="vis" style="margin-left: 50px;"></svg>
 
 <script>
     console.log(d3);
@@ -14,11 +14,38 @@
 
     
     // Get the path of the CSV
-    var uploadedCSV = d3.csv("cars-sample.csv")
+    d3.csv("cars-sample.csv", function(data) {
+        // Check if csv was uploaded properly
 
-    // Check if csv was uploaded properly
-    //console.log(uploadedCSV)
-     var parsedData = d3.csv.parse(uploadedCSV)
-     console.log(parsedData)
+    // Create xAxis
+    var xAxis = d3.scaleLinear()
+    .domain([0,4000])
+    .range([0,400])
+
+    // Put xAxis on the svg
+    svg.append('g')
+        .attr("transform", "translate(0," + 400 + ")")
+        .call(d3.axisBottom(xAxis))
+
+    // Create yAxis
+    var yAxis = d3.scaleLinear()
+    .domain([0,4000])
+    .range([400,0])
+    
+    // Put yAxis on SVG
+    svg.append('g')
+        .call(d3.axisLeft(yAxis))
+
+    // Place data
+    svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return x(d.Weight); } )
+    .attr("cy", function (d) { return y(d.MPG); } )
+    .attr("r", 1.5)
+
+    })
 
 </script>
