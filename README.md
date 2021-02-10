@@ -69,6 +69,8 @@ Changing the size of the markers based on weight seemed not possible for the way
 
 * Used dictionary for color section in matplotlib to streamline the graph creation
 
+* Edited ranges from tableau and excel to better represent the data
+
 
 ##Sources
 
