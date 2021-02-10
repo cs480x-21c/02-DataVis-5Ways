@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.js"></script>
+<div id="vis"></div>
+<style>
+    .bubbles:hover {
+        stroke: black;
+    }
+</style>
+<script>
+    console.log(d3);
+
+    // dimensions&&margins
+    var mgn = { top: 20, rgt: 20, btm: 60, lft: 60 },
+        wid = window.innerWidth - 2 * mgn.lft - mgn.rgt,
+        hgt = window.innerHeight - mgn.top - 2 * mgn.btm;
+
+    var svg = d3.select("#vis")
+        .append("svg")
+        .attr("width", wid + mgn.lft + mgn.rgt)
+        .attr("height", hgt + mgn.top + mgn.btm)
+        .append("g")
+        .attr("transform", "translate(" + mgn.lft + "," + mgn.top + ")");
+
+    // load csv
+    d3.csv("https://raw.githubusercontent.com/FISH-HAT/02-DataVis-5Ways/main/cars-sample.csv", function (data) {
+
+        // x&&y axes
+        var x = d3.scaleLinear()
+            .domain([1400, 5100])
+            .range([0, wid]);
+        svg.append("g")
+            .attr("transform", "translate(0, " + hgt + ")")
+            .call(d3.axisBottom(x));
+
+        var y = d3.scaleLinear()
+            .domain([9, 46])
+            .range([hgt, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // bubble size&&color
+        var siz = d3.scaleLinear()
+            .domain([500, 5500])
+            .range([3, 15]);
+        var clr = d3.scaleOrdinal()
+            .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
+            .range(["#648FFF7F", "#785EF07F", "#DC267F7F", "#FE61007F", "#FFB0007F"]);
+
+        // tooltip
+        var toolTip = d3.select("#vis")
+            .append("div")
+            .style("opacity", 0)
+            .attr("class", "tooltip")
+            .style("background-color", "black")
+            .style("border-radius", "5px")
+            .style("padding", "10px")
+            .style("color", "white")
+        var showTT = function (d) {
+            toolTip
+                .transition()
+                .duration(200)
+            toolTip
+                .style("opacity", 1)
+                .html("Model: " + d.Car)
+                .style("left", (d3.mouse(this)[0] + 30) + "px")
+                .style("top", (d3.mouse(this)[1] + 30) + "px")
+        }
+        var moveTT = function (d) {
+            toolTip
+                .style("left", (d3.mouse(this)[0] + 30) + "px")
+                .style("top", (d3.mouse(this)[1] + 30) + "px")
+        }
+        var hideTT = function (d) {
+            toolTip
+                .transition()
+                .duration(200)
+                .style("opacity", 0)
+        }
+
+        // bubbles
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "bubbles")
+            .attr("cx", function (d) { return x(d.Weight); })
+            .attr("cy", function (d) { return y(d.MPG); })
+            .attr("r", function (d) { return siz(d.Weight); })
+            .style("fill", function (d) { return clr(d.Manufacturer); })
+            .on("mouseover", showTT)
+            .on("mousemove", moveTT)
+            .on("mouseleave", hideTT)
+
+        // axes labels
+        svg.append("text")
+            .attr("x", mgn.lft + wid/2)
+            .attr("y", mgn.top + hgt + 15)
+            .text("Weight");
+        svg.append("text")
+            .attr("x", -(mgn.top + hgt/2))
+            .attr("y", -30)
+            .attr("transform", "rotate(-90)")
+            .text("MPG");
+
+    })
+</script>
