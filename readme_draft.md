@@ -37,7 +37,7 @@ To create the visualization, I created a bubble chart and then uploaded the csv 
 # Vega-lite
 Vega-lite is a Javascript library that can create visualizations.
 
-To create a visualization, one has to create specification for a visualization. In the specification, I defined what data to use, the type of visualization, the sizes of the dots, and the colors of the dots. It was very quick and easy to create the visualization, but it took a while to figure out how to set the opacity of the dots.
+To create a visualization, one has to create specification for a visualization. In the specification, I defined what data to use, the type of visualization, the sizes of the dots, and the colors of the dots. It was very quick and easy to create the visualization, but it took a while to figure out how to set the opacity of the dots. My only issue while working with Vega-lite was that I wasn't able to set the maximum size of the dots, so the dots' change of size with weight isn't very apparent.
 
 ![vegalite](vega-lite/visualization.png)
 

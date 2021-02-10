@@ -42,6 +42,13 @@
         .tickValues([2000,3000,4000,5000]);
         let yAxis = d3.axisLeft().scale(yScale).tickSizeOuter(0);
 
+        svg.append('rect')
+        .attr('x', '50')
+        .attr('y', '20')
+        .style('width', '570')
+        .style('height', '410')
+        .attr('fill', '#ededed');
+
         let xAxisGroup = svg.append('g')
         .call(xAxis)
         .attr('transform', 'translate(50, 430)');
@@ -100,7 +107,8 @@
                 }
 
             })
-            .attr('opacity', '0.5');
+            .attr('opacity', '0.5')
+            .attr('class', 'highlightable')
 
     }
 
@@ -111,5 +119,11 @@
 <style>
     svg .label {
         font-size: 14px;
+    }
+    .highlightable {
+        opacity: 0.5;
+    }
+    .highlightable:hover {
+        opacity: 1.0;
     }
 </style>
