@@ -23,7 +23,7 @@ Tablesaw is a Java library for creating data tables, manipulating data tables, a
 
 To create the visualization, I read the csv into a table, then used a query to select only the data records that didn't contain missing data. I calculated the sizes of the dots in a separate column. Then, I added this new column to the table. Then, I used the Plot.show(BubbleChart.create()) API to display the scatter plot.
 
-Creating the plot was mostly simple, but I found a few parts cumbersome. Removing all records with missing values wasn't a direct operation on the table, for example. Instead, I had to make a selection on the columns to select values that weren't missing, then apply the selection to the table. In addition, the BubbleChart API only accepted the name of a column as an argument for the sizes of the dots. As a result, I had to create a new column to pass in sizes for the API.
+Creating the plot was mostly simple, but I found a few parts cumbersome. Removing all records with missing values wasn't a direct operation on the table, for example. Instead, I had to make a selection on the columns to select values that weren't missing, then apply the selection to the table. In addition, the BubbleChart API only accepted the name of a column as an argument for the sizes of the dots. As a result, I had to create a new column to pass in sizes for the API. In addition, I wasn't able to change the axis ticks of the plot.
 
 ![tablesaw](java/javaplot.png)
 
@@ -33,6 +33,13 @@ Flourish is a web application for creating visualizations.
 To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values were easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
 
 ![flourish](flourish/flourish_vis.png)
+
+# Vega-lite
+Vega-lite is a Javascript library that can create visualizations.
+
+To create a visualization, one has to create specification for a visualization. In the specification, I defined what data to use, the type of visualization, the sizes of the dots, and the colors of the dots. It was very quick and easy to create the visualization, but it took a while to figure out how to set the opacity of the dots.
+
+![vegalite](vega-lite/visualization.png)
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
