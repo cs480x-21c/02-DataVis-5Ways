@@ -3,18 +3,14 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
+small dataset about cars, `cars-sample.csv`.
 Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
 
 Your goal is to use 5 different tools to make the following chart:
 
 ![ggplot2](img/ggplot2.png)
 
-These features should be preserved as much as possible in your replication:
+features to preserve
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
 - Scales: Note the scales do not start at 0.
@@ -23,7 +19,7 @@ These features should be preserved as much as possible in your replication:
 - Size mapping to Weight.
 - Opacity of circles set to 0.5 or 50%.
 
-Other features are not required. This includes:
+features not required:
 
 - The background grid.
 - The legends.
@@ -48,22 +44,18 @@ Some may be difficult choices, like Matlab or SPSS, which require large installa
 
 I have marked a few that are strongly suggested.
 
+yes
+
 - R + ggplot2 `<- definitely worth trying`
 - Excel
 - d3 `<- since the rest of the class uses this, we're requiring it`
 - Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
+
+choose
+
 - p5js `<- good for playing around. not really a chart lib`
 - Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
 - Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
 
 Tips
 ---
@@ -98,22 +90,18 @@ Other Requirements
 - Description of the Design achievements you attempted with this visualization.
   - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
 
-GitHub Details
+Plots
 ---
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+# Flourish
 
-Grading
----
+I looked up Flourish to check it out not realizing that I would be done replicating the plot within the next 5min! Without having to write a single line of code it was only a dozen or so clicks to get the data loaded and plotted just the way I needed. This is a great tool for getting something done in a snap. Although it is quite fast there is a lot of flexibility taken away from having this check box approach. Even something as simple as placing the legend on the right of the graph did not seem possible without writing something yourself and without access to the HTML (unless paid for) there is no room to expand upon what the tool creates for you.
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+Personally, I would not use this tool very much as I would prefer the flexibility that programming myself gives me.
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+https://public.flourish.studio/visualisation/5258253/
+
+![Flourish](img/5waysFlourish.png)
 
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
