@@ -1,0 +1,24 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!-- Create the place where the graph is to be rendered on the page -->
+<svg id="vis"></svg>
+
+<script>
+    console.log(d3);
+
+    // Create the canvas
+    var svg = d3.select("#vis")
+    .attr('width', 800)
+    .attr('height', 800)
+    .attr('border', 'black');
+
+    
+    // Get the path of the CSV
+    var uploadedCSV = d3.csv("cars-sample.csv")
+
+    // Check if csv was uploaded properly
+    //console.log(uploadedCSV)
+     var parsedData = d3.csv.parse(uploadedCSV)
+     console.log(parsedData)
+
+</script>
