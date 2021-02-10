@@ -79,7 +79,7 @@ Plots
 
 # R + ggplot2
 
-Without much experience in R I was quite hesitant to pick up this library, oh man I’m glad I did. The documentation is amazing (https://ggplot2.tidyverse.org/reference/index.html) and was the only thing I needed to replicate this graph in record time, aside from the usual “how make library and code go brrr”. The few lines of code required consisted of exactly, load library, load data, make super crazy all in one amazing plot, and save image. Just like that, legends for the attributes and gridlines built in, I see now why this is such a powerful tool. Especially with a target in mind, finding the functions I needed was a breeze. I do think I would get a little caught up if I did not have such a clear-cut idea of what I wanted to create; thought with some great documentation it looks to be fun to explore.
+Without much experience in R I was quite hesitant to pick up this library, oh man I’m glad I did. The documentation is amazing (<a href="https://ggplot2.tidyverse.org/reference/index.html" target="_blank">ggplot Docs</a>) and was the only thing I needed to replicate this graph in record time, aside from the usual “how make library and code go brrr”. The few lines of code required consisted of exactly, load library, load data, make super crazy all in one amazing plot, and save image. Just like that, legends for the attributes and gridlines built in, I see now why this is such a powerful tool. Especially with a target in mind, finding the functions I needed was a breeze. I do think I would get a little caught up if I did not have such a clear-cut idea of what I wanted to create; thought with some great documentation it looks to be fun to explore.
 
 ![ggplot2](img/Rggplot2.png)
 
