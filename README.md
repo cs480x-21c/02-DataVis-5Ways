@@ -99,7 +99,7 @@ I looked up Flourish to check it out not realizing that I would be done replicat
 
 Personally, I would not use this tool very much as I would prefer the flexibility that programming myself gives me.
 
-https://public.flourish.studio/visualisation/5258253/
+<a href="https://public.flourish.studio/visualisation/5258253/" target="_blank">Flourish vis</a>
 
 ![Flourish](img/5waysFlourish.png)
 
