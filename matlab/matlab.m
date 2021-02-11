@@ -41,11 +41,11 @@ mercedes.MarkerFaceAlpha = 0.5;
 toyota.MarkerFaceAlpha = 0.5;
 
 % Color
-bmw.MarkerFaceColor = '#E46962';
-ford.MarkerFaceColor = '#A9AA4B';
-honda.MarkerFaceColor = '#4EBC8C';
-mercedes.MarkerFaceColor = '#33ADEB';
-toyota.MarkerFaceColor = '#DC78E3';
+bmw.MarkerFaceColor = '#0DC800';
+ford.MarkerFaceColor = '#FF8C00';
+honda.MarkerFaceColor = '#11B1DD';
+mercedes.MarkerFaceColor = '#4800FF';
+toyota.MarkerFaceColor = '#FF006F';
 
 % Plot customization
 xlabel('Weight');
