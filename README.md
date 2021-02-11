@@ -26,6 +26,17 @@ The bubble chart layout works well for the original image we're trying to replic
 
 ![googlesheets](img/googlesheets.png)
 
+# Flourish
+
+Flourish is an online tool for creating visualizations. Out of all the tools I used in this assignment, Flourish was the easiest to use, but it still retained plenty of functionality and versatility.
+
+One neat thing about Flourish, was that it had a built-in method for enabling/disabling visibility of specific colors/manufactureres.
+
+Unfortunately, you can't download the visualization in .html format with a free account, but I can see Flourish being extremelly useful in a professional context.
+
+![flourishA](img/flourishA.png)
+![flourishB](img/flourishB.png)
+
 ## Technical Achievements
 - For the d3 implementation, users can mouse over the bubbles, and a tooltip will display the model of car that bubble represents.
 
