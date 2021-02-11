@@ -3,140 +3,62 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+In this project, I used the following tools to visualize a scatterplot of Weight vs MPG (Miles-per-gallon) of "cars-sample.csv" data:
+1. JavaScript + d3.js
+2. R + ggplot2
+3. Python + Matplotlib
+4. MS Excel
+5. Tableau
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+# JavaScript + d3
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+The first tool I used here is d3.js. Since I was using d3.js for the second time, it was a bit challenging to get started. I had some problems in terms of loading the csv file from the parent directory (despite using python http.server) and so I moved it in the same directory of the index.html file. Making the actual scatterplot was interesting as I was able to explore the d3.js library such as built-in axis functions. Another interesting thing about the first scatterplot generated was that it was plotting the MPG values marked as "N/A" as well. This did not happen in anyother visualization tools I used. To deal with that, I removed those two data entries as "outliers" as I was using a separate data file for this visualization tool. I also made use of call back functions inside d3 functions to manipulate the size, position and color of dots in the scatterplot.
 
-Your goal is to use 5 different tools to make the following chart:
+Here are the screenshots of the visualization:
+![d3](img/d31.jpg)
+![d3](img/d32.jpg)
 
-![ggplot2](img/ggplot2.png)
+# R + ggplot2 
 
-These features should be preserved as much as possible in your replication:
+The second tool I used here is ggplot2. The visualization took only 5 lines of code in order to be generated (pretty fascinating!). As compared to d3.js, it was easier to read data from the csv file and generate a scatterplot from it. The axes scales got automatically adjusted here. I made use of the ggplot function to use the data and map the axes and colors according to the attributes in the dataset. I used geom_point function to generate the scatterplot and control the size and opacity of dots. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+Since I used R for the first time, I made use of the R documentation online in order to get the visualization.
 
-Other features are not required. This includes:
+Here is the screenshot of the visualization:
+![ggplot2](img/ggplot2.jpg)
 
-- The background grid.
-- The legends.
+# Python + Matplotlib
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+The third tool I used here is Matplotlib. This was one of the easiest tools to generate the scatterplot, with minimal lines of code. I used python's dictionary data structure to map Manufacturers with their respective colors. I made use of the pandas library as well to read data from csv file. It was also easy to set the axes scales and labels as compared to d3.js. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
-Improvements are also welcome as part of Technical and Design achievements.
+Here is the screenshot of the visualization:
+![Matplotlib](img/Matplotlib.jpg)
 
-Libraries, Tools, Languages
----
+# MS Excel
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+The fourth tool I used here is MS Excel. It was a bit difficult to generate the visualization with the prescribed features in this tool. For generating the basic scatterplot (without any prescribed features), I separated the data attributes: MPG and Weight into a different excel sheet along with a column for the corresponding size of the data point. Setting up the position and opacity was easy but the color part was tough. Somehow, my excel's pivot table feature wasn't working properly and so I had to separately arrange the data according to the Manufacturer attribute in order to generate different colors. It was also not possible to generate the exact tick points like the main image provided to us, so the visualization contains some additional intermediate ticks as well. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+Here is the screenshot of the visualization:
+![Excel](img/Excel.jpg)
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+# Tableau
 
-I have marked a few that are strongly suggested.
+The fifth tool I used here is Tableau. It was also an easy tool to used, especially for beginners in visualization because of the UI and "drag and drop" features. The axes scales and the labels were also automatically adjusted according to the input data. The only problem in this was setting the relative difference in sizes of the dots, as it wasn't as much significant as visualizations produced by other tools above. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+Here is the screenshot of the visualization:
+![Tableau](img/Tableau.jpg)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Utilized "mouseover" and "mouseout" functions in d3.js for making the visualization a bit interactive. On "mouseover", I utilized d3 "tool tip" function to generate a textbox for labelling the scatter point. On hover, this displays the name of the car for that particular dot. I also increased the opacity of the dot to 100% when the user hovers over it.
+- Learned and utilized basic css styles to set the style for the tool tip boxes that appear after the "mouseover" event while using the d3.js tool.
+
+
+
+## Design Achievements
+
+- Utilized linear progression function for achieving the size of the dots in all the visualization tools.
+- Experimented with different css styles for setting up the tool tip boxes.
+
+
+
