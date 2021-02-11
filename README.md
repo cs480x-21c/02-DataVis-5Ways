@@ -44,10 +44,6 @@ very well about the software.
 ![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/excel.png)
 
 
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
 ### Design Achievements
 - Kept consistent color scheme
+- Kept sizing of circles consistent
