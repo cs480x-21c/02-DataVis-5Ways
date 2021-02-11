@@ -1,7 +1,5 @@
 # 02-DataVis-5ways
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
 # Vis 1: D3.js
 
 D3 was fairly simple for me to use, however I was unable to get the background color and grid
