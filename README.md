@@ -15,8 +15,8 @@ In this project, I used the following tools to visualize a scatterplot of Weight
 The first tool I used here is d3.js. Since I was using d3.js for the second time, it was a bit challenging to get started. I had some problems in terms of loading the csv file from the parent directory (despite using python http.server) and so I moved it in the same directory of the index.html file. Making the actual scatterplot was interesting as I was able to explore the d3.js library such as built-in axis functions. Another interesting thing about the first scatterplot generated was that it was plotting the MPG values marked as "N/A" as well. This did not happen in anyother visualization tools I used. To deal with that, I removed those two data entries as "outliers" as I was using a separate data file for this visualization tool. I also made use of call back functions inside d3 functions to manipulate the size, position and color of dots in the scatterplot.
 
 Here are the screenshots of the visualization:
-![d3](img/d31.jpg)
-![d3](img/d32.jpg)
+![d3](img/d31.JPG)
+![d3](img/d32.png)
 
 # R + ggplot2 
 
@@ -25,28 +25,28 @@ The second tool I used here is ggplot2. The visualization took only 5 lines of c
 Since I used R for the first time, I made use of the R documentation online in order to get the visualization.
 
 Here is the screenshot of the visualization:
-![ggplot2](img/ggplot2.jpg)
+![ggplot2](img/ggplot2.JPG)
 
 # Python + Matplotlib
 
 The third tool I used here is Matplotlib. This was one of the easiest tools to generate the scatterplot, with minimal lines of code. I used python's dictionary data structure to map Manufacturers with their respective colors. I made use of the pandas library as well to read data from csv file. It was also easy to set the axes scales and labels as compared to d3.js. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
 Here is the screenshot of the visualization:
-![Matplotlib](img/Matplotlib.jpg)
+![Matplotlib](img/Matplotlib.JPG)
 
 # MS Excel
 
 The fourth tool I used here is MS Excel. It was a bit difficult to generate the visualization with the prescribed features in this tool. For generating the basic scatterplot (without any prescribed features), I separated the data attributes: MPG and Weight into a different excel sheet along with a column for the corresponding size of the data point. Setting up the position and opacity was easy but the color part was tough. Somehow, my excel's pivot table feature wasn't working properly and so I had to separately arrange the data according to the Manufacturer attribute in order to generate different colors. It was also not possible to generate the exact tick points like the main image provided to us, so the visualization contains some additional intermediate ticks as well. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
 Here is the screenshot of the visualization:
-![Excel](img/Excel.jpg)
+![Excel](img/Excel.JPG)
 
 # Tableau
 
 The fifth tool I used here is Tableau. It was also an easy tool to used, especially for beginners in visualization because of the UI and "drag and drop" features. The axes scales and the labels were also automatically adjusted according to the input data. The only problem in this was setting the relative difference in sizes of the dots, as it wasn't as much significant as visualizations produced by other tools above. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
 Here is the screenshot of the visualization:
-![Tableau](img/Tableau.jpg)
+![Tableau](img/Tableau.JPG)
 
 ## Technical Achievements
 
