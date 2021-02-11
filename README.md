@@ -36,7 +36,7 @@ Here is the screenshot of the visualization:
 
 # MS Excel
 
-The fourth tool I used here is MS Excel. It was a bit difficult to generate the visualization with the prescribed features in this tool. For generating the basic scatterplot (without any prescribed features), I separated the data attributes: MPG and Weight into a different excel sheet along with a column for the corresponding size of the data point. Setting up the position and opacity was easy but the color part was tough. Somehow, my excel's pivot table feature wasn't working properly and so I had to separately arrange the data according to the Manufacturer attribute in order to generate different colors. It was also not possible to generate the exact tick points like the main image provided to us, so the visualization contains some additional intermediate ticks as well. This tool automatically took care of the "N/A" values for MPG and did not plot them.
+The fourth tool I used here is MS Excel. It was a bit difficult to generate the visualization with the prescribed features in this tool. For generating the basic scatterplot (without any prescribed features), I separated the data attributes: MPG and Weight into a different excel sheet along with a column for the corresponding size of the data point. Setting up the position and opacity was easy but the color part was tough. Somehow, I wasn't able to find an easier way to make a pivot table based on Manufacturer and so I had to separately arrange the data according to the Manufacturer attribute in order to generate different colors. It was also not possible to generate the exact tick points like the main image provided to us, so the visualization contains some additional intermediate ticks as well. This tool automatically took care of the "N/A" values for MPG and did not plot them.
 
 Here is the screenshot of the visualization:
 ![Excel](img/Excel.JPG)
@@ -52,8 +52,6 @@ Here is the screenshot of the visualization:
 
 - Utilized "mouseover" and "mouseout" functions in d3.js for making the visualization a bit interactive. On "mouseover", I utilized d3 "tool tip" function to generate a textbox for labelling the scatter point. On hover, this displays the name of the car for that particular dot. I also increased the opacity of the dot to 100% when the user hovers over it.
 - Learned and utilized basic css styles to set the style for the tool tip boxes that appear after the "mouseover" event while using the d3.js tool.
-
-
 
 ## Design Achievements
 
