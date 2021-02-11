@@ -2,6 +2,22 @@
 
 <script src="https://d3js.org/d3.v4.js"></script>
 
+<style> /* set the CSS */    
+    .heavyGrid line {
+      stroke: white;
+      stroke-opacity: 0.7;
+      stroke-width: 2; 
+      shape-rendering: crispEdges;
+    }
+
+    .lightGrid line {
+      stroke: white;
+      stroke-opacity: 0.7;
+      stroke-width: 1; 
+      shape-rendering: crispEdges;
+    }
+</style>
+
 <div id="vis"></div>
 
 <script>
@@ -41,6 +57,11 @@
     .append("g")
     .attr("transform", "translate(" + margin.left + ", " + margin.top +")")
 
+    svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("fill", "#ececec")
+
     // Set x + y linear scales
     var x = d3.scaleLinear().domain([1500, 5100]).range([0, width])  
     var y = d3.scaleLinear().domain([8, 47]).range([height, 0])
@@ -69,6 +90,34 @@
     .attr("transform", "rotate(-90)")
     .style("text-anchor", "middle")
     .text("MPG")
+
+    // Make grid lines
+    var xLine = d3.line()
+    .x(function(d) { return x(d.Wight )})
+    .y(function(d) { return x(d.MPG )})
+
+    function make_x_gridline(ticks) { return d3.axisBottom(x).ticks(ticks) }
+    function make_y_gridline(ticks) { return d3.axisLeft(y).ticks(ticks) }
+
+    // Add main grid lines
+    svg.append("g")
+    .attr("class", "heavyGrid")
+    .attr("transform", "translate(0," + height + ")")
+    .call(make_x_gridline(5).tickSize(-height).tickFormat(""))
+
+    svg.append("g")
+    .attr("class", "heavyGrid")
+    .call(make_y_gridline(5).tickSize(-width).tickFormat(""))
+
+    // Add secondary grid lines
+    svg.append("g")
+    .attr("class", "lightGrid")
+    .attr("transform", "translate(0," + height + ")")
+    .call(make_x_gridline(10).tickSize(-height).tickFormat(""))
+
+    svg.append("g")
+    .attr("class", "lightGrid")
+    .call(make_y_gridline(10).tickSize(-width).tickFormat(""))
 
     // Read in data from csv
     d3.csv("../cars-sample.csv", function(data) {
