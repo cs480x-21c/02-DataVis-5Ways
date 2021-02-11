@@ -45,3 +45,12 @@ very well about the software.
 ### Design Achievements
 - Kept consistent color scheme
 - Experimented with different sizing in each library
+
+### Resources
+https://pythonspot.com/matplotlib-scatterplot/
+
+https://www.youtube.com/watch?v=gBbGBrHTMrM
+
+https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+https://medium.com/python-in-plain-english/from-python-to-tableau-fast-and-simple-visualizations-fe772aa83220
