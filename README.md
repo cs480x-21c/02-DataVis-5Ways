@@ -71,6 +71,13 @@ Changing the size of the markers based on weight seemed not possible for the way
 
 * Edited ranges from tableau and excel to better represent the data
 
+# Design Achievements
+
+* Played around with a lot of colors to make sure the manufacters are clearly separated in graphs
+
+* Ranges were important, in order to properly display the downward trend of the scatterplot, so I played around with ranges until I got the graphs looking
+how I wanted them to
+
 
 ##Sources
 
