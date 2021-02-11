@@ -1,0 +1,127 @@
+    <html>
+    <head>
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+        <script> console.log(d3)</script>
+    </head>
+    <body>
+
+    <!-- <h1>CS 480x: Data Visualization</h1>
+    <h2>Assignment 1, Danya Baron</h2> -->
+
+    <div id="chart">
+
+    </div>
+
+    <style>
+
+    </style>
+
+
+    <script>
+
+    var margin = {top: 10, right: 30, bottom: 80, left: 60},
+        width = 560 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+
+
+    var svg = d3.select("#chart")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+        
+        d3.csv("http://localhost:8000/cars-sample.csv", function(d) {
+            let data = d.sort((a, b) => d3.ascending(a.Weight, b.Weight));
+            console.log(data)
+            
+    // Add X axis
+    var x = d3.scaleLinear()
+        .domain([1500, 5100])
+        .range([ 0, width ]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+    // Add Y axis
+    var y = d3.scaleLinear()
+        .domain([8, 47])
+        .range([ height, 0]);
+    svg.append("g")
+        .call(d3.axisLeft(y));
+
+    // text label for the x axis
+    svg.append("text")
+                    .attr("transform",
+                        "translate(" + (width / 2) + " ," +
+                        (height + margin.top + 30) + ")")
+                    .style("text-anchor", "middle")
+                    .style("font-family", "Microsoft Tai Le, serif")
+                    .text("Weight");
+
+     // text label for the y axis
+     svg.append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", 0 - margin.left)
+                    .attr("x", 0 - (height / 2))
+                    .attr("dy", "1em")
+                    .style("text-anchor", "middle")
+                    .style("font-family", "Microsoft Tai Le, serif")
+                    .text("MPG");
+
+    // Add dots
+    svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) {
+            return x(d.Weight);
+        })
+        .attr("cy", function (d) {
+            return y(d.MPG);
+        })
+        .attr("r", function (d) {
+            return d.Weight / 650;
+        })
+        .style("fill", function(d) {
+            return assignColor(d.Manufacturer);
+        })
+        .style("fill-opacity", 0.5);
+        
+})
+
+function assignColor(manufacturer) {
+    switch(manufacturer) {
+        case "ford":
+            return d3.color("#a6e39f");
+            break;
+        case "toyota":
+            return d3.color("#f092ce");
+        case "bmw":
+            return d3.color("red");
+        case "mercedes":
+            return d3.color("#92e0f0");
+        case "honda":
+            return d3.color("green");
+        
+        default: 
+            return d3.color("black");
+    }
+}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+

@@ -1,142 +1,56 @@
 # 02-DataVis-5ways
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+# Vis 1: D3.js
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+D3 was fairly simple for me to use, however I was unable to get the background color and grid
+of the graph as I was able to with some of the other tools I used. I definitely can see D3 being useful
+in the future for visualizing graphs especially since the tool was built on that foundation.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/d3%20graph.png)
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Vis 2: R + ggplot2
 
-Your goal is to use 5 different tools to make the following chart:
+R is a popular language used for graphing and other visualization tools. To properly visualize the graph, I used the 'ggplot2'
+library, which came with many series of functions that I needed to use to plot this graph. 
+I used ggplot2's `geom_point()` layer, with aesthetics functions for the color and size. I don't think I will see myself be using R
+in the future due to the difficulty of integrating it into other IDE's.
 
-![ggplot2](img/ggplot2.png)
+![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/ggplot2.png)
 
-These features should be preserved as much as possible in your replication:
+# Vis 3: Python + matplotlib
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+Python was also very simple for me to use due to Python's libraries, "pandas" and "matplotlib". These libraries came with a bunch of functions 
+that I needed in order to plot the graph correctly in Python. I really liked using matplotlib because I didn't need many lines of code to 
+do the scatter plot which I really enjoyed. I definitely see myself using Python in the future for projects.
 
-Other features are not required. This includes:
+![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/python%20graph.png)
 
-- The background grid.
-- The legends.
+# Vis 4: Tableau
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+I had never used Tableau before this, and found it to be the simplest of technologies. It was very user friendly and I was able to import my data
+and make the visualization pretty quick. I was able to adjust the size, as well as the color and if the graph was trending upward or not. I would
+definitely consider using Tableau when working with data. 
 
-Improvements are also welcome as part of Technical and Design achievements.
+![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/tableau.png)
 
-Libraries, Tools, Languages
----
+# Vis 5: Excel
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+Ironically, I found Excel to be the hardest of technologies to use to make this graph. There is a steep learning curve when using Excel and I was not
+prepared for the complications I ran into. I did not find Excel to be user friendly and there were things that I did not understand
+very well about the software.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+![ScreenShot](https://github.com/danyabaron/02-DataVis-5Ways/blob/main/img/excel.png)
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Kept consistent color scheme
+- Experimented with different sizing in each library
+
+### Resources
+https://pythonspot.com/matplotlib-scatterplot/
+
+https://www.youtube.com/watch?v=gBbGBrHTMrM
+
+https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+https://medium.com/python-in-plain-english/from-python-to-tableau-fast-and-simple-visualizations-fe772aa83220
