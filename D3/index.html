@@ -1,0 +1,84 @@
+<script src="https://d3js.org/d3-dsv.v2.min.js"></script>
+<script src='https://d3js.org/d3.v6.min.js'></script>
+<body>
+  <script>
+    console.log(d3); // test if d3 is loaded
+
+    var margin = {top: 10, right: 30, bottom: 30, left: 60},
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // Accessing the values from csv
+  d3.csv("cars-sample.csv").then(function(data) {
+    data.forEach(function(d) {
+      d.MPG = +d.MPG;
+      d.Weight = +d.Weight;
+    })
+    console.log(data);
+
+    var maxMPG = d3.max(data, function(d){return d.MPG})
+    var minMPG = d3.min(data, function(d){return d.MPG})
+
+    var maxWeight = d3.max(data, function(d){return d.Weight})
+    var minWeight = d3.min(data, function(d){return d.Weight})
+
+    console.log(maxMPG);
+    console.log(minMPG)
+    console.log(maxWeight);
+    console.log(minWeight);
+
+    // Creating X Scale
+
+    var xScale = d3.scaleLinear()
+      .domain([minWeight, maxWeight])
+      .range([0, width])
+    svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(xScale));
+
+    var yScale = d3.scaleLinear()
+      .domain([minMPG, maxMPG])
+      .range([height, 0]);
+    svg.append("g")
+            .call(d3.axisLeft(yScale));
+
+    svg.append('g')
+      .selectAll("dot")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d){return xScale(d.Weight); })
+        .attr("cy", function(d){return yScale(d.MPG); })
+        .attr("r", function(d){return d.Weight/500})
+         .style("opacity", "50%")
+        .style("fill", function(d){
+          if(d.Manufacturer == "ford"){
+            return "red"
+          }
+          if(d.Manufacturer == "bmw"){
+            return "silver";
+          }
+          if(d.Manufacturer == "mercedes"){
+            return "black";
+          }
+          if(d.Manufacturer == "toyota"){
+            return "#F7E7CE";
+          }
+          if(d.Manufacturer == "honda"){
+            return "#00008b";
+          }
+        });
+
+  });
+
+  </script>
+</body>
