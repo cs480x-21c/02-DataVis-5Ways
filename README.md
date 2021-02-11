@@ -46,4 +46,4 @@ very well about the software.
 
 ### Design Achievements
 - Kept consistent color scheme
-- Kept sizing of circles consistent
+- Experimented with different sizing in each library
