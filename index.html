@@ -1,50 +1,62 @@
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
 <!-- Create the place where the graph is to be rendered on the page -->
-<svg id="vis" style="margin-left: 50px;"></svg>
+<svg id="vis" style="margin-left: 50px; margin-top: 50px; margin-right: 50px"></svg>
 
 <script>
-    console.log(d3);
+    //console.log(d3);
 
     // Create the canvas
     var svg = d3.select("#vis")
-    .attr('width', 800)
-    .attr('height', 800)
-    .attr('border', 'black');
-
+    .attr('width', 800 + 50 + 50)
+    .attr('height', 800 + 50)
+    .append('g')
+    .attr('transform', 'translate(' + 50 + ',' + 50 + ')')
     
     // Get the path of the CSV
     d3.csv("cars-sample.csv", function(data) {
-        // Check if csv was uploaded properly
 
-    // Create xAxis
-    var xAxis = d3.scaleLinear()
-    .domain([0,4000])
-    .range([0,400])
+        // Create the axis
+        var xAxis = d3.scaleLinear()
+        .domain([0,5000])
+        .range([0,800])
 
-    // Put xAxis on the svg
-    svg.append('g')
-        .attr("transform", "translate(0," + 400 + ")")
-        .call(d3.axisBottom(xAxis))
+         // Create yAxis 
+         var yAxis = d3.scaleLinear()
+        .domain([0,50])
+        .range([400,0])
 
-    // Create yAxis
-    var yAxis = d3.scaleLinear()
-    .domain([0,4000])
-    .range([400,0])
-    
-    // Put yAxis on SVG
-    svg.append('g')
-        .call(d3.axisLeft(yAxis))
+        // Put Axis on the svg
+        svg.append('g')
+            .attr("transform", "translate(0," + 400 + ")")
+            .call(d3.axisBottom(xAxis).ticks(5))
+        
+        svg.append('g')
+            .call(d3.axisLeft(yAxis).ticks(5))
 
-    // Place data
-    svg.append('g')
-    .selectAll("dot")
-    .data(data)
-    .enter()
-    .append("circle")
-    .attr("cx", function (d) { return x(d.Weight); } )
-    .attr("cy", function (d) { return y(d.MPG); } )
-    .attr("r", 1.5)
+        // Add labels
+        svg.append('text')
+        .attr("class", "y label")
+        .attr("x", -20)
+        .attr("y", -15)
+        .text("MPG")
+
+        svg.append('text')
+        .attr("class", "x label")
+        .attr("x", 400)
+        .attr("y", 450)
+        .text("Weight")
+
+        //console.log(data.Weight)
+
+        // Place data
+        svg.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", function(d) { return xAxis(d.Weight); } )
+                .attr("cy", function(d) { return yAxis(d.MPG); } )
+                .attr("r", 1.5)
 
     })
 
