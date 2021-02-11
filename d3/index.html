@@ -8,11 +8,20 @@
      console.log("hello1");
      d3.csv("../cars-sample.csv", function(data) {
         console.log("hello2");
-        for(var i=0; i < data.length; i++) {
-            console.log("hello3");
-            console.log(data[i].Manufacturer);
-            console.log(data[i].MPG);
-        }
+        return {
+          car: data.Car,
+          manufacturer: data.Manufacturer,
+          mpg: +data.MPG,
+          cylinders: +data.Cylinders,
+          displacement: +data.Displacement,
+          horsepower: +data.Horsepower,
+          weight: +data.Weight,
+          acceleration: +data.Acceleration,
+          year: +data.Model.Year,
+          origin: data.Origin
+        };
+     }).then(function(data) {
+       console.log(data);
      });
    </script>
   </body>
