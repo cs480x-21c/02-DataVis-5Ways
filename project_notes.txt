@@ -1,0 +1,3 @@
+Resources used for D3:
+    https://www.d3-graph-gallery.com/graph/bubble_color.html
+    https://github.com/sgratzl/d3tutorial

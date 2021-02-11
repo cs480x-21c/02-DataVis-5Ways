@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3-->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--Load color scale???-->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<div id="value"></div>
+<svg id="vis"></svg>
+
+<!--TODO:
+- Fix colors
+- Fix lick mark spacing
+- Fix axis label spacing
+- Make legend
+-->
+
+
+<script>
+    // Dimensions and margins of graph
+    var margin = {top: 10, right: 20, bottom: 30, left: 50},
+        width = 500 - margin.left - margin.right,
+        height = 420 - margin.top - margin.bottom;
+
+    // Set up svg
+    let svg = d3.select('#vis')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    // Read in data
+    d3.csv('cars-sample.csv', function (data) {
+
+        // Add X-axis
+        var x = d3.scaleLinear()
+            .domain([1000, 5000])
+            .range([0, width]);
+        svg.append('g')
+            .attr('transform', 'translate(0,' + height + ')')
+            .call(d3.axisBottom(x));
+
+        // X-Axis label
+        svg.append('text')
+            .attr('text-anchor', 'end')
+            .attr('x', width)
+            .attr('y', height - 50)
+            .text('Weight')
+
+        // Add Y-axis
+        var y = d3.scaleLinear()
+            .domain([10, 40])
+            .range([height - 10, 0]);
+        svg.append('g')
+            .call(d3.axisLeft(y));
+
+        // Y-axis label
+        svg.append(('text'))
+            .attr('text-anchor', 'end')
+            .attr('x', 20)
+            .attr('y', 20)
+            .text('MPG')
+            .attr('text-anchor', 'start')
+
+        // Scale of bubble size
+        var z = d3.scaleLinear()
+            .domain([1000, 4000])
+            .range([1, 10])
+
+        // Scale for bubble color
+        var color = d3.scaleOrdinal()
+            .domain(['bmw', 'ford', 'honda', 'mercedes', 'toyota'])
+            .range(['orange', 'chartreuse', 'turquoise', 'deepskyblue', 'magenta'])
+
+        // Add data points
+        svg.append('g')
+            .selectAll('dot')
+            .data(data)
+            .enter()
+            .append('circle')
+            .attr('cx', function (d) {
+                return x(d.Weight)
+            })
+            .attr('cy', function (d) {
+                return y(d.MPG)
+            })
+            .attr('r', function (d) {
+                return z(d.Weight)
+            })
+            .style('fill', function (d) {
+                return color(d.Manufacturer)
+            })
+            .style('opacity', '0.5')
+            .style('stroke-width', '0px')
+
+    });
+
+</script>
