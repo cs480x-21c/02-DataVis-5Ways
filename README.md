@@ -3,6 +3,23 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
+# Excel
+===
+The first graph I created was made using Microsoft Excel. Excel is a 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
 
 The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
