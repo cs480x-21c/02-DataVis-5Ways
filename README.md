@@ -34,9 +34,9 @@ One neat thing about Flourish, was that it had a built-in method for enabling/di
 
 Unfortunately, you can't download the visualization in .html format with a free account, but I can see Flourish being extremelly useful in a professional context.
 
-![flourishA](img/flourishA.png)
+![flourishA](img/flourishA.PNG)
 
-![flourishB](img/flourishB.png)
+![flourishB](img/flourishB.PNG)
 
 ## Technical Achievements
 - For the d3 implementation, users can mouse over the bubbles, and a tooltip will display the model of car that bubble represents.
