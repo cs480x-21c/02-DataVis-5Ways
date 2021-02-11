@@ -21,6 +21,7 @@
         //svg.style('border', '1px solid black');
 
         data = data.filter(d => d.Weight != 'NA' && d.MPG != 'NA');
+        data = data.sort((a,b) => a.Weight - b.Weight);
 
         let weights = data.map(d => parseInt(d.Weight));
         let mpgs = data.map(d => parseInt(d.MPG));
@@ -107,8 +108,16 @@
                 }
 
             })
+            .attr('opacity', '0')
+
+
+            d3.selectAll('circle')
+            .transition()
+            .duration(1000)
             .attr('opacity', '0.5')
-            .attr('class', 'highlightable')
+            .delay(function(d, i) { return i*20; })
+            .transition(1)
+            .attr('class', 'highlightable');
 
     }
 
