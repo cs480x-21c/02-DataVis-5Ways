@@ -5,4 +5,13 @@
 <script>
 
 console.log(d3); // test if d3 is loaded
+
+//Add an SVG
+var frame = d3.select('#frame')
+    .attr('width', '100%')
+    .attr('height', '100%')
+
+var data = d3.csv("cars-sample.csv");
+console.log(data)
+
 </script>
