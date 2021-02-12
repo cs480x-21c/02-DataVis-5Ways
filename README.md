@@ -130,6 +130,23 @@ While it takes time to find the correct documentation, these functions made the 
 ![ggplot2](img/ggplot2.png)
 
 # d3...
+Sources:
+* https://www.d3-graph-gallery.com/graph/bubble_basic.html
+
+# Excel
+
+Data -> Get Data -> Get File -> From_Text/CSV
+
+I created 10 more columns (in groups of 2) after importing the original CSV file into Excel. Each group of columns that I created had an 'MPG' column and a 'Weight' column.
+I copy and pasted the information for each of the 5 manufacturers into their appropriate columns. I then inserted a blank bubble chart, and added a data series for each of the MPg/WEight columns groupings for each manufacturer. I used 'Format Chart Area' to incorporate the following features:
+
+* changing the scale of the x-axis and y-axis
+* adding a legend
+* adding labels on the x-axis and y-axis
+
+# Flourish 
+
+Flourish is a data visualization software that has a really great UI for users to implement data visualizations. In order to create my visualization, I selected to create a bubble chart, and imported the cars-sample.csv file into the visulaization. Then, I adjusted the 
 
 (And so on...)
 
