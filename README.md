@@ -19,7 +19,7 @@ Flourish is an online tool for creating data visualizations that has both free a
 
 In comparison to the other GUI tool I used (Excel), Flourish was WAY easier to use. Like, stupidly easy to use. I was able to import the .csv file easily, and immediately was prompted to choose which columns I wanted to map to the X axis and Y axis. In addition, I was also immediately prompted with options to assign axes to use for point size and point color data. Similar to Excel, however, I couldn't locate an option to adjust the difference between smallest and largest point size, so the difference is rather subtle. Still, this took me a fraction of the time it took to set up in Excel, and even made the addition of a legend for the manufacturers a simple click to add. It also truncated and adjusted the scales of the axes completely automatically with no input from me. 
 
-# d3
+# Javascript and d3
 Sources/tutorials consulted while making this plot:
 https://bl.ocks.org/d3noob/5680dd0089abdc5b15f188d5efe48852
 https://bl.ocks.org/d3noob/f46a355d35077a7dc12f9a97aeb6bc5d
@@ -33,17 +33,15 @@ If there's any weakness for d3, it's the relative complexity of adding the axes 
 
 
 
-# R + ggplot2 + R Markdown
+# R and ggplot2
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+Tutorial consulted while making this plot: http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+Using the ggplot2 library with the programming language R, it was shockingly easy to generate. Importing the .csv file was easy after I figured out that you needed to escape the backslashes in the directory to the file. The simple ggplot() command to generate the plot made is simple to set the axes and the properties for the point, and was easy to understand as soon as I figured out that "aes" was short for aesthetic mapping. ggplot makes it super simple to indicate "x=Weight, y=MPG", and automatically built the axes. I completely guessed how to map the color to the manufacterer property and got it right ("color=Manufacturer"), which speaks to how intuitive it was to achieve plot features like that. And the cherry on top of the whole thing was the automatic labeling of the axes and generation of legends, completely unprompted by me. Definitley an easier experience than I was expecting!
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+<img src="img/R.png" width="600">
+(Yes I am well aware this plot looks nearly identical to the example we were given. This was generated in my R environment, I swear!)
 
-![ggplot2](img/ggplot2.png)
 
 # d3...
 
