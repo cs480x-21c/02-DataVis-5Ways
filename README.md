@@ -19,6 +19,20 @@ Flourish is an online tool for creating data visualizations that has both free a
 
 In comparison to the other GUI tool I used (Excel), Flourish was WAY easier to use. Like, stupidly easy to use. I was able to import the .csv file easily, and immediately was prompted to choose which columns I wanted to map to the X axis and Y axis. In addition, I was also immediately prompted with options to assign axes to use for point size and point color data. Similar to Excel, however, I couldn't locate an option to adjust the difference between smallest and largest point size, so the difference is rather subtle. Still, this took me a fraction of the time it took to set up in Excel, and even made the addition of a legend for the manufacturers a simple click to add. It also truncated and adjusted the scales of the axes completely automatically with no input from me. 
 
+# d3
+Sources/tutorials consulted while making this plot:
+https://bl.ocks.org/d3noob/5680dd0089abdc5b15f188d5efe48852
+https://bl.ocks.org/d3noob/f46a355d35077a7dc12f9a97aeb6bc5d
+http://bl.ocks.org/weiglemc/6185069
+https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+<img src="img/d3.png" width="600">
+
+Using d3 to construct this scatterplot was faily involved, but had its strengths in comparison to other tools (like Excel). Importing the data from the CSV was surprisingly easy to accomplish, and d3 also makes it really easy to iterate through the data and add the points using the select all -> data -> enter -> append methodology. Structuring the import this way also allowed to add conditions farily easily, so it was pretty easy to assign different colored points to the different manufacturers using a simple series of if statements. It was also easy to using d3's built in linear scale functions both for plotting the points on the axes and for customizing the scale of the point sizing. 
+If there's any weakness for d3, it's the relative complexity of adding the axes themselves and the labels. This required a fair amount of attribute changing for svg text which I was not really familiar with outside of the tutorials I was consulting. In the end it all made sense but it was still a little complex to understand. 
+
+
+
 # R + ggplot2 + R Markdown
 
 R is a language primarily focused on statistical computing.
