@@ -87,7 +87,7 @@ Without much experience in R I was quite hesitant to pick up this library, oh ma
 
 Matplotlib was a bit more familiar territory for me. I have use some of the library and Python in a previous class, so I was able to load the csv and make a scatter plot fairly quickly. The documentation came in quite handy for scaling the points and coloring them. I have not gotten the legend to work yet, I plan to tackle that one soon.
 
-![Matplot](img/MatPlot.png)
+![Matplot](img/MatPlot_1.png)
 
 Docs: <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html" target="_blank">Matplotlib.pyplot</a>
 
