@@ -1,0 +1,241 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<style>
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
+</style>
+
+<body class="center">
+<svg id="vis"></svg>
+<br><br><br>
+<button type="button" onclick="generateSet1()">Dark2</button>
+<button type="button" onclick="generateSet2()">Category10</button>
+<button type="button" onclick="generateSet3()">Tableau10</button>
+<button type="button" onclick="generateSet4()">Set1</button>
+<button type="button" onclick="generateSet5()">Paired</button>
+
+<script>
+
+  var margin = {top: 10, right: 20, bottom: 30, left: 50}
+  var width = 500 - margin.left - margin.right
+  var height = 420 - margin.top - margin.bottom
+
+  var svg = d3.select('#vis')
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom + 10)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")")
+
+  function removeCircles(){
+    svg.selectAll('circle').remove()
+  }
+
+  var tooltip = d3.select("body")
+    .append("div")
+    .attr("fill", "black")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .style('background-color', 'white');
+
+  function generateSet1(){
+    removeCircles()
+    d3.csv("https://raw.githubusercontent.com/cs480x-21c/02-DataVis-5Ways/main/cars-sample.csv", function(data){
+    addCircleColorSet1(data)
+    })
+  }
+
+  function generateSet2(){
+    removeCircles()
+    d3.csv("https://raw.githubusercontent.com/cs480x-21c/02-DataVis-5Ways/main/cars-sample.csv", function(data){
+    addCircleColorSet2(data)
+    })
+  }
+
+  function generateSet3(){
+    removeCircles()
+    d3.csv("https://raw.githubusercontent.com/cs480x-21c/02-DataVis-5Ways/main/cars-sample.csv", function(data){
+    addCircleColorSet3(data)
+    })
+  }
+
+  function generateSet4(){
+    removeCircles()
+    d3.csv("https://raw.githubusercontent.com/cs480x-21c/02-DataVis-5Ways/main/cars-sample.csv", function(data){
+    addCircleColorSet4(data)
+    })
+  }
+
+  function generateSet5(){
+    removeCircles()
+    d3.csv("https://raw.githubusercontent.com/cs480x-21c/02-DataVis-5Ways/main/cars-sample.csv", function(data){
+    addCircleColorSet5(data)
+    })
+  }
+
+  function addCircleColorSet1(data){
+    if(data.MPG != "NA")
+    {
+      console.log(data)
+      svg.append('g')
+        .append("circle")
+          .attr("cx", x(data.Weight))
+          .attr("cy", y(data.MPG))
+          .attr("r", z(data.Weight))
+          .style("fill", colorSet1(data.Manufacturer))
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .on("mouseover", function(){return tooltip.style("visibility", "visible")
+                                                    .text("Weight: " + data.Weight + "  MPG: " + data.MPG + "  Manufacturer: " + data.Manufacturer);})
+          .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    }
+  }
+
+  function addCircleColorSet2(data){
+    if(data.MPG != "NA")
+    {
+      console.log(data)
+      svg.append('g')
+        .append("circle")
+          .attr("cx", x(data.Weight))
+          .attr("cy", y(data.MPG))
+          .attr("r", z(data.Weight))
+          .style("fill", colorSet2(data.Manufacturer))
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .on("mouseover", function(){return tooltip.style("visibility", "visible")
+                                                    .text("Weight: " + data.Weight + "  MPG: " + data.MPG + "  Manufacturer: " + data.Manufacturer);})
+          .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    }
+  }
+
+  function addCircleColorSet3(data){
+    if(data.MPG != "NA")
+    {
+      console.log(data)
+      svg.append('g')
+        .append("circle")
+          .attr("cx", x(data.Weight))
+          .attr("cy", y(data.MPG))
+          .attr("r", z(data.Weight))
+          .style("fill", colorSet3(data.Manufacturer))
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .on("mouseover", function(){return tooltip.style("visibility", "visible")
+                                                    .text("Weight: " + data.Weight + "  MPG: " + data.MPG + "  Manufacturer: " + data.Manufacturer);})
+          .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    }
+  }
+
+  function addCircleColorSet4(data){
+    if(data.MPG != "NA")
+    {
+      console.log(data)
+      svg.append('g')
+        .append("circle")
+          .attr("cx", x(data.Weight))
+          .attr("cy", y(data.MPG))
+          .attr("r", z(data.Weight))
+          .style("fill", colorSet4(data.Manufacturer))
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .on("mouseover", function(){return tooltip.style("visibility", "visible")
+                                                    .text("Weight: " + data.Weight + "  MPG: " + data.MPG + "  Manufacturer: " + data.Manufacturer);})
+          .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    }
+  }
+
+  function addCircleColorSet5(data){
+    if(data.MPG != "NA")
+    {
+      console.log(data)
+      svg.append('g')
+        .append("circle")
+          .attr("cx", x(data.Weight))
+          .attr("cy", y(data.MPG))
+          .attr("r", z(data.Weight))
+          .style("fill", colorSet5(data.Manufacturer))
+          .style("opacity", "0.5")
+          .attr("stroke", "black")
+          .on("mouseover", function(){return tooltip.style("visibility", "visible")
+                                                    .text("Weight: " + data.Weight + "  MPG: " + data.MPG + "  Manufacturer: " + data.Manufacturer);})
+          .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+    }
+  }
+
+  var x = d3.scaleLinear()
+    .domain([1500, 5000])
+    .range([ 0, width ])
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+
+    svg.append("text")
+    .attr("text-anchor", "middle")
+    .attr("x", width/2)
+    .attr("y", height + margin.top + 20)
+    .text("Weight")
+
+  var y = d3.scaleLinear()
+    .domain([5, 50])
+    .range([ height, 0])
+  svg.append("g")
+    .call(d3.axisLeft(y))
+
+svg.append("text")
+    .attr("text-anchor", "middle")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -margin.left+20)
+    .attr("x", -height/2)
+    .text("MPG")
+
+  var z = d3.scaleLinear()
+    .domain([2000, 4000])
+    .range([3, 8])
+
+  var colorSet1 = d3.scaleOrdinal()
+    .domain(["bmw", "ford", "honda", "mercedes", "toyoda"])
+    .range(d3.schemeDark2)
+  var colorSet2 = d3.scaleOrdinal()
+    .domain(["bmw", "ford", "honda", "mercedes", "toyoda"])
+    .range(d3.schemeCategory10)
+  var colorSet3 = d3.scaleOrdinal()
+    .domain(["bmw", "ford", "honda", "mercedes", "toyoda"])
+    .range(d3.schemeTableau10)
+  var colorSet4 = d3.scaleOrdinal()
+    .domain(["bmw", "ford", "honda", "mercedes", "toyoda"])
+    .range(d3.schemeSet1)
+  var colorSet5 = d3.scaleOrdinal()
+    .domain(["bmw", "ford", "honda", "mercedes", "toyoda"])
+    .range(d3.schemePaired)
+
+  generateSet1()
+</script>
