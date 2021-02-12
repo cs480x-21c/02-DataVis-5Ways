@@ -32,7 +32,7 @@ Looking at the graph, the points were grouped by manufacturer and colored with a
 
 # d3
 
-Best for last. d3 was by far the most interesting tool to use for this assignment. The amount of customization and options you have is daunting. I decided to try and recreate the graphs I had already made and then add some more functionality to try and test what is possible withing d3. 
+Best for last. d3 was by far the most interesting tool to use for this assignment. The amount of customization and options you have is daunting. I decided to try and recreate the graphs I had already made and then add some more functionality to try and test what is possible withing d3. Make sure to test out index.html on a local server (I used a web server chrome extension)
 
 Looking at the graph, you can see it is quite basic and similar to my other graphs, just that alone was a much harder feat in comparison to something like Flourish or scatterplotonline. The difference being, after getting that basic functionality of the graph, I was able to expand upon that and add extra data, I'll talk about this in the Achievements section below.
 
