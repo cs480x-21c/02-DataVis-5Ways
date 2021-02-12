@@ -1,5 +1,20 @@
-<script src='https://d3js.org/d3.v6.min.js'></script>
+<style>
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 65px;
+    height: 25px;
+    padding: 2px;
+    font-size: 8px;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+</style>
+
 <body>
+<script src='https://d3js.org/d3.v6.min.js'></script>
   <script>
     console.log(d3); // test if d3 is loaded
 
@@ -31,6 +46,11 @@
             .style("text-anchor", "middle")
             .text("MPG");
 
+    var Tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+
     // Accessing the values from csv
   d3.csv("cars-sample.csv").then(function(data) {
     data.forEach(function(d) {
@@ -44,11 +64,6 @@
 
     var maxWeight = d3.max(data, function(d){return d.Weight})
     var minWeight = d3.min(data, function(d){return d.Weight})
-
-    console.log(maxMPG);
-    console.log(minMPG)
-    console.log(maxWeight);
-    console.log(minWeight);
 
     // Creating X Scale
 
@@ -66,6 +81,12 @@
       .range([height, 0]);
     svg.append("g")
             .call(d3.axisLeft(yScale));
+
+    var mouseOut = function(d){
+      Tooltip.transition()
+              . duration(200)
+              .style("opacity", 0)
+    }
 
     svg.append('g')
       .selectAll("dot")
@@ -93,9 +114,15 @@
             return "blue";
           }
         })
-         .on("click", function(d){
-              d3.select(this).transition().attr("fill", "blue");
+            .on("mouseover", function(e, data){
+              Tooltip.transition()
+                      .duration(200)
+                      .style("opacity", 1)
+              Tooltip.html("[MPG]: " + data.MPG + "<br/> [Weight]" +  data.Weight + "<br/> [Model]:" + data.Car)
+              .style("left", d3.select(this).attr("cx") + "px")
+              .style("top", d3.select(this).attr("cy") + "px");
             })
+      .on("mouseout", mouseOut);
 
 
         xScale.domain([minWeight, maxWeight])
