@@ -37,6 +37,8 @@ For matplot I used information from: https://kanoki.org/2020/08/30/matplotlib-sc
 
 ## Technical Achievements
 - Used the three input excel scatterplot to make the size of the dots increase with vehicle weight.
+- Created the color set and mapped the colors to it in python.
+- Used viridis for the cmap.
 
 ### Design Achievements
 - Downloaded the given graph and used a color picker to select colors for the Rplot graph
