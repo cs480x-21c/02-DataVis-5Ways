@@ -42,7 +42,7 @@ I would consider Excel to be an easy tool to create a scatterplot visualization.
 D3.js is a Javascript library for manipulating documents based on data. D3 stands for Data Driven Document, and is used to create interactive data visualizations. This chart is composed in an .html document that comprises of the d3 chart generation.
 
 I have not used d3 too much outside of class, so this plot was more difficult for me. I did have to look up [resources](https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js) to read in the data from the cars-sample.csv file, and [resources](https://www.d3-graph-gallery.com/graph/scatter_basic.html) to create a scatterplot.
-![d3](img/D3.png)
+![d3](img/D3.js.png)
 
 ## Python + Matplotlib
 
