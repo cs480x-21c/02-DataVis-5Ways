@@ -3,7 +3,7 @@ library(ggplot2)
 
 cars <- read.csv("./cars-sample.csv")
 
-ggplot(diabetes, aes(y=glyhb, x=age, size=weight, color=frame)) +
+ggplot(cars, aes(y=MPG, x=Weight, size=Weight)) +
     geom_point()
 
 #ggsave("../img/ggplotcarsvisualization.png")
