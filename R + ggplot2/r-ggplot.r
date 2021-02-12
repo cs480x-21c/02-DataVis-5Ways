@@ -7,6 +7,6 @@ ggplot(cars_sample, aes(x=Weight, y=MPG)) + geom_point()
 ggplot(cars_sample, aes(x=Weight, y=MPG)) + geom_point(aes(size=Weight))
 
 (cars_sample, aes(x=Weight, y=MPG)) + geom_point(aes(size=Weight,color=Manufacturer))
-cars_sample, aes(x=Weight, y=MPG)) + geom_point(aes(size=Weight,color=Manufacturer,alpha=0.5))
+cars_sample, aes(x=Weight, y=MPG)) + geom_point(aes(size=Weight,color=Manufacturer))
 
-geom_point(aes(size=Weight,color=Manufacturer,alpha=0.5))+geom_smooth(method=lm)
+geom_point(aes(size=Weight,color=Manufacturer))+geom_smooth(method=lm)
