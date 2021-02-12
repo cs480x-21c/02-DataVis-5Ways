@@ -34,10 +34,9 @@ d3.csv("../cars-sample.csv").then(function(data) {
 
   // Label for X axis
   svg.append("text")
-    .attr("class", "x label")
-    .attr("text-anchor", "end")
+    .attr("text-anchor", "middle")
     .attr("x", width)
-    .attr("y", height - 6)
+    .attr("y", height + 6)
     .text("Weight");
   
   // Add Y axis
@@ -49,10 +48,9 @@ d3.csv("../cars-sample.csv").then(function(data) {
   
   // Label for Y axis
   svg.append("text")
-    .attr("class", "y label")
-    .attr("text-anchor", "end")
-    .attr("y", 6)
-    .attr("dy", ".75em")
+    .attr("text-anchor", "middle")
+    .attr("y", 0)
+    .attr("dy", "2em")
     .attr("transform", "rotate(-90)")
     .text("MPG");
 
