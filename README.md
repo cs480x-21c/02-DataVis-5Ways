@@ -12,7 +12,7 @@ Here is the graph that was recreated in D3 with the requirements met. As for des
 
 I struggled a lot with excel as I couldnt find many conventional ways to alter the color of the points based on weight for size and manufacturer for color. In addition to this, I didnt find good or creative ways for the design or technical achievements besides making the points pop on the screen to better display where they are on the grid.
 
-![Flourish](CS480xFlourish.png)
+![Flourish](CS480xFlourishPicture.png)
 
 Flourish was pretty straight forward to display correctly, the entire process was very streamline. As for technical and design achievements I picked some colors that just allowed for each individual thing stand out better allowing for better visibility on the graph itself.
 
