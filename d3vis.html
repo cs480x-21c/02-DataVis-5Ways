@@ -42,7 +42,7 @@ d3.csv("cars-sample.csv").then(function(data) {
   svg.selectAll("dot")
       .data(data)
     .enter().append("circle")
-      .attr("r", function(d) {return x(d.Weight);})
+      .attr("r", function(d) {return Math.sqrt(d.Weight);})
       .attr("cx", function(d) { return x(d.Weight); })
       .attr("cy", function(d) { return y(d.MPG); });
 
