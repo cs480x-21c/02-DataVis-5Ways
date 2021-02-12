@@ -4,9 +4,6 @@
  * Author: Benjamin M'Sadoques
  *
  * Provides all the hard-coded values to make the vis
- * Provides the main method to draw the plot
- * Some code taken from:
- * https://www.d3-graph-gallery.com/scatter
  */
 
 // pixel size taken from the image provided (exact)
@@ -50,7 +47,7 @@ const cScale = d3.scaleOrdinal()
  */
 function d3Main(data)
 {
-    let svg = d3.select('#vis')
+    let svg = d3.select("#vis")
         .attr("width", width)
         .attr("height", height);
 
@@ -65,64 +62,4 @@ function d3Main(data)
         .attr("transform", "rotate(270, " + yLabel.x + ", " + yLabel.y + ")");
 
     drawPlot(svg, data);
-}
-
-/**
- * adds an axis
- * @param svg
- * @param x position
- * @param y position
- * @param axis
- * @returns {*} the new axis
- */
-function addAxis(svg, x, y, axis)
-{
-    return svg.append("g")
-        .attr("transform", "translate(" + x + ", " + y + ")")
-        .call(axis);
-}
-
-/**
- * Adds the axis labels
- * @param svg
- * @param x position
- * @param y position
- * @param text for the axis
- * @returns {*} the new axis label
- */
-function addAxisLabel(svg, x, y, text)
-{
-    return svg.append("text")
-        .attr("x", x)
-        .attr("y", y)
-        .text(text);
-}
-
-/**
- * Draws the plot data to the svg
- * @param svg
- * @param data
- */
-function drawPlot(svg, data)
-{
-    svg.append('g')
-        .attr("id", "scatterPlot")
-        .selectAll("dot")
-        .data(data)
-        .enter()
-        .append("circle")
-            .attr("class", function (d) { return d.Manufacturer })
-            .attr("cx", function(d) { return xScale(d.Weight)})
-            .attr("cy", function(d) { return yScale(d.MPG)})
-            .attr("r", function(d) { return rScale(d.Weight) })
-            .style("fill", function(d) { return cScale(d.Manufacturer)})
-            .on("mouseover", function (e, d) { changeCircleOpacity(d, 1.0); })
-            .on("mouseleave", function(e, d) { changeCircleOpacity(d, 0.5); });
-}
-
-function changeCircleOpacity(d, opacity)
-{
-    d3.selectAll("." + d.Manufacturer)
-        .transition()
-        .style("fill", d3.color(cScale(d.Manufacturer)).copy({opacity:opacity}));
 }

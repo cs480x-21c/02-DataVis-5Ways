@@ -25,12 +25,16 @@ trying out different types of vis with the same dataset.
 # d3
 
 D3 is the main library we are using in this course, so it was an easy choice for this project.
-...
 
+Using d3 feels a lot more manual. There are no plots, instead, I had to position the data,
+axes, and axes labels. With this control it takes a lot of tweaking to get the right plot, but 
+in return I have a lot of control over positioning. Adding additional functionality can be tricky,
+but it is always possible to make the vis interactive.
 
-Write a paragraph for each vis tool/library you used/ Was 
-it easy? Difficult? Where could you see the tool being useful in the future?
-Did you have to use any hacks for data manip to get the right chart? Or anything else of note.
+In the future I would use d3 for creating an interactive vis, when I have already decided exactly 
+what I am making.
+
+![d3 Vis](img/d3Vis.jpg)
 
 # R and ggplot
 
@@ -49,6 +53,7 @@ In the future I would use R if I need to make a simple static vis, or a quick pl
 
 Design Achievements
 --
+
 The design achievement for this project was matching the color scheme as closely as possible. 
 I first tried to pick colors directly from the image using a simple color picker. 
 Unfortunately, the colors produced looked faded compared to the image, since the circles need to 
@@ -58,7 +63,7 @@ To get the actual colors I used a simple screen color picker tool I found, to ma
 I took my first vis in Excel, added the matching light grey background, and the 50% circle transparency.
 With this simulation, I slowly changed the color inputs to match the color of the picture.
 
-![pickerProcess](img/DesignAchievement.jpg)
+![Design Achievement](img/DesignAchievement.jpg)
 
 This produced the following color hex codes I used for all my vis recreations:
 
@@ -78,12 +83,30 @@ toyota:	#E86DF1
 <div style="width:10px;height:10px;background-color:#E86DF1;"></div>
 
 
-The color picker I used:
+The color picker I used: <br>
 https://download.cnet.com/ScreenColorPicker/3000-2383_4-75796638.html
 
 
 Technical Achievements
 ---
 
-???? idk, might be something in D3, or maybe R, or some other tool
-maybe annotations
+The technical achievement for this project was adding group highlighting and annotations to the d3 plot.
+
+The group highlighting changes the opacity to 1.0 for the selected brand when hovered over,
+and changes the opacity back to 0.5 when not hovered over.
+To do this process I added a class to each circle that represents its manufacturer. 
+Then I used d3 to select the manufacturer class.
+Finally I used d3 color to change the opacity of the manufacturer's color. 
+
+The annotations adds the car name, MPG, and Weight to a circle when moused over.
+I used d3 annotations to add the annotation.
+I displayed the annotation this way because it does not cut off any information for any of the data points.
+Adding more information from the CSV is doable but I think it would be too much information.
+
+D3 annotations was interesting to use, it somehow works in d3-v6, even though it is meant for d3-v4;
+so there may be some features I did not explore that no longer work.
+
+![Technical Achievement](img/TechnicalAchievement.jpg)
+
+D3 Annotations: <br>
+https://d3-annotation.susielu.com/
