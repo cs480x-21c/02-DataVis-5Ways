@@ -48,7 +48,7 @@ d3.csv('cars-sample.csv', function(data) {
     .enter()
     .append("circle")
       .attr("cx", function (d) {
-          console.log(d.Weight)
+          console.log('test')
            return x(d.Weight); } )
       .attr("cy", function (d) { return y(d.MPG); } )
       .attr("r", 1.5)
