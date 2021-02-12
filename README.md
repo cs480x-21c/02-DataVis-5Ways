@@ -24,6 +24,17 @@ weight increased.
 
 ![ExcelImage](img/Assignment2Excel.png)
 
+# Python + matplot
+
+Python is a versitile language that is very intuitive and has a lot of great addons, such as matplot. 
+I used matplot to make a plot, it is very simple to use matplot, and nothing was needed to take care
+of the rows with missing variables. I created a color set and mapped the classes to the colors, I also
+used viridis in the cmap to automatically change the intensity of the color.
+
+For matplot I used information from: https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/
+
+![PythonImage](img/PythonAssignment2Image.png)
+
 ## Technical Achievements
 - Used the three input excel scatterplot to make the size of the dots increase with vehicle weight.
 
