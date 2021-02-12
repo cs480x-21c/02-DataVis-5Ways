@@ -18,6 +18,16 @@ R is a programming language designed for use in statistics and managing datasets
 
 ![r&ggplot2](img/r&ggplot2.png)
 
+# Python & Plotly
+
+Python is a simpler programming language that is usually considered easier for beginners. Plotly is a python library used for creating charts, graphs, and visualizations. Plotly has a couple different versions, such as an express version, which is faster and easier to implement, but offers a bit less customization.
+
+One neat thing about Plotly, is that it has a built-in method for enabling/disabling visibility of specific colors/manufactureres.
+
+![pythona](img/pythona.png)
+
+![pythonb](img/pythonb.png
+
 # Google Sheets
 
 Google sheets is very similar to excel in terms of functionality, but I find it easier to use since it's browser based and free. Google sheets has built in methods fpr generating graphs from datasets, with the caveat that will often default to the wrong type of chart, and will require some tweaking.
@@ -30,7 +40,7 @@ The bubble chart layout works well for the original image we're trying to replic
 
 Flourish is an online tool for creating visualizations. Out of all the tools I used in this assignment, Flourish was the easiest to use, but it still retained plenty of functionality and versatility.
 
-One neat thing about Flourish, was that it had a built-in method for enabling/disabling visibility of specific colors/manufactureres.
+Similar to Plotly, Flourish also has a built in tool for enabling/disabling colors/manufactureres.
 
 Unfortunately, you can't download the visualization in .html format with a free account, but I can see Flourish being extremelly useful in a professional context.
 
@@ -39,7 +49,7 @@ Unfortunately, you can't download the visualization in .html format with a free 
 ![flourishB](img/flourishB.PNG)
 
 ## Technical Achievements
-- For the d3 implementation, users can mouse over the bubbles, and a tooltip will display the model of car that bubble represents.
+- For the d3 implementation, users can mouse over the bubbles, and a tooltip will display the model of car that bubble represents. This feature is built into Plotly and Flourish, and was not manually implemented in those.
 
 ### Design Achievements
 - Made use of colorblind-friendly colors for points across all visualizations, courtesy of this interactive site:
@@ -48,3 +58,7 @@ Unfortunately, you can't download the visualization in .html format with a free 
 ### Code Sources
 - Found this site extremely helpful when working with d3, and modeled my d3 code on the given interactive examples:
 	- https://www.d3-graph-gallery.com/index.html
+- Made use of the guides on Plotly's website
+	- https://plotly.com/
+	- https://plotly.com/python/bubble-charts/
+	
