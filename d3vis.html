@@ -3,16 +3,41 @@
     <svg id="frame"></svg>
 </div>
 <script>
+    //using code from https://www.d3-graph-gallery.com/graph/scatter_basic.html as a base
 
 console.log(d3); // test if d3 is loaded
 
 //Add an SVG
 var frame = d3.select('#frame')
-    .attr('width', '100%')
-    .attr('height', '100%')
+    .attr('width', 400)
+    .attr('height', 400)
 
 d3.csv("cars-sample.csv", function(data){
-    console.log(data)
+     // Add X axis
+  var x = d3.scaleLinear()
+    .domain([1000, 5000])
+    .range([ 0, 400 ]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([5, 45])
+    .range([ 400, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Weight); } )
+      .attr("cy", function (d) { return y(d.MPG); } )
+      .attr("r", 1.5)
+      .style("fill", "#69b3a2")
 
 });
 
