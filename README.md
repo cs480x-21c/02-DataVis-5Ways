@@ -23,6 +23,7 @@ Tableau is a visual analytics platform focused on generating data visualizations
 
 ## Technical Achievements
 - **Plot Background**: Added the gray background and white gridlines for all plots. Please note that for some tools this was not possible to complete in its entirety - I found that matlab and tableau did not support the customizable minor gridlines. 
+- **Data Cleaning**: For each tool I used I "cleaned" the data by removing entries with "NA" in different ways. For d3 I used the filter() function, for excel I removed the entries maunally, for matlab I used the rmmissing() function, and in matplotlib and tableau the null data is removed automatically.
 
 ### Design Achievements
 - **Color Palette**: I found the some of the colors in the original color scheme to be a little too close to each other. When creating my plots I occasionally found it difficult to differentiate between the blue and teal, as well as red and pink. With the help of <code><a href="https://spectrum.adobe.com/page/color-for-data-visualization/">this guide</a></code> as well as the color lecture, I created a categorical color scheme with five distinct colors. Keeping in mind that each data point would be at 50% opacity, I also chose especially bright colors. <br/>
