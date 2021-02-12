@@ -1,3 +1,4 @@
+# CS 480x Assignment 2: Jean-Philippe Pierre
 # d3.js
 
 d3.js is a Javascript library that can manipulate webpages based on data.
@@ -13,25 +14,25 @@ Matplotlib is a Python library that can create visualizations. Pandas is a Pytho
 
 I firstly used Pandas' read_csv() function to read the csv file into a table. Then, I used its drop_na() function to filter out dataset entries with empty values. I then used Pandas' groupby() function to group the entries by manufacturer. After doing that, I used a list comprehension to convert each group gained from groupby() into a dataframe for that group. For each group, I used dataframe.plot.scatter() (which uses matplotlib) to show a scatter plot for each group in its respective color.
 
-Creating a visualization very quick and simple to set up. By default, the axes had labels and didn't start from zero. Changing the size, color, and opacity of the dots was as simple as adding arguments to the call to dataframe.plot.scatter(). Changing the tick values was also easy to do, as I only needed to call ax.set_xticks() or ax.set_yticks(). It took a little work to display the categories in different colors, however. To achieve this, I had to group the records by manufacturer and then make a plot for each group on the same set of axes.
+I found that it was very quick and easy to create a visualization. By default, the axes had labels and didn't start from zero. Changing the size, color, and opacity of the dots was as simple as adding arguments to the call to dataframe.plot.scatter(). Changing the tick values was also easy to do, as I only needed to call ax.set_xticks() or ax.set_yticks(). It took a little work to display the categories in different colors, however. To achieve this, I had to group the records by manufacturer and then make a plot for each group on the same set of axes.
 
 ![matplotlib](img/matplot_vis.png)
 
 # Tablesaw
 Tablesaw is a Java library for creating data tables, manipulating data tables, and creating visualizations from them.
 
-To create the visualization, I read the csv into a table, then used a query to select only the data records that didn't contain missing data. I calculated the sizes of the dots in a separate column. Then, I added this new column to the table. Then, I used the Plot.show(BubbleChart.create()) API to display the scatter plot.
+To create the visualization, I read the csv into a table, then made a query to select only the data records that didn't contain missing data. I calculated the sizes of the dots in a separate column. Then, I added this new column to the table. Then, I used the Plot.show(BubbleChart.create()) API to display the scatter plot.
 
 Creating the plot was mostly simple, but I found a few parts cumbersome. Removing all records with missing values wasn't a direct operation on the table, for example. Instead, I had to make a selection on the columns to select values that weren't missing, then apply the selection to the table. In addition, the BubbleChart API only accepted the name of a column as an argument for the sizes of the dots. As a result, I had to create a new column to pass in sizes for the API. In addition, I wasn't able to change the axis ticks of the plot.
 
 ![tablesaw](img/tablesaw_vis.png)
 
-The code for this is available in the java folder, in the form of an IntelliJ project. It is in the java.zip folder, and is also in its unexported form.
+The code for this is available in the java folder, in the form of an IntelliJ project. It is in the java.zip file, and is also in its unexported form.
 
 # Flourish
 Flourish is a web application for creating visualizations.
 
-To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set columns used for the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values were easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
+To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set columns used for the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values was easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
 
 ![flourish](img/flourish_vis.png)
 
@@ -67,7 +68,7 @@ To create a visualization, one has to create specification for a visualization. 
 * Changed font to Arial to make the text more appealing to the user.
 * The fade in animation was intended to make viewing the plot a more pleasant experience for the user.
 * When the user hovers over a dot, it becomes opaque and a black outline is shown around it. This is so that the user knows which dot's information is being shown.
-* The feature that updates the maximum X and Y values displays an error message if the user's input is invalid. The error message lets the user know that they should only input numbers to use the features.
+* The feature that updates the maximum X and Y values displays an error message if the user's input is invalid. The error message lets the user know that they should only input numbers to use this feature.
 * Added a grey background to the plot to make it easier to see the dots. This was done because some of the dots were difficult to see on a white background.
 
 ### matplotlib + Pandas
