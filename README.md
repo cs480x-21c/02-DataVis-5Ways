@@ -1,11 +1,15 @@
-# 02-DataVis-5ways
+# Assignment 2 - Data Visualization, 5 Ways  
+Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
 
+I have provided a small dataset about cars, `cars-sample.csv`.
+Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
 # Excel
-===
-The first graph I created was made using Microsoft Excel. Excel is a 
+The first graph I created was made using Microsoft Excel. I've used Excel countless times when visualizing graphical data but this was my first time using it for a weighted scatter plot. My first attempt at making the chart lead to deadends and problems when attempting to color vehicles based on manufacturer. To accomplish this I reffered to [this guide.](https://www.exceldashboardtemplates.com/dynamically-change-excel-bubble-chart-colors/) Utilizing the author's reccomendation of reconstructing the table by leveraging the series feature of excel charts by conditionally building each series using the 'IF()' function, I was able to sort the data set into individual series for each manufacturer. Doing this additionally allowed me to produce a legend of manufacturers and their respective colored markers as the legend displays series. My choice in color scheme for this iteration was to choose solid, contrasting colors in order to identify conflicting markers even with the lowered alpha level(opacity). This was extremely important within the dense, 2000-3000 weight range. Below is the chart I've referenced that has been generated in Excel. 
+![excel](excel/excelCarsScatter.png)
+# Tableau
+ 
 
 
 
