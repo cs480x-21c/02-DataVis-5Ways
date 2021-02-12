@@ -5,6 +5,14 @@
   <body>
    <script>
      console.log(d3);
+     console.log("hello");
+     d3.csv("cars-sample.csv", function(data) {
+        for(var i=0; i < data.length; i++) {
+            console.log("hello");
+            console.log(data[i].Manufacturer);
+            console.log(data[i].MPG);
+        }
+     });
      
    </script>
   </body>
