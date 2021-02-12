@@ -26,7 +26,7 @@ One neat thing about Plotly, is that it has a built-in method for enabling/disab
 
 ![pythona](img/pythona.png)
 
-![pythonb](img/pythonb.png
+![pythonb](img/pythonb.png)
 
 # Google Sheets
 
