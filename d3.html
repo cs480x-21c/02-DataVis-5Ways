@@ -1,0 +1,57 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<svg id="scatterplot" ></svg>
+<script>
+  console.log(d3); // test if d3 is loaded
+  
+  var margin = {top: 20, right:20, bottom:30, left:50},
+	width = 500 - margin.left - margin.right;
+	height = 500 - margin.top - margin.bottom;
+	
+  // Add an SVG
+  var svg = d3.select('#scatterplot')
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  //axes scales/ranges
+  var x = d3.scaleLinear()
+	.domain([1630, 5000])
+	.range([0, width]);
+  var y = d3.scaleLinear()
+	.domain([10, 50])
+	.range([height, 0]);
+  var pointSize = d3.scaleLinear()
+	.domain([1630, 5000])
+	.range([3, 7]);
+  
+  //import data from CSV
+  d3.csv("cars-sample.csv").then(function(data) {
+  
+	console.log(data.Weight);
+	console.log(data.MPG);
+	
+	//adding scatterplot
+	svg.selectAll("dot")
+		.data(data)
+	  .enter().append("circle")
+		.attr("r", function(d) {return pointSize(d.Weight); })
+		.attr("cx", function(d) { return x(d.Weight); })
+		.attr("cy", function(d) { return y(d.MPG); })
+		.attr('fill', 'blue')
+		
+		
+  
+	//adding X axis
+	svg.append("g")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.axisBottom(x));
+		
+	//adding Y axis
+	svg.append("g")
+		.call(d3.axisLeft(y));
+		
+	})	
+  
+</script>
