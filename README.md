@@ -12,7 +12,7 @@ Dedicated tools (i.e. Excel) do not count towards the language requirement.
 - d3  :heavy_check_mark:
 - Matplotlib :heavy_check_mark:
 - Python + Seaborn :heavy_check_mark:
-- Matlab :heavy_check_mark:
+- Flourish :heavy_check_mark:
 
 ## Other Requirements
 
@@ -25,27 +25,27 @@ Dedicated tools (i.e. Excel) do not count towards the language requirement.
 
 # R + ggplot2
 
-![ggplot2](img/r-ggplot.png)
+![r+ggplot2](img/r-ggplot.png)
 
 # Excel
 
-![ggplot2](img/excel.png)
+![excel](img/excel.png)
 
 # d3
 
-![ggplot2](img/d3.png)
+![d3](img/d3.png)
 
 # Matplotlib
 
-![ggplot2](img/matplotlib.png)
+![matplotlib](img/matplotlib.png)
 
 # Python + Seaborn
 
-![ggplot2](img/python-seaborn.png)
+![python+seaborn](img/python-seaborn.png)
 
-# Matlab
+# Flourish
 
-![ggplot2](img/matlab.png)
+![flourish](img/flourish.PNG)
 
 ## Technical Achievements
 
