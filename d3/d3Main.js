@@ -5,6 +5,8 @@
  *
  * Provides all the hard-coded values to make the vis
  * Provides the main method to draw the plot
+ * Some code taken from:
+ * https://www.d3-graph-gallery.com/scatter
  */
 
 // pixel size taken from the image provided (exact)
@@ -104,12 +106,23 @@ function addAxisLabel(svg, x, y, text)
 function drawPlot(svg, data)
 {
     svg.append('g')
+        .attr("id", "scatterPlot")
         .selectAll("dot")
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function(d) { return xScale(d.Weight)})
-        .attr("cy", function(d) { return yScale(d.MPG)})
-        .attr("r", function(d) { return rScale(d.Weight) })
-        .style("fill", function(d) { return cScale(d.Manufacturer)});
+            .attr("class", function (d) { return d.Manufacturer })
+            .attr("cx", function(d) { return xScale(d.Weight)})
+            .attr("cy", function(d) { return yScale(d.MPG)})
+            .attr("r", function(d) { return rScale(d.Weight) })
+            .style("fill", function(d) { return cScale(d.Manufacturer)})
+            .on("mouseover", function (e, d) { changeCircleOpacity(d, 1.0); })
+            .on("mouseleave", function(e, d) { changeCircleOpacity(d, 0.5); });
+}
+
+function changeCircleOpacity(d, opacity)
+{
+    d3.selectAll("." + d.Manufacturer)
+        .transition()
+        .style("fill", d3.color(cScale(d.Manufacturer)).copy({opacity:opacity}));
 }

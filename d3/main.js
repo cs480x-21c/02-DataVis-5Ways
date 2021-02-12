@@ -11,6 +11,11 @@
  */
 function main()
 {
+
+
+
+
+
     // Waits till the data is read
     let dataPromise = new Promise((resolve)=>
     {
