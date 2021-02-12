@@ -41,6 +41,7 @@ Of the 5 tools, you must use at least 3 libraries (libraries require code of som
 This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
 Dedicated tools (i.e. Excel) do not count towards the language requirement.
 
+
 Otherwise, you should seek tools and libraries to fill out your 5.
 
 Below are a few ideas. Do not limit yourself to this list!
@@ -129,10 +130,30 @@ While it takes time to find the correct documentation, these functions made the 
 
 ![ggplot2](img/ggplot2.png)
 
-# d3...
+# d3.js 
 
 (And so on...)
 
+![d3](img/d3-js-pic.png)
+
+# Python + Altair 
+
+![altair](img/altair-python.png)
+
+# Python + Matplotlib
+
+![matplotlib](img/python-matplotlib.png)
+
+# Google Sheets
+
+![google](img/chart-google.png)
+
+# Tableau
+
+![tableau](img/tableau.png)
+# Flourish
+
+![flourish](img/flourish.png)
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
