@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="787e33d2-9de6-41c6-9d76-e63f5b5fa9e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/d3/cars-sample.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d3/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d3/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/d3/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PowerBI-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/PowerBI-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Python.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars-sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cars-sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613088425782</updated>
-      <workItem from="1613088426867" duration="22959000" />
+      <workItem from="1613088426867" duration="25094000" />
     </task>
     <servers />
   </component>
@@ -109,5 +103,9 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="501" y="216" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1613088722902" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1613161519627">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1613161519627" />
   </component>
 </project>
