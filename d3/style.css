@@ -1,0 +1,22 @@
+
+svg{
+    background-color: #ebf0f1;
+}
+
+div{
+    background-color: antiquewhite;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Aclonica';
+    font-size: 22px;
+
+}
+text{
+    font-family: 'Tangerine', serif;
+    font-size: 14px;
+}
