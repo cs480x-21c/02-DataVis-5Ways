@@ -37,7 +37,8 @@ R is a language and environment especially for statistical computing
  wanted to use, including drawing x and y axis, x and y labels, loading data, 
  mapping each data as a circle, changing the colors and sizes, etc. I can
  also easily change the background to be an image and design different
- shapes for different Manufacturers.
+ shapes for different Manufacturers. Blue is ford, yellow is toyota, green
+ is bmw, purple is honda and cyan is mercedes.
  
  ![](Flourish/Flourish-ScatterPlot.png)
  
@@ -50,6 +51,7 @@ R is a language and environment especially for statistical computing
  things get a lot easier. I created a svg and added axis, labels and shapes to it.
  I also created tooltips so that when the mouse hover over a point, there will
  be a message pops up; and when the mouse moves away, the message disappears.
+ Pink is bmw, green is ford, cyan is honda, orange is mercedes and purple is toyota.
  
   ![](img/d3.jpg)
   
