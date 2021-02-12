@@ -4,7 +4,7 @@ Assignment 2 - Data Visualization, 5 Ways
 ===
 
 # R + ggplot2 
-My first implementation uses R and ggplot2 to  create the visualization of the car data. You can view a screenshot of the visualization ![here](img/r+gglot2.png).
+My first implementation uses R and ggplot2 to  create the visualization of the car data. You can view a screenshot of the visualization ![here](r+gglot2.png).
 
 Sources:
 * https://flowingdata.com/2010/11/23/how-to-make-bubble-charts/
