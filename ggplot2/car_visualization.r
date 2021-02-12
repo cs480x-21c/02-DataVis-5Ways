@@ -1,11 +1,10 @@
-#install.packages("ggplot2")
+
 library(ggplot2)
 
-print("hello")
+cars <- read.csv("https://raw.githubusercontent.com/vygrasso/02-DataVis-5Ways/main/cars-sample.csv")
 
-cars <- read.csv("../cars-sample.csv")
+sp<-ggplot(cars, aes(y=MPG, x=Weight, size=Weight, color=Manufacturer)) +
+    geom_point(alpha=0.5)
 
-ggplot(cars, aes(y=MPG, x=Weight, size=Weight)) +
-    geom_point()
+sp + scale_color_manual(values=c("#F79EE7", "#FF9333", "#20CD24", "#AF26AA", "#2131E7"))
 
-#ggsave("../img/ggplotcarsvisualization.png")
