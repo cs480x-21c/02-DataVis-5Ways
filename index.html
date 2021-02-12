@@ -1,0 +1,106 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<!-- Create the place where the graph is to be rendered on the page -->
+<svg id="vis" style="width: 1000; height: 1000"></svg>
+
+<script>
+   
+    var color = ['yellow', 'black', 'red', 'blue', 'green']
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#vis")
+      .append("svg")
+        .attr("width", 960)
+        .attr("height", 800)
+      .append("g")
+        .attr("transform",
+              "translate(" + 60 + "," + 30 + ")");
+
+    // Add X axis
+    var x = d3.scaleLinear()
+        .domain([0, 5000])
+        .range([0, 870]);
+      svg.append("g")
+        .attr("transform", "translate(0," + 700 + ")")
+        .call(d3.axisBottom(x).ticks(5));
+    
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .domain([0, 50])
+        .range([700, 0]);
+      svg.append("g")
+        .call(d3.axisLeft(y).ticks(5));
+
+    // Add Axis Labels
+    svg.append('text')
+        .attr('x', -20)
+        .attr('y', -15)
+        .text("MPG")
+
+    svg.append('text')
+        .attr('x', 400)
+        .attr('y', 750)
+        .text("Weight")
+
+    svg.append('text')
+        .attr('x', 400)
+        .attr('y', -15)
+        .text("Weight vs MPG")
+    
+    //Read the data
+    d3.csv("cars-sample.csv").then(function(data) {
+
+        var tooltip = d3.select('this')
+        .append('div')
+        .style('position', 'absolute')
+        .style('z-index', 10)
+        .style('visibility', 'hidden')
+        .text("Filler Text")
+        //.text(function(d) { return 'Weight: ' + x(d["Weight"]) + " , " + "MPG: " + y(d["MPG"])})
+
+        // Add dots
+        svg.selectAll('g')
+        .data(data)
+        .enter().append('circle')
+        .attr('r', function(d) { return x(d["Weight"])/80})
+        .attr('fill', function(d) {
+            var i = -1
+            var outputcolor = ''
+
+            //console.log(d["Manufacturerer"]);
+
+            switch(d["Manufacturer"]) {
+                case "bmw":
+                    i = 0
+                    return color[i]
+                case 'toyota':
+                    i = 1
+                    return color[i]
+                case 'honda':
+                    i = 2
+                    return color[i]
+                case 'ford':
+                    i = 3
+                    return color[i]
+                case 'mercedes':
+                    i = 4
+                    return color[i]
+                default:
+                   outputcolor = 'black'
+                   return color
+            }
+        })
+        .attr('cx', function(d) {return x(d["Weight"])})
+        .attr('cy', function(d) {return y(d["MPG"])})
+        .style('fill-opacity', '0.5')
+        .append('div')
+        .on("mouseover", function(d){tooltip.text(d); return tooltip.style("visibility", "visible");})
+        .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+        .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+        
+        //console.log("X: " + x(data["Weight"]))
+        //console.log("Y: " + y(data["MPG"]))
+
+    });
+
+</script>
