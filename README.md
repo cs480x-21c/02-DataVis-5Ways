@@ -25,7 +25,7 @@ Dedicated tools (i.e. Excel) do not count towards the language requirement.
 
 # R + ggplot2
 
-![r+ggplot2](img/r-ggplot.png)
+![r+ggplot2](img/r_ggplot.png)
 
 # Excel
 
