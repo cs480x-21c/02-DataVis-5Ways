@@ -36,7 +36,7 @@ d3.csv("cars-sample.csv").then(function(data) {
   x.domain([1500, 5000 ]);
   y.domain([7, 45]);
 
-var color = d3.scale.category10();
+var color = d3.scaleOrdinal(d3.schemeCategory10)
       
   // Add the scatterplot
   svg.selectAll("dot")
