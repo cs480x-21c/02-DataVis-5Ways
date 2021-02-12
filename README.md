@@ -119,3 +119,9 @@ honda, '+' represents toyota, diamond represents bmw, circle represents ford,
  and triangle represents mercedes. This looks a lot more fun, doesn't it?
  Also, don't worry about the size. For each shape, the size is still based
  on the weight.
+ 
+ - **Background Image in Flourish**:
+ Imagine if we add an amazing background image to the scatter plot that
+ relates to the topic, it will be cool! Since in this assignment we are
+ dealing with cars, I got a car image which looks pretty nice and set it
+ to be the background of the scatter chart.
