@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+        .tooltip {
+            position: absolute;
+            font-size: 20px;
+            pointer-events: none;
+            background-color: rgb(236, 195, 90);
+            padding: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+<div id="scatter"></div>
+<script>
+  //console.log(d3); // test if d3 is loaded
+  var width = 600, height = 600 // x-padding is 50 and y-padding is 10
+  var svg = d3.select("#scatter")
+    .append("svg")
+    .attr("width",width)
+    .attr("height",height)
+    
+ 
+  d3.csv("cars-sample.csv",function(data){
+      //console.log(data.MPG)
+      var xScale = d3.scaleLinear().domain([1500,5000]).range([0,500]);
+      var yScale = d3.scaleLinear().domain([8,50]).range([500,0]);
+      var xAxis = d3.axisBottom().scale(xScale).ticks(4)
+      var yAxis = d3.axisLeft().scale(yScale).ticks(4)
+
+
+      svg.append("g")
+      .attr("transform","translate(50,510)")
+      .call(xAxis)
+      svg.append("g")
+      .attr("transform","translate(50,10)")
+      .call(yAxis)
+
+      var toolTip = d3.select("#scatter") 
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+
+      svg
+      .append('circle')
+      .attr('cx',function(d){
+          return 50 + xScale(data.Weight)
+        })
+        .attr('cy',function(d){
+            return yScale(data.MPG) 
+        })
+        .attr('r',function(d){
+            return 2.5 * (data.Weight/1000)
+
+
+        })
+        .attr('fill',function(d){
+            if(data.Manufacturer == "bmw"){
+                return "orange"
+            }
+            else if(data.Manufacturer == "ford"){
+                return "green"
+            }
+            else if(data.Manufacturer == "honda"){
+                return "lightblue"
+            }
+            else if(data.Manufacturer == "mercedes"){
+                return "darkblue"
+            }
+            else if(data.Manufacturer == "toyota"){
+                return "purple"
+            }
+        })
+        .attr('opacity',0.5)
+        .on('mouseover',function(){
+
+            d3.select(this)
+            .attr("opacity", 1)
+
+            toolTip
+            .text(data.Car)
+            .style("left", d3.select(this).attr('cx')+"px")
+            .style("top", (d3.select(this).attr('cy')-30)+"px")
+            .transition()
+            .duration(200)
+            .style("opacity", 1)
+
+            //console.log(d3.select(this).attr('cy'))
+          
+
+        })
+
+        .on('mouseout',function(){
+
+            d3.select(this)
+            .attr("opacity", 0.5)
+
+            toolTip
+            .transition()
+            .duration(300)
+            .style("opacity", 0)
+            
+         
+        })
+        
+
+        svg.append("text")
+        .attr("transform",
+        "translate(" + (width/2)+","+
+                (550 - 10) + ")")
+        .style("text-anchor","middle")
+        .text("Weight")
+
+        svg.append("text")
+        .attr("y",225)
+        .attr("x",25)
+        .style("text-anchor","middle")
+        .text("MPG")
+        .attr("transform","rotate(-90,25,225)")
+
+    })
+
+</script>
+    
+</body>
+</html>
+
+
+
+<!-- if(data.Weight>=1000 && data.Weight<2000){
+    return 5
+}
+else if(data.Weight>=2000 && data.Weight<3000){
+    return 7.5
+}
+else if(data.Weight>=3000 && data.Weight<4000){
+    return 10
+}
+else if(data.Weight>=4000 && data.Weight<5000){
+    return 12.5
+} -->
