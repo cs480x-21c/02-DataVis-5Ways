@@ -7,9 +7,9 @@ console.log(d3); // test if d3 is loaded
 
 
 // set the dimensions and margins of the graph
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 500 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top: 20, right: 50, bottom: 100, left: 50},
+    width = 600 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
 
 
@@ -67,8 +67,8 @@ var color = d3.scaleOrdinal(d3.schemeCategory10)
    .text("Weight")
 
   svg.append('text')
-   .attr('x', 20)
-   .attr('y', 250)
+   .attr('x', -150)
+   .attr('y', 10)
    .attr('transform', 'rotate(270, 20, 55)')
    .style("font-size", 20)
    .text("MPG")
