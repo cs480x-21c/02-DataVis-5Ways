@@ -1,142 +1,75 @@
-# 02-DataVis-5ways
-
-Assignment 2 - Data Visualization, 5 Ways  
-===
-
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
-# R + ggplot2 + R Markdown
+# D3
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+The first data vizualiation tool I used for this assignment was D3. Since I am relativley new to D3 it took me some time
+to get used to the syntax and anon functions. But after that I found the data visualization pretty simple. It was challenging
+to understanding how the data was imported from CSV into JSON object. But overall, the tool is powerful and I see myself 
+using it again
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+![d3](D3/img/img.png)
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+## Technical achievements: 
+For the technical achievement I animated the graph to make it look like the graphical points
+are bouncing. This animation is delayed based on the color/company that the point is from. 
 
-![ggplot2](img/ggplot2.png)
+## Design achievements 
+For the design achievement I added tooltips to the data points that contained more specific information
+on that data point. The tooltip contains that car name, MPG, and Weight. 
 
-# d3...
+# Excel
 
-(And so on...)
+The second tool I used was Excel. Coming into this course I had used a fair amount of Excel and assumed that a task 
+like this would be fairly simple to accomplish. However, I was mistaken. This program is not well suited for a graph like this
+It is challenging to group series by color, and change the size of the point based on the weight. This required a lot of data
+manipulation in the CSV file. I would only use Excel for simple 1 to 1 relationship functions. [X, Y]. 
+
+![Excel](Excel/img/DataViz2-Excel.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+NA
+## Design Achievements
+NA
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+# R + ggplot2
+
+The third tool I used was R and ggplot2. This was very simple to use, and it made this viz extremely simple to accomplish. 
+As you can see everything was accomplished in a single line of code using ggplot library and the geom_point() function. 
+For intensive viz projects I would most certainly feel comfortable using R + ggplot again. The power of the tool was unmatched
+compared to the others used in this assignment. 
+
+![R + ggplot2](R%20+%20ggplot2/img/img.png)
+
+## Technical Achievements
+NA
+## Design Achievements
+NA
+
+# Python + matplotlib + (pandas)
+
+The fourth tool I used was Python and matplotlib. This was also very similar to use and it made this viz simple to accomplish. 
+The hardest part of using this libary was learning how to extract information from the pandas library dataframe. However, despite this
+it still did not require any data manipulation. I found that matplotlib with pandas was as simple to use as ggplot2.
+
+![Python + matplotlib](Python%20+%20matplotlib/img/img.png)
+
+## Technical Achievements
+NA
+## Design Achievements
+NA
+
+# Tableau
+
+The last tool I used was tableau. Tableau is tool similar to excel, but with more flexibility in terms of data presentation. 
+I enjoyed learning this new tool and was surprised with the complexity of the data analysis tools, and data presentation tools. 
+Once I learned about the GUI and was able to get myself oriented, constructing a graph was done within a few clicks. Overall, 
+I would use Tableau over Excel any day (still not as good as ggplot2 and python though). 
+
+![Tabluea](Tableau/img/img.png)
+
+
+## Technical Achievements
+NA
+## Design Achievements
+NA
