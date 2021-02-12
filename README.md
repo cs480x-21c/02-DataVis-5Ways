@@ -40,7 +40,6 @@ I would consider Excel to be an easy tool to create a scatterplot visualization.
 ## D3
 
 D3.js is a Javascript library for manipulating documents based on data. D3 stands for Data Driven Document, and is used to create interactive data visualizations. This chart is composed in an .html document that comprises of the d3 chart generation.
-
 I have not used d3 too much outside of class, so this plot was more difficult for me. I did have to look up [resources](https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js) to read in the data from the cars-sample.csv file, and [resources](https://www.d3-graph-gallery.com/graph/scatter_basic.html) to create a scatterplot.
 ![d3](img/D3.js.png)
 
@@ -68,7 +67,9 @@ Since this was my first time using Flourish, it took a little bit of trial and e
 ## Technical Achievements
 
 - **Extra Visualization**: I completed 6 total visualizatons of the cars-sample.csv data. My extra chart comes from Flourish. Using D3 to generate charts was new to me, so that chart took the most time to generate.
+- **Cleaned Data**: For each plot, I made sure that the empty values in the MPG and the Weight were disregarded.
 
 ### Design Achievements
 
 - **Color Consistency**: Matched (as close as I could) the colors from the original specification in all of the charts. bmw = red, ford = dark green/yellow, honda = lightgreen, mercedes = lightblue/cyan, toyota = purple/pink.
+- **Legend on each plot**: For each plot I included a key/legend with the correct corresponding colors.
