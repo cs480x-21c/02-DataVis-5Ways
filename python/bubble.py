@@ -1,48 +1,32 @@
-from pylab import *
-from scipy import *
 import pandas as pd
-import numpy
-import plotly.express as px
+import matplotlib.pyplot as plt
 
 df = pd.read_csv(r'cars-sample.csv')
 
-""" fig = px.scatter(df, x="Weight", y="MPG",
-                 color="Manufacturer",
-                 size='Weight',
-                 hover_data=['Weight'])
 
-fig.show() """
+def func(a):
+    if "bmw" in a.lower():
+        return "red"
+    elif "ford" in a.lower():
+        return "orange"
+    elif "honda" in a.lower():
+        return "yellow"
+    elif "mercedes" in a.lower():
+        return "green"
+    elif "toyota" in a.lower():
+        return "blue"
+    else:
+        return "gray"
 
 
-x = []
-y = []
-color = []
-area = []
-counter = zeros(97)
+df['Manufacturer-Colors'] = df.Manufacturer.apply(lambda x: func(x))
 
-for i in counter:
-    x.append(df['Weight'])  # weight
-    y.append(df['MPG'])  # mpg
-   # color.append(df['Manufacturer'])  # menufacturer
-    area.append(df['Weight']*0.1)  # weight
 
-# making the scatter plot
-sct = scatter(x, y, s=area, linewidths=2, edgecolor='w')
-sct.set_alpha(0.75)
-
-axis([1500, 5000, 10, 45])
-xlabel('Weight')
-ylabel('MPG')
-show()
-
-_manufacturers = ['bmw', 'ford', 'honda', 'mercedes', 'toyota']
-
-""" # create data
+# create data
 x = df['Weight']
 y = df['MPG']
 z = df['Weight']
-# colors = numpy.random.choice(_manufacturers, size=97)
-# use the scatter function
-# plt.scatter(x, y, s=z*0.1, c=colors)
-plt.scatter(x, y, s=z*0.1) """
-# plt.show()
+colors = df['Manufacturer-Colors']
+
+plt.scatter(x, y, s=z*0.1, c=colors, alpha=0.5)
+plt.show()
