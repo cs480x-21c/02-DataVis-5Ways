@@ -118,20 +118,22 @@ We will choose some at random to run and test.
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
 # R + ggplot2 + R Markdown
+Sources:
+* https://flowingdata.com/2010/11/23/how-to-make-bubble-charts/
+* https://www.r-graph-gallery.com/320-the-basis-of-bubble-plot.html
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
+# Python + Matlab + Pandas + Seaport
+Sources:
+* https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html
+* https://www.tutorialspoint.com/python_data_science/python_bubble_charts.htm
+* https://glowingpython.blogspot.com/2011/11/how-to-make-bubble-charts-with.html
+* https://python-graph-gallery.com/270-basic-bubble-plot/
 
 # d3...
 Sources:
 * https://www.d3-graph-gallery.com/graph/bubble_basic.html
+* https://www.d3-graph-gallery.com/graph/bubble_template.html
 
 # Excel
 
