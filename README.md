@@ -1,142 +1,75 @@
-# 02-DataVis-5ways
+# CS 480x Assignment 2: Jean-Philippe Pierre
+# d3.js
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+d3.js is a Javascript library that can manipulate webpages based on data.
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+To visualize the dataset, I created an x and y axis using d3.js's scaleLinear, axisBottom, and axisLeft API's. To create axis labels, I used d3.js to add text SVG elements to the document. Then, to create the dots in the scatter plot, I used d3's data() API to add a dot for each data entry, with a radius and color determined by the weight and manufacturer.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+I found it cumbersome to use axes in d3. Regardless of the type of axis that is created, d3 will render the axis at (0,0) by default, requiring the developer to translate the axes to be able to see the axis ticks. Also, after moving the axes, the developer has to translate the dots in the scatter plot by the same amount as they translated the axes. Axes also didn't have enough features for customization. Axes didn't provide labels; I had to create them myself. I also couldn't find a way to define the amount that the axis ticks increased by. Apart from the trouble I had with the axis features, I found that d3 made it easy to dynamically create dots based on the dataset. Adding an attribute to the dots usually required only a few lines of code.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+![d3](img/d3vis.png)
 
-Your goal is to use 5 different tools to make the following chart:
+# Matplotlib + Pandas
+Matplotlib is a Python library that can create visualizations. Pandas is a Python library used for creating and manipulating data tables.
 
-![ggplot2](img/ggplot2.png)
+I firstly used Pandas' read_csv() function to read the csv file into a table. Then, I used its drop_na() function to filter out dataset entries with empty values. I then used Pandas' groupby() function to group the entries by manufacturer. After doing that, I used a list comprehension to convert each group gained from groupby() into a dataframe for that group. For each group, I used dataframe.plot.scatter() (which uses matplotlib) to show a scatter plot for each group in its respective color.
 
-These features should be preserved as much as possible in your replication:
+I found that it was very quick and easy to create a visualization. By default, the axes had labels and didn't start from zero. Changing the size, color, and opacity of the dots was as simple as adding arguments to the call to dataframe.plot.scatter(). Changing the tick values was also easy to do, as I only needed to call ax.set_xticks() or ax.set_yticks(). It took a little work to display the categories in different colors, however. To achieve this, I had to group the records by manufacturer and then make a plot for each group on the same set of axes.
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+![matplotlib](img/matplot_vis.png)
 
-Other features are not required. This includes:
+# Tablesaw
+Tablesaw is a Java library for creating data tables, manipulating data tables, and creating visualizations from them.
 
-- The background grid.
-- The legends.
+To create the visualization, I read the csv into a table, then made a query to select only the data records that didn't contain missing data. I calculated the sizes of the dots in a separate column. Then, I added this new column to the table. Then, I used the Plot.show(BubbleChart.create()) API to display the scatter plot.
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+Creating the plot was mostly simple, but I found a few parts cumbersome. Removing all records with missing values wasn't a direct operation on the table, for example. Instead, I had to make a selection on the columns to select values that weren't missing, then apply the selection to the table. In addition, the BubbleChart API only accepted the name of a column as an argument for the sizes of the dots. As a result, I had to create a new column to pass in sizes for the API. In addition, I wasn't able to change the axis ticks of the plot.
 
-Improvements are also welcome as part of Technical and Design achievements.
+![tablesaw](img/tablesaw_vis.png)
 
-Libraries, Tools, Languages
----
+The code for this is available in the java folder, in the form of an IntelliJ project. It is in the java.zip file, and is also in its unexported form.
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+# Flourish
+Flourish is a web application for creating visualizations.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set columns used for the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values was easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+![flourish](img/flourish_vis.png)
 
-I have marked a few that are strongly suggested.
+Below are the settings I used to create the plot:
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+![flourish](flourish/data_settings.png)
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+![flourish](flourish/vis_settings.png)
 
-Tips
----
+# Vega-lite
+Vega-lite is a Javascript library that can create visualizations.
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+To create a visualization, one has to create specification for a visualization. In the specification, I defined what data to use, the type of visualization, the sizes of the dots, and the colors of the dots. It was very quick and easy to create the visualization, but it took a while to figure out how to set the opacity of the dots. My only issue while working with Vega-lite was that I wasn't able to set the maximum size of the dots, so the dots' change of size with weight isn't very apparent.
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+![vegalite](img/vega_vis.png)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+### d3
+* Created an animation for the dots to fade in when they appear in the plot.
+* Cleaned data by removing data records with no MPG from the dataset.
+* Created a tooltip feature that shows a car's name and year when the user hovers over one of the dots.
+* Created a feature allowing the user to display the plot with a different maximum X value and Y value.
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+### matplotlib + Pandas
+* Cleaned data by removing data records with no MPG from the dataset.
+* Added a legend to the plot.
+
+### Tablesaw
+* Cleaned data by removing data records with no MPG from the dataset.
+
+## Design Achievements
+### d3
+* Changed font to Arial to make the text more appealing to the user.
+* The fade in animation was intended to make viewing the plot a more pleasant experience for the user.
+* When the user hovers over a dot, it becomes opaque and a black outline is shown around it. This is so that the user knows which dot's information is being shown.
+* The feature that updates the maximum X and Y values displays an error message if the user's input is invalid. The error message lets the user know that they should only input numbers to use this feature.
+* Added a grey background to the plot to make it easier to see the dots. This was done because some of the dots were difficult to see on a white background.
+
+### matplotlib + Pandas
+* Added a legend to the plot to let the user know the corresponding manufacturer for each color.
