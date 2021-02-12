@@ -8,28 +8,40 @@
 console.log(d3); // test if d3 is loaded
 
 //Add an SVG
-var frame = d3.select('#frame')
-    .attr('width', 400)
-    .attr('height', 400)
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
-d3.csv("cars-sample.csv", function(data){
-     // Add X axis
+// append the svg object to the body of the page
+var svg = d3.select("#frame")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv('cars-sample.csv', function(data) {
+
+  // Add X axis
   var x = d3.scaleLinear()
     .domain([1000, 5000])
-    .range([ 0, 400 ]);
-  frame.append("g")
-    .attr("transform", "translate(0,400)")
+    .range([ 0, width ]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x));
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([5, 45])
-    .range([ 400, 0]);
-  frame.append("g")
+    .domain([7, 45])
+    .range([ height, 0]);
+  svg.append("g")
     .call(d3.axisLeft(y));
 
   // Add dots
-  frame.append('g')
+  svg.append('g')
     .selectAll("dot")
     .data(data)
     .enter()
@@ -39,7 +51,7 @@ d3.csv("cars-sample.csv", function(data){
       .attr("r", 1.5)
       .style("fill", "#69b3a2")
 
-});
+})
 
 
 </script>
