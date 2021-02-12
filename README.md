@@ -17,8 +17,8 @@ If I changed the minimum, then all the numbers would change.
 If I could fix the axes, the background would fix itself.
 Getting tick marks without lines seems impossible, I saw some hacks for it that worked in older versions of excel.
 
-In the future I would use Excel for quickly putting in data to see what it looked like or trying out different 
-types of vis with the same dataset, but not for a final product.
+In the future I would use Excel for quickly putting in data to see what it looked like or
+trying out different types of vis with the same dataset.
 
 ![Excel Vis](img/ExcelVis.jpg)
 
@@ -32,6 +32,19 @@ Write a paragraph for each vis tool/library you used/ Was
 it easy? Difficult? Where could you see the tool being useful in the future?
 Did you have to use any hacks for data manip to get the right chart? Or anything else of note.
 
+# R and ggplot
+
+R with GG plot was the library used to create the original vis. So it should be able to re-create it.
+
+I found re-creating the graph to be easy once I understood how ggplot worked. 
+I am surprised I needed only 5 lines of code. 
+Though it was only easy because the vis used R's default color scheme.
+If the colors, font, axis, or other elements were different, 
+it would be difficult to re-create the vis in R.
+
+In the future I would use R if I need to make a simple static vis, or a quick plot.
+
+![R Vis](img/RVis.png)
 
 
 Design Achievements
