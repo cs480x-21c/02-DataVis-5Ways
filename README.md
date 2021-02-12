@@ -1,142 +1,50 @@
-# 02-DataVis-5ways
+# Python
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+Python is by far my favorite overall programming language, especially when it comes to data manipulation. Using a few different common libraries (numpy, pandas, mathplotlib) I was able to pretty quickly put together a graph similar to what was asked.
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+It was easy to make the graph look nice, color code based on manufacturer and even add a legend. What was not easy was scaling the size of the individual dots. If you look at plot.py you can see some commented out code trying to fix this problem but to no avail. I'm sure I would be able to successfully scale the size of the dots given more time.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+![pythonplot](img/python_graph.png)
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Excel
 
-Your goal is to use 5 different tools to make the following chart:
+Excel was a program I thought would be rather easy to create a graphic with. Unfortunately, with my lack of excel expertise it ended up taking longer then expected, allthough I do feel as if I could do something similar in excel much faster now.
 
-![ggplot2](img/ggplot2.png)
+Looking at the graph, you can see it has been color coded based on manufacturer with a legend at the side. This was the only other program I was also unable to figure out a way to scale the size of each individual point. Looking at my excel file (data vis.xlsx) you can see how the points were grouped up, running some quick commands allowed me to group not only by manufacturer but also by weight. Unfortunately, even though I was able to group by weight, I still was unale to scale the size based off of that.
 
-These features should be preserved as much as possible in your replication:
+![excelgraph](img/excel_graph.png)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# Flourish
 
-Other features are not required. This includes:
+Having never used this program before, it was remarkably easy to import my data and get a graph created. I was able to hit every necessary point for this project with ease using Flourish. Grouping my manufacture and scaling size based on weight were both only a few clicks away. Allthough, I do recognize the limitations this software comes with in comparison to an actual coding language like d3 (javascript) or python.
 
-- The background grid.
-- The legends.
+Looking at the graph, you can see the grouping by manufacturer with the legend at the top as well as the scaling of size based off of weight. Making the points transparent was another quick change using Flourish. 
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+![flourishgraph](img/Flourish_graph.png)
 
-Improvements are also welcome as part of Technical and Design achievements.
+# Scatterplotonline
 
-Libraries, Tools, Languages
----
+After using Flourish, I wanted to see if I could find another online graphing tool with similar features. This led me to using a few different websites and eventually landing on "scatterplotonline". This software was also very easy to use for basic graphic needs. It categorized all the columns by itself for use in drop down menus for things like "Scaling size of points based on []". This made meeting the assinments requirements easy while also allowing quite a few different options.
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+Looking at the graph, the points were grouped by manufacturer and colored with a legend in the top right. The points were scaled based on weight and given half opacity. 
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+![scatterplotonlinegraph](img/scatterplotonline_graph.png)
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+# d3
 
-I have marked a few that are strongly suggested.
+Best for last. d3 was by far the most interesting tool to use for this assignment. The amount of customization and options you have is daunting. I decided to try and recreate the graphs I had already made and then add some more functionality to try and test what is possible withing d3. 
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+Looking at the graph, you can see it is quite basic and similar to my other graphs, just that alone was a much harder feat in comparison to something like Flourish or scatterplotonline. The difference being, after getting that basic functionality of the graph, I was able to expand upon that and add extra data, I'll talk about this in the Achievements section below.
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
+![d3graph](img/d3_graph.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- The majority of my graphs had legends (excluding d3)
+- d3 graph functionality
+  - Mousing over a point on my d3 graph will do 2 things:
+      - change the opacity to 1, making it stand out
+      - tooltip donut will pop up and tell you which car it is you're looking at
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Majority of my time was spent making them look better, rather then getting them to work.
