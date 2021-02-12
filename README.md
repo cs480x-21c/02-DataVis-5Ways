@@ -1,142 +1,76 @@
-# 02-DataVis-5ways
+# CS4802 Colby Frechette Assignment 2
+For Assignment 2 I was asked to create the same graph, Figure 1, in at least 5 different data visualization tools, both software and libraries. I chose to work with both software and libraries I have used as well as ones I have never used.
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+![img.png](img/img.png)\
+(Figure 1)
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+# d3.js
+To begin I started with the only required data visualization tool, the d3.js library. Overall, d3.js was by far the worst tool to work with. It was the worst in the way that it's customizability made it difficult to create the look I was going for. It was bad in the way programming in C is bad. I definitely struggled the most with d3 but learned the most from it as well. I actually liked learning about it but wish I could have implemented some interactivity as well as remove the extra data points. Figure 2 shows the output of my d3 graph.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+![img_1.png](img/img_1.png)\
+(Figure 2)
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Google Sheets
+Google Sheets was probably my most familiar software to use, so it was very easy to make the graph I was going for, after I stopped over complicating it. Figure 3 shows my output from Google Sheets. I wish I could have made the axes ticks in the right places, but to my knowledge it is not possible to do so. I did get the colors right though! (well at least the same as d3 🤷)
 
-Your goal is to use 5 different tools to make the following chart:
+![img_2.png](img/img_2.png)\
+(Figure 3)
 
-![ggplot2](img/ggplot2.png)
+# R, RStudio, and ggplot2
+I used R with ggplot 2 for a statistics class, so I did not have much of a challenge making the scatterplot here. It came out pretty good, got all the correct colors, everything. Figure 4 shows my output from R and ggplot2.
 
-These features should be preserved as much as possible in your replication:
+![img_3.png](img/img_3.png)\
+(Figure 4)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# Tableau
+Tableau was the first new one for me. I had never used the software, but it was really efficient once I learned what everything did. It took longer than I'm willing to admit, to change a setting, but I eventually got it to look pretty close. As far as I(Google) know, you can't change the opacity of the bubbles which was pretty annoying. Got the legend and grids built in though. Figure 5 shows my output from Tableau.
 
-Other features are not required. This includes:
+![img_4.png](img/img_4.png)\
+(Figure 5)
 
-- The background grid.
-- The legends.
+# Python, pandas, and matplotlib
+Python is a programming language I haven't used in a long time but was pretty easy to remember. It was definitely the most intuitive library I used, and I really enjoyed getting back into Python's simplicity. The chart came out the worst though, and I cannot figure out how to change the colors. Also, Pandas. Figure 6 shows my output from Python, pandas, and matplotlib.
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+![img_5.png](img/img_5.png)\
+(Figure 6)
 
-Improvements are also welcome as part of Technical and Design achievements.
+# Flourish
+Flourish was really cool and easy to learn, definitely something I am going to use for other classes as it was super user-friendly. I was able to do everything I needed to and more. Figure 7 shows my output from Flourish with more examples down below.
 
-Libraries, Tools, Languages
----
+![img_7.png](img/img_7.png)\
+(Figure 7)
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+# Design and Technical Achievements
+d3.js - I added the gridlines and tried to pull the colors from the original graph, which I think I did successfully. I also got a nicer font than Times in there, thank god.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+Google Sheets - Kept the same colors as d3, and the bubbles came out nice, it was virtually impossible to do anything else though. Got the legend and gridlines in there though. Kept ticks at the same intervals as the example. Does interaction count here? It was interactive, as shown in Figure 8.
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+R - Same colors and ring around the bubbles as the example. Virtually (pun) perfect. 
 
-I have marked a few that are strongly suggested.
+Tableau - There wasn't much to do in Tableau it seemed, but the legend and gridlines are included. I also was able to continue the same colors I used throughout.
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+Python - I got the gridlines and got mad at the colors. Grrr
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+[Flourish](https://public.flourish.studio/visualisation/5274074/) - Same colors and ring around the bubbles as the example. Definitely one of the better looking vis' I did. It also made 6 tools. Also interactive!
 
-Tips
----
+Common Trends - Removed extra data points, colors, axis labels, fun :).
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+# Additional Figures
+(Figure 8)\
+![img_6.png](img/img_6.png)
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+(Figure 9 and 10) Flourish settings\
+![img_8.png](img/img_8.png)
+![img_9.png](img/img_9.png)
 
 
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
+# Credit to these lovely pages!
+https://stackoverflow.com/questions/54175042/python-3-7-anaconda-environment-import-ssl-dll-load-fail-error \
+http://www.d3noob.org/2016/08/changing-text-size-for-axes-in-d3js-v4.html \
+https://stackoverflow.com/questions/29573481/d3-js-scatterplot-with-different-colors-and-symbols-issues-encountered \
+https://medium.com/@kj_schmidt/making-a-simple-scatter-plot-with-d3js-58cc894d7c97 \
+https://www.statology.org/matplotlib-scatterplot-color-by-value/ \
+https://stackoverflow.com/questions/8202605/matplotlib-scatterplot-colour-as-a-function-of-a-third-variable \
 
 
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
