@@ -18,7 +18,7 @@ d3.csv("cars-sample.csv", function(data){
     .domain([1000, 5000])
     .range([ 0, 400 ]);
   frame.append("g")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0,400)")
     .call(d3.axisBottom(x));
 
   // Add Y axis
