@@ -22,7 +22,7 @@ I imported the csv file, removed all of the columns that I was not using, and or
 data inputs to assign the weight/25 to be the size of the width of the dots scaled to 25, this allowed me to make the graph increase the size of the dots as the
 weight increased.
 
-![ExcelImage](Assignment2Excel.png)
+![ExcelImage](img/Assignment2Excel.png)
 
 ## Technical Achievements
 - Used the three input excel scatterplot to make the size of the dots increase with vehicle weight.
