@@ -17,7 +17,7 @@ d3.csv("cars-sample.csv", function(data){
   var x = d3.scaleLinear()
     .domain([1000, 5000])
     .range([ 0, 400 ]);
-  svg.append("g")
+  frame.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x));
 
@@ -25,11 +25,11 @@ d3.csv("cars-sample.csv", function(data){
   var y = d3.scaleLinear()
     .domain([5, 45])
     .range([ 400, 0]);
-  svg.append("g")
+  frame.append("g")
     .call(d3.axisLeft(y));
 
   // Add dots
-  svg.append('g')
+  frame.append('g')
     .selectAll("dot")
     .data(data)
     .enter()
