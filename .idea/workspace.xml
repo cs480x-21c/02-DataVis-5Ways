@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="787e33d2-9de6-41c6-9d76-e63f5b5fa9e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/d3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -52,15 +53,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/R+ggplot2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rin\Desktop\02-DataVis-5Ways-1\img" />
       <recent name="C:\Users\rin\Desktop\02-DataVis-5Ways-1\R+ggplot2" />
       <recent name="C:\Users\rin\Desktop\02-DataVis-5Ways-1\d3" />
-      <recent name="C:\Users\rin\Desktop\02-DataVis-5Ways-1\img" />
       <recent name="C:\Users\rin\Desktop\02-DataVis-5Ways-1\Python+matplotlib" />
     </key>
   </component>
@@ -72,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613088425782</updated>
-      <workItem from="1613088426867" duration="25094000" />
+      <workItem from="1613088426867" duration="31426000" />
     </task>
     <servers />
   </component>
@@ -103,9 +104,9 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="501" y="216" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1613088722902" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1613161519627">
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1613169600750">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1613161519627" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1613169600750" />
   </component>
 </project>
