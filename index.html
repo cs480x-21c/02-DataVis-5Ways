@@ -1,0 +1,123 @@
+<body>
+<!--Load d3-->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--Load Color Schemes-->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script>
+
+
+    //Create Margins
+    var margin = {top: 20, right: 20, bottom: 50, left: 50},
+        width = 700 - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
+
+
+    //Set ranges for x and y axis, size of bubbles, and color of bubbles
+    var x = d3.scaleLinear().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+    var size = d3.scaleLinear().range([1,10]);
+    var color = d3.scaleOrdinal().range(["#4e79a7","#f28e2c","#e15759","#76b7b2","#59a14f"]);
+
+    //Create the SVG object and put it relative to the margins
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Load the data from the CSV provided
+    d3.csv("cars-sample.csv", function(error, data) {
+        if (error) throw error;
+
+        // Format the data
+        data.forEach(function(d) {
+            d.Weight = +d.Weight;
+            d.MPG = +d.MPG;
+            d.size = +d.Weight;
+
+        });
+
+
+        // Set the domain of the data, mostly the min and max for the axes and size, but color names for manufacturer.
+        x.domain([1000, 5000]);
+        y.domain([10, 40]);
+        size.domain([1000, 5000]);
+        color.domain(["bmw","ford","honda","mercedes","toyota"]);
+
+        //Create the gridlines for x
+        function make_x_gridlines() {
+            return d3.axisBottom(x)
+                .ticks(4)
+        }
+
+       //Create the gridlines for y
+        function make_y_gridlines() {
+            return d3.axisLeft(y)
+                .ticks(5)
+        }
+
+        // Add the scatterplot
+        svg.selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .on("click", function(d){})
+            .attr("r", function(d) { return size(d.size);})
+            .attr("cx", function(d) { return x(d.Weight);})
+            .attr("cy", function(d) { return y(d.MPG);})
+            .style("fill", function(d) { return color(d.Manufacturer);})
+            .attr("fill-opacity",0.5)
+            .attr("stroke", function(d) { return color(d.Manufacturer);})
+            .attr("stroke-width",2)
+
+
+        // Draw the actual x gridlines
+        svg.append("g")
+            .attr("class", "grid")
+            .attr("transform", "translate(0," + height + ")")
+            .call(make_x_gridlines()
+                .tickSize(-height)
+                .tickFormat("")
+            )
+
+        // Draw the actual y gridlines
+        svg.append("g")
+            .attr("class", "grid")
+            .call(make_y_gridlines()
+                .tickSize(-width)
+                .tickFormat("")
+            )
+
+        // Add the X Axis
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        // Add the Y Axis
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        // Add the Y axis label
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x",0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG")
+            .style("font","20px arial")
+
+        //Add the X axis label
+        svg.append("text")
+            .attr("transform",
+                "translate(" + (width/2) + " ," +
+                (height + margin.top + 20) + ")")
+            .style("text-anchor", "middle")
+            .text("Weight")
+            .style("font","20px arial")
+
+    });
+
+</script>
+</body>
