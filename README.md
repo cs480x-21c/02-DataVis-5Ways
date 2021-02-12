@@ -3,18 +3,29 @@ The goal of this project is to gain experience with as many data visualization l
 I used these languages, libraries, and programs to complete the assignment:
  * Excel
  * Tableau
- * RMarkdown + ggplot2
+ * R + RMarkdown + ggplot2
  * Python + mathplotlib + pandas
  * Javascript + D3
 
 All following graphs were constructed using the  `cars-sample.csv` sample dataset
 # Excel
-The first graph I created was made using Microsoft Excel. I've used Excel countless times when visualizing graphical data but this was my first time using it for a weighted scatter plot. My first attempt at making the chart lead to deadends and problems when attempting to color vehicles based on manufacturer. To accomplish this I reffered to [this guide.](https://www.exceldashboardtemplates.com/dynamically-change-excel-bubble-chart-colors/) Utilizing the author's reccomendation of reconstructing the table by leveraging the series feature of excel charts by conditionally building each series using the 'IF()' function, I was able to sort the data set into individual series for each manufacturer. Doing this additionally allowed me to produce a legend of manufacturers and their respective colored markers as the legend displays series.
+The first graph I created was made using Microsoft Excel. I've used Excel countless times when visualizing graphical data but this was my first time using it for a weighted scatter plot. My first attempt at making the chart lead to deadends and problems when attempting to color vehicles based on manufacturer. To accomplish this I reffered to [this guide.](https://www.exceldashboardtemplates.com/dynamically-change-excel-bubble-chart-colors/) Utilizing the author's reccomendation of reconstructing the table by leveraging the series feature of excel charts by conditionally building each series using the `IF()` function, I was able to sort the data set into individual series for each manufacturer. Doing this additionally allowed me to produce a legend of manufacturers and their respective colored markers as the legend displays series.
 
 My choice in color scheme for this iteration was to choose solid, contrasting colors in order to identify conflicting markers even with the lowered alpha level(opacity). This was extremely important within the dense, 2000-3000 weight range. Below is the chart I've referenced that has been generated in Excel. 
 ![excel](excel/excelCarsScatter.png)
 # Tableau
- 
+This was my first time working with Tableau. It's an intuitive and accessible visualization application. Within minutes of downloading I already completed the required aspects of the chart for the assignment which is a testament to the power of Tableau. Connectivity with local datasets is seamless and it's drag and drop tools made constructing the chart seamless. As seen below I was able to generate a chart nearly similar to what was provided as an example graphic in R.
+
+The color scheme for this iteration was made using the color blindness theme provided by Tableau. I felt going this route is important for accessibility. The theme allows for markers to still be distinguishable.
+
+![tableau1](tableau/carsScatterAll.png)
+
+Using the introductory tutorials provided by the application as my own experimenting led me to generating **2** graphics. The difference with the second graphic below is that it includes an animation tool to create pages based on year. The user is able to either manually scrub through years or have the animaiton play in ascending or descending years. When ascending by year, the prior year is included as a lower opacity "trail". Doing this visualizes the trends of MPG and weight of vehicles from the dataset.
+
+![tableau2](tableau/carsScatterYearly.png)
+
+# R + ggplot2 + R Markdown
+This was also my first time working in R. Getting used to the language, the R Studio IDE, and the ggplot2 and R Markdown libraries was surprisingly more accessible than I originally imagined. R Markdown is similar in nature to those familiar with Jupyter Notebooks.
 
 
 
@@ -29,38 +40,7 @@ My choice in color scheme for this iteration was to choose solid, contrasting co
 
 
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
+# Libraries, Tools, Languages
 
 You are required to use 5 different tools or libraries.
 Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
