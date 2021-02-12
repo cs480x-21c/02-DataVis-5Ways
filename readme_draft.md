@@ -72,4 +72,4 @@ To create a visualization, one has to create specification for a visualization. 
 * Added a grey background to the plot to make it easier to see the dots. This was done because some of the dots were difficult to see on a white background.
 
 ### matplotlib + Pandas
-* Added a legend to the plot to let the user know the corresponding manufacturer to each color.
+* Added a legend to the plot to let the user know the corresponding manufacturer for each color.
