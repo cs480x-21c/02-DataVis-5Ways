@@ -22,6 +22,11 @@ types of vis with the same dataset, but not for a final product.
 
 ![Excel Vis](img/ExcelVis.jpg)
 
+# d3
+
+D3 is the main library we are using in this course, so it was an easy choice for this project.
+...
+
 
 Write a paragraph for each vis tool/library you used/ Was 
 it easy? Difficult? Where could you see the tool being useful in the future?
@@ -62,3 +67,10 @@ toyota:	#E86DF1
 
 The color picker I used:
 https://download.cnet.com/ScreenColorPicker/3000-2383_4-75796638.html
+
+
+Technical Achievements
+---
+
+???? idk, might be something in D3, or maybe R, or some other tool
+maybe annotations
