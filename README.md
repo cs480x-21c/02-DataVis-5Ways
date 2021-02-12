@@ -3,7 +3,7 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-#R+ggplot2
+# ggplot2
 R is a language and environment especially for statistical computing
  and graphics (cited from R official website). It is a very powerful
  tool to analyze data and create visualization to present data. This 
@@ -19,7 +19,7 @@ R is a language and environment especially for statistical computing
  
  ![](img/ggplot2.png)
  
- #Python+matplotlib
+ # Python+matplotlib
  I had the experience of draw maps and graphs with Python before,
  so this part was not very difficult to me. I imported `pandas` 
  as to read the sample csv file and store the data as a dataframe.
@@ -31,7 +31,7 @@ R is a language and environment especially for statistical computing
  
  ![](img/Python.png)
  
- #Flourish
+ # Flourish
  So far Flourish is the easiest tool I used to create the scatter
  plot, as I have no need to write code by myself. All the functions I
  wanted to use, including drawing x and y axis, x and y labels, loading data, 
@@ -41,7 +41,7 @@ R is a language and environment especially for statistical computing
  
  ![](Flourish/Flourish-ScatterPlot.png)
  
- #JavaScript+d3
+ # JavaScript+d3
  As this course is basically all about creating wonderful data visualization
  webpages, `JavaScript` and `d3` are requisite. Different from other tools, 
  with JavaScript and d3, I have to write a lot of code to make it work.
@@ -53,7 +53,7 @@ R is a language and environment especially for statistical computing
  
   ![](img/d3.jpg)
   
- #PowerBI+PlayAxis
+ # PowerBI+PlayAxis
  Finally is the PowerBI, a super great tool for data visualization.
  When I did my MQP, I used PowerBI to visualize the data and present to
  my sponsors. Before plotting, the first thing to do is to load data, which 
@@ -98,7 +98,7 @@ to know what the chart will look like in different model years and how
 does the car market changes in different years, click on the play
 axis and PowerBI will display an animation for you. Here is the link to the video about the animation: https://drive.google.com/file/d/1dhFP5L0mWwXELgy-mj9SIxv996v3G7Ks/view?usp=sharing
 
-### Design Achievements
+## Design Achievements
 - **Web Page with Google Font**: 
 Font plays an important role in web pages. When coding with HTML and
 JavaScript, there is a default font. It is very formal, but also looks
