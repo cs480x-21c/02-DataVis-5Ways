@@ -31,11 +31,12 @@
         height: 400,
         opacity: 0.5,
         encoding: {
-          y: {field: 'MPG', type: 'quantitative', "scale": {"domain": [7,45]}, axis: {tickCount: 5}},
+          y: {field: 'MPG', type: 'quantitative', scale: {domain: [7,45]}, axis: {tickCount: 5}},
           x: {
             field: 'Weight',
             type: 'quantitative',
-            "scale": {"domain": [1500,5000]}
+            scale: {"domain": [1500,5000]},
+            axis: {tickCount: 5}
           },
           color: {
             field: "Manufacturer",
