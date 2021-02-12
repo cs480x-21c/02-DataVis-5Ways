@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <svg id="svg"></svg><br>
+        <label for="maxX">Maximum X value:</label>
+        <input type="text" id="maxX" /><br>
+        <label for="maxY">Maximum Y value:</label>
+        <input type="text" id="maxY" /><br>
+        <button onclick="showRange()">Update graph</button>
+        <p class="error" id="error">Invalid input. Please only input numbers.</p>
+    </body>
+</html>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<script>
+    console.log(d3);
+    let visWidth = 670;
+    let visHeight = 510;
+    let svg = null;
+
+    async function initVis(xMax = null, yMax = null) {
+
+        let data = await d3.csv('../cars-sample.csv');
+        svg = d3.select('#svg');
+        svg.style('height', visHeight);
+        svg.style('width', visWidth);
+        //svg.style('border', '1px solid black');
+
+        data = data.filter(d => d.Weight != 'NA' && d.MPG != 'NA');
+        data = data.sort((a,b) => a.Weight - b.Weight);
+
+        let weights = data.map(d => parseInt(d.Weight));
+        let mpgs = data.map(d => parseInt(d.MPG));
+
+        let maxWeight = Math.max(...weights);
+        let maxMPG = Math.max(...mpgs);
+
+        let xExtent = maxWeight;
+        let yExtent = maxMPG;
+
+        let xTicks = [2000,3000,4000,5000];
+
+        if(xMax != null) {
+            xExtent = xMax;
+            xTicks = null;
+        } 
+        if(yMax != null) yExtent = yMax;
+
+        let xScale = d3.scaleLinear()
+        .domain([1500, xExtent + 100])
+        .range([0, visWidth-100]);
+
+        let yScale = d3.scaleLinear()
+        .domain([yExtent + 5, 8])
+        .range([0, visHeight-100]);
+
+        let xAxis = d3.axisBottom().scale(xScale).tickSizeOuter(0)
+        .tickValues(xTicks);
+        let yAxis = d3.axisLeft().scale(yScale).tickSizeOuter(0);
+
+        svg.append('rect')
+        .attr('x', '50')
+        .attr('y', '20')
+        .style('width', '570')
+        .style('height', '410')
+        .attr('fill', '#ededed');
+
+        let xAxisGroup = svg.append('g')
+        .call(xAxis)
+        .attr('transform', 'translate(50, 430)');
+
+        let yAxisGroup = svg.append('g').call(yAxis)
+        .attr('transform', 'translate(50, 20)');
+
+        xAxisGroup.append('text')
+        .text('Weight')
+        .attr('x', '310')
+        .attr('y', '50')
+        .attr('fill', 'black')
+        .attr('class', 'label');
+
+        yAxisGroup.append('text')
+        .text('MPG')
+        .attr('x', '0')
+        .attr('y', '0')
+        .attr('fill', 'black')
+        .attr('transform', 'translate(-40, 190) rotate(-90)')
+        .attr('class', 'label');
+
+        let div = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", "0");
+
+        svg.selectAll('dot')
+        .data(data)
+        .enter()
+        .append('circle')
+            .attr('cx', function(d) { return xScale(d.Weight) + 50 })
+            .attr('cy', function(d) { return yScale(d.MPG) + 20 })
+            .attr('r', function(d) { 
+                return (d.Weight / 1000) * 2;
+            })
+            .attr('fill', function(d) {
+
+                switch(d.Manufacturer) {
+
+                    case 'ford':
+                        return 'yellow';
+                        break;
+                    
+                    case 'toyota':
+                        return 'pink';
+                        break;
+                    
+                    case 'bmw':
+                        return 'red';
+                        break;
+                    
+                    case 'mercedes':
+                        return 'blue';
+                        break;
+                    
+                    case 'honda':
+                        return 'green';
+                        break;
+
+                }
+
+            })
+            .attr('opacity', '0')
+            .style('display', function(d) {
+
+                //do not display circles that are out of range.
+                if(xMax != null && yMax != null) {
+
+                    if(d.Weight > xMax || d.MPG > yMax) {
+                        return "none";
+                    } else return "block";
+
+                }
+
+            })
+
+
+            .on("mouseover", function(event, d) {
+                div.style("display", "block");
+                div.transition()
+                .duration(300)
+                .style("opacity", "0.8");
+                
+                div.html(`<p>Car name: ${d.Car}</p><p>Year: ${d['Model.Year']}`);
+                
+                div.style("left", event.pageX + 10 + 'px')
+                .style("top", event.pageY - 40 + 'px');
+                
+                d3.select(this).attr("stroke", "black");
+                d3.select(this).attr("stroke-width", "3");
+            })
+            .on("mouseout", function(event,d) {
+                div.transition()
+                .duration(500)
+                .style("opacity", "0")
+
+                d3.select(this).attr("stroke", "null");
+
+            })
+
+
+            d3.selectAll('circle')
+            .transition()
+            .duration(1000)
+            .attr('opacity', '0.5')
+            .delay(function(d, i) { return i*20; })
+            .transition(1)
+            .attr('class', 'highlightable');
+
+    }
+
+    function showRange() {
+
+        let xMax = document.getElementById("maxX").value;
+        let yMax = document.getElementById("maxY").value;
+
+        xMax = parseInt(xMax);
+        yMax = parseInt(yMax);
+
+        console.log(xMax);
+        console.log(yMax);
+
+        if(isNaN(xMax) || isNaN(yMax)) {
+            d3.select("#error").style("display", "block");
+        } else {
+            d3.select("#error").style("display", "none");
+            svg.selectAll('*').remove();
+            initVis(xMax, yMax);
+        }
+
+    }
+
+    initVis();
+
+</script>
+
+<style>
+    svg .label {
+        font-size: 14px;
+    }
+    .highlightable {
+        opacity: 0.5;
+    }
+    .highlightable:hover {
+        opacity: 1.0;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    .tooltip {
+        position: absolute;
+        text-align: center;
+        width: 130px;
+        min-height: 40px;
+        padding: 2px;
+        background: #8daee3;
+        border-radius: 8px;
+        pointer-events: none;
+    }
+
+    body {
+        font-family: Arial;
+    }
+
+    .error {
+        font-size: 10px;
+        color: red;
+        display: none;
+    }
+</style>
