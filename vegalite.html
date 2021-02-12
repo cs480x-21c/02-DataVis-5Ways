@@ -27,6 +27,8 @@
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
         data: {"url": "cars-sample.csv"},
         mark: 'circle',
+        width: 500,
+        height: 400,
         opacity: 0.5,
         encoding: {
           y: {field: 'MPG', type: 'quantitative', "scale": {"domain": [5,45]}},
