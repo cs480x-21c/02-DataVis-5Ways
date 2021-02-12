@@ -27,6 +27,7 @@
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
         data: {"url": "cars-sample.csv"},
         mark: 'circle',
+        opacity: 0.5,
         encoding: {
           y: {field: 'MPG', type: 'quantitative', "scale": {"domain": [5,45]}},
           x: {
@@ -38,7 +39,10 @@
             field: "Manufacturer",
             type: 'nominal'
           },
-          opacity: 0.5
+          size: {
+              field: "Weight",
+              type: 'quantitative'
+          }
         }
       };
 
