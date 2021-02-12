@@ -26,12 +26,20 @@ Creating the plot was mostly simple, but I found a few parts cumbersome. Removin
 
 ![tablesaw](java/javaplot.png)
 
+The code for this is available in the java folder, in the form of an IntelliJ project. It is in the java.zip folder, and is also in its unexported form.
+
 # Flourish
 Flourish is a web application for creating visualizations.
 
-To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values were easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
+To create the visualization, I created a bubble chart and then uploaded the csv file. Then, I set columns used for the dots' sizes, the dots' colors, the x axis, and y axis. So far, this tool has been the easiest to use. Getting the colors and sizes I wanted was a quick process, as I didn't have to manipulate the table to do so. Editing the axes' minimum and maximum values were easy. The only issue that I ran into while using this tool was that I couldn't edit how much the axes' ticks increased by.
 
 ![flourish](flourish/flourish_vis.png)
+
+Below are the settings I used to create the plot:
+
+![flourish](flourish/data_settings.png)
+
+![flourish](flourish/vis_settings.png)
 
 # Vega-lite
 Vega-lite is a Javascript library that can create visualizations.
@@ -41,8 +49,26 @@ To create a visualization, one has to create specification for a visualization. 
 ![vegalite](vega-lite/visualization.png)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+### d3
+* Created an animation for the dots to fade in when they appear in the plot.
+* Cleaned data by removing data records with no MPG from the dataset.
+* Created a tooltip feature that shows a car's name and year when the user hovers over one of the dots.
+* Created a feature allowing the user to display the plot with a different maximum X value and Y value.
+
+### matplotlib + Pandas
+* Cleaned data by removing data records with no MPG from the dataset.
+* Added a legend to the plot.
+
+### Tablesaw
+* Cleaned data by removing data records with no MPG from the dataset.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+### d3
+* Changed font to Arial to make the text more appealing to the user.
+* The fade in animation was intended to make viewing the plot a more pleasant experience for the user.
+* When the user hovers over a dot, it becomes opaque and a black outline is shown around it. This is so that the user knows which dot's information is being shown.
+* The feature that updates the maximum X and Y values displays an error message if the user's input is invalid. The error message lets the user know that they should only input numbers to use the features.
+* Added a grey background to the plot to make it easier to see the dots. This was done because some of the dots were difficult to see on a white background.
+
+### matplotlib + Pandas
+* Added a legend to the plot to let the user know the corresponding manufacturer to each color.
