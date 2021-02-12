@@ -79,7 +79,7 @@ Plots
 
 # R + ggplot2
 
-Without much experience in R I was quite hesitant to pick up this library, oh man I’m glad I did. The documentation is amazing (<a href="https://ggplot2.tidyverse.org/reference/index.html" target="_blank">ggplot Docs</a>) and was the only thing I needed to replicate this graph in record time, aside from the usual “how make library and code go brrr”. The few lines of code required consisted of exactly, load library, load data, make super crazy all in one amazing plot, and save image. Just like that, legends for the attributes and gridlines built in, I see now why this is such a powerful tool. Especially with a target in mind, finding the functions I needed was a breeze. I do think I would get a little caught up if I did not have such a clear-cut idea of what I wanted to create; thought with some great documentation it looks to be fun to explore.
+Without much experience in R I was quite hesitant to pick up this library, oh man I’m glad I did. The documentation is amazing (https://ggplot2.tidyverse.org/reference/index.html) and was the only thing I needed to replicate this graph in record time, aside from the usual “how make library and code go brrr”. The few lines of code required consisted of exactly, load library, load data, make super crazy all in one amazing plot, and save image. Just like that, legends for the attributes and gridlines built in, I see now why this is such a powerful tool. Especially with a target in mind, finding the functions I needed was a breeze. I do think I would get a little caught up if I did not have such a clear-cut idea of what I wanted to create; thought with some great documentation it looks to be fun to explore.
 
 ![ggplot2](img/Rggplot2.png)
 
@@ -92,6 +92,12 @@ Personally, I would not use this tool very much as I would prefer the flexibilit
 <a href="https://public.flourish.studio/visualisation/5258253/" target="_blank">Flourish vis</a>
 
 ![Flourish](img/5waysFlourish.png)
+
+# Excel
+
+Excel would not be my first choice when making a vis. It was easy to separate the data quickly, however, navigating through the same three windows over and over again selecting the data to build the bubble chart exactly the way I wanted was repetitive and tedious. If I were working with a much larger dataset, I would quickly move over to a programming language that would allow me to separate and map data recursively instead of adding each grouping individually.
+
+![ExcelPlot](img/ExcelPlot.png)
 
 
 ## Technical Achievements
