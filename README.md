@@ -1,142 +1,75 @@
-# 02-DataVis-5ways
+# Assignment 2 - Data Visualization, 5 Ways
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
-
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
+## Libraries, Tools, Languages
 
 You are required to use 5 different tools or libraries.
 Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
+This could be `Python, R, Javascript` :heavy_check_mark: or `Java, Javascript, Matlab` or any other combination.
 Dedicated tools (i.e. Excel) do not count towards the language requirement.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+- R + ggplot2 :heavy_check_mark:
+- Excel :heavy_check_mark:
+- d3 :heavy_check_mark:
+- Matplotlib :heavy_check_mark:
+- Python + Seaborn :heavy_check_mark:
+- Flourish :heavy_check_mark:
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+## Other Requirements
 
-I have marked a few that are strongly suggested.
+0. Your code should be forked from the GitHub repo. :heavy_check_mark:
+1. Place all code, Excel sheets, etcetera in a named folder. :heavy_check_mark:
+1. Your writeup (readme.md in the repo) should also contain the following:
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+- Description of the Technical achievements you attempted with this visualization. :heavy_check_mark:
+- Description of the Design achievements you attempted with this visualization. :heavy_check_mark:
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+## R + ggplot2
 
-Tips
----
+I created my plot using RStudio, which is an integrated development environment for R. R is a language and environment for statistical computing and graphics. To make this chart I used ggplot2(), which is a data visualization pakage that allows you to break up a graph into its components to customize.
+Before I was able to plot, I had to read in the cars-sample.csv file.
+I have used R and RStudio in multiple classes and projects, so I did not find it difficult to plot the cars-sample data.
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+![r+ggplot2](img/r_ggplot.png)
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+## Excel
 
+Excel is a widely used tool for spreadsheets and graphing. For this tool, I imported the neccessary columns (Manufacturer, Weight, MPG), and created scatter plot using the numeric data in the Weight and MP columns. From there I created categores based on the distinct manufactures. Each manufacturer was colored ith respect to the original graph specification.
+I would consider Excel to be an easy tool to create a scatterplot visualization. The customization of the chart was easy to do since the UI was straightforward.
+![excel](img/excel.png)
 
-Readme Requirements
----
+## D3
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+D3.js is a Javascript library for manipulating documents based on data. D3 stands for Data Driven Document, and is used to create interactive data visualizations. This chart is composed in an .html document that comprises of the d3 chart generation.
+I have not used d3 too much outside of class, so this plot was more difficult for me. I did have to look up [resources](https://www.tutorialsteacher.com/d3js/loading-data-from-file-in-d3js) to read in the data from the cars-sample.csv file, and [resources](https://www.d3-graph-gallery.com/graph/scatter_basic.html) to create a scatterplot.
+![d3](img/D3.js.png)
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+## Python + Matplotlib
 
-Other Requirements
----
+Matplotlib is Python plotting library, that is a collection of command style functions that work similarly to MATLAB. Also, I use the Python library, pandas, to filter the data by manufacturer.
+First, I had to read in the cars-sample.csv and then, I was able generate the plot. I am fairly familiar with Python, so this plot was not to challenging to generate.
+![matplotlib](img/matplotlib.png)
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+## Python + Seaborn
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+For this visualization I used Python with the Seaborn data visualization library. The Seaborn library is based on the matplotlib, used previously. Between the Seaborn plot below and the Matplotlib above, the Seaborn plot looks more appealing.
+First I had to read in the cars-sample.csv file and then, I could generate the plot.
+I found that using Seaborn was more straightforward than using Matplotlib.
+![python+seaborn](img/python-seaborn.png)
 
-GitHub Details
----
+## Flourish
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+[Link to Visualization using Flourish](https://public.flourish.studio/visualisation/5281299/)  
+Flourish is an online data visualization and storytelling tool. This tool allows you to import a dataset and create charts accordingly. Within Flourish, you can categorize the data and assign colors to specific categories. For the case of the cars-sample dataset, I assigned each car manufacturer it's own color.
+I was unable to figure out how to weight each data point, but when you hover over a specific data point you can get the actual coordinates.
+Since this was my first time using Flourish, it took a little bit of trial and error to configur the visualization to the correct specifications.
+![flourish](img/flourish.PNG)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+
+- **Extra Visualization**: I completed 6 total visualizatons of the cars-sample.csv data. My extra chart comes from Flourish. Using D3 to generate charts was new to me, so that chart took the most time to generate.
+- **Cleaned Data**: For each plot, I made sure that the empty values in the MPG and the Weight were disregarded.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+
+- **Color Consistency**: Matched (as close as I could) the colors from the original specification in all of the charts. bmw = red, ford = dark green/yellow, honda = lightgreen, mercedes = lightblue/cyan, toyota = purple/pink.
+- **Legend on each plot**: For each plot I included a key/legend with the correct corresponding colors.
