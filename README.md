@@ -1,142 +1,30 @@
-# 02-DataVis-5ways
-
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+# d3
+![d3 graph](img/d3.png) <br/>
+d3 is a JavaScript library that leverages SVGs and HTML to build web-friendly data visualizations. To access the given data I used d3.csv(), for which I needed to run a local server to enable HTTP. I served the CSV as well as my d3.html locally in d3.js. Although creating the axis of the plot were difficult at first, I was able to follow along with <code><a href="https://www.d3-graph-gallery.com/graph/scatter_basic.html">this example</a></code> to get me started. After plotting the data, I was able to customize the graph and data points, and used <code><a href="https://www.d3-graph-gallery.com/graph/scatter_basic.html">this tutorial</a></code> to help with the gridlines.
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+# excel
+![excel graph](img/excel.png)<br/>
+Microsoft Excel is a spreadsheet software that contains tools for calculation, formulas, and graphing. To access the given data I opened the CSV in a new sheet and manually deleted the "NA" rows and extraneous columns. After experimenting the basic scatterplot, I decided to use the bubble chart, which allowed easier manipulation of the data point sizes. That being said, although the sizes of the data points are different, it isn't as obvious as some of the other graphs. Except for the data point sizes, Excel was an simpler software to replicate this chart with, as it was already a familiar tool. 
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# matlab
+![matlab graph](img/matlab.png)<br/>
+Matlab is a programming language and computing environment by MathWorks which supports complex calculations, algorithms, and graphs. I accessed the CSV using the readTable function, and then parsed the data to remove "NA" rows and separate the data by manufacturer to plot different series with unique colors. Being unfamiliar with Matlab, I struggled the most with this tool. I had wanted to plot all the data at once and change the color based on the individual point's manufacturer data, but after many different attempts decided to go with the simpler, albeit less concise, method of plotting each manufacturer's data separately.  
 
-Your goal is to use 5 different tools to make the following chart:
+# matplotlib
+![matplotlib](img/matplotlib.png)<br/>
+Matplotlib is a Python library for graphing and data visualization. I used the Python library pandas to read in the CSV, and plotting the scatter was as simple as calling a single function. Due to my familiarity and the gentle learning curve of both Python and matplotlib I found this to be one of the easier methods of replicating the graph, and encountered no issues. 
 
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+# tableau
+![tableau graph](img/tableau.png)<br/>
+Tableau is a visual analytics platform focused on generating data visualizations. Despite having never used it before, I found it extremely intuitive to created highly customizable graphs. I was especially impressed with how it allowed me to scale the size of the data points using the size range feature, which allowed me to make the smaller data points even smaller (and vice versa for the larger data points) to highlight the difference between the two and get it as close as possible to the sample graph. 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Plot Background**: Added the gray background and white gridlines for all plots. Please note that for some tools this was not possible to complete in its entirety - I found that matlab and tableau did not support the customizable minor gridlines. 
+- **Data Cleaning**: For each tool I used I "cleaned" the data by removing entries with "NA" in different ways. For d3 I used the filter() function, for excel I removed the entries maunally, for matlab I used the rmmissing() function, and in matplotlib and tableau the null data is removed automatically.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Color Palette**: I found the some of the colors in the original color scheme to be a little too close to each other. When creating my plots I occasionally found it difficult to differentiate between the blue and teal, as well as red and pink. With the help of <code><a href="https://spectrum.adobe.com/page/color-for-data-visualization/">this guide</a></code> as well as the color lecture, I created a categorical color scheme with five distinct colors. Keeping in mind that each data point would be at 50% opacity, I also chose especially bright colors. <br/>
+![color palette](img/colors.png)

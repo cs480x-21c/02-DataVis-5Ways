@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<style> /* set the CSS */    
+    .heavyGrid line {
+      stroke: white;
+      stroke-opacity: 0.7;
+      stroke-width: 2; 
+      shape-rendering: crispEdges;
+    }
+
+    .lightGrid line {
+      stroke: white;
+      stroke-opacity: 0.7;
+      stroke-width: 1; 
+      shape-rendering: crispEdges;
+    }
+</style>
+
+<div id="vis"></div>
+
+<script>
+    var margin = {top: 10, right: 50, bottom: 40, left: 50}
+    var width = 550 - margin.right - margin.left
+    var height = 440 - margin.top - margin.bottom
+
+    var bmwColor = "#0DC800"
+    var fordColor = "#FF8C00"
+    var hondaColor = "#11B1DD"
+    var mercedesColor = "#4800FF"
+    var toyotaColor = "#FF006F"
+
+    // Determine fill color based on manufactuer
+    function addColor(manufactuer) {
+        switch(manufactuer) {
+            case "bmw":
+                return bmwColor
+            case "ford":
+                return fordColor
+            case "honda":
+                return hondaColor
+            case "mercedes":
+                return mercedesColor
+            case "toyota":
+                return toyotaColor
+            default:
+                return "#FFFFFF"
+        }
+    }
+
+    // Create SVG and nested G objects
+    var svg = d3.select("#vis")
+    .append("svg")
+    .attr("width", width + margin.right + margin.left)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + ", " + margin.top +")")
+
+    svg.append("rect")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("fill", "#ececec")
+
+    // Set x + y linear scales
+    var x = d3.scaleLinear().domain([1500, 5100]).range([0, width])  
+    var y = d3.scaleLinear().domain([8, 47]).range([height, 0])
+
+    // x axis
+    svg.append("g")
+    .attr("transform", "translate(0, "+ height + ")")
+    .call(d3.axisBottom(x).tickValues([2000, 3000, 4000, 5000]).tickFormat(d3.format("d")))
+
+    // y axis
+    svg.append("g")
+    .call(d3.axisLeft(y).tickValues([10, 20, 30, 40]))
+
+    // x axis label
+    svg.append("text")
+    .attr("x", width/2)
+    .attr("y", height + margin.bottom - 5)
+    .style("text-anchor", "middle")
+    .text("Weight")
+
+    // y axis label
+    svg.append("text")
+    .attr("y", 0 - margin.left)
+    .attr("x",0 - (height / 2))
+    .attr("dy", "1em")
+    .attr("transform", "rotate(-90)")
+    .style("text-anchor", "middle")
+    .text("MPG")
+
+    // Make grid lines
+    var xLine = d3.line()
+    .x(function(d) { return x(d.Wight )})
+    .y(function(d) { return x(d.MPG )})
+
+    function make_x_gridline(ticks) { return d3.axisBottom(x).ticks(ticks) }
+    function make_y_gridline(ticks) { return d3.axisLeft(y).ticks(ticks) }
+
+    // Add main grid lines
+    svg.append("g")
+    .attr("class", "heavyGrid")
+    .attr("transform", "translate(0," + height + ")")
+    .call(make_x_gridline(5).tickSize(-height).tickFormat(""))
+
+    svg.append("g")
+    .attr("class", "heavyGrid")
+    .call(make_y_gridline(5).tickSize(-width).tickFormat(""))
+
+    // Add secondary grid lines
+    svg.append("g")
+    .attr("class", "lightGrid")
+    .attr("transform", "translate(0," + height + ")")
+    .call(make_x_gridline(10).tickSize(-height).tickFormat(""))
+
+    svg.append("g")
+    .attr("class", "lightGrid")
+    .call(make_y_gridline(10).tickSize(-width).tickFormat(""))
+
+    // Read in data from csv
+    d3.csv("../cars-sample.csv", function(data) {
+
+        // Remove 2 entries with no MPG data
+        var filteredData = data.filter(function (d) { return d.MPG !== "NA" })
+
+        // Add data point for each entry
+        svg.append('g')
+        .selectAll("dot")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return x(d.Weight) })
+        .attr("cy", function (d) { return y(d.MPG) })
+        .attr("r", function (d) { return d.Weight/400 } )
+        .style("opacity", 0.5)
+        .style("fill", function (d) { return addColor(d.Manufacturer) })
+    })
+</script> 
