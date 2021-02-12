@@ -3,7 +3,7 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-# ggplot2
+# R+ggplot2
 R is a language and environment especially for statistical computing
  and graphics (cited from R official website). It is a very powerful
  tool to analyze data and create visualization to present data. This 
