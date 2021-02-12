@@ -36,13 +36,15 @@ d3.csv("cars-sample.csv").then(function(data) {
   x.domain([1500, 5000 ]);
   y.domain([7, 45]);
 
-
+var color = d3.scale.category10();
       
   // Add the scatterplot
   svg.selectAll("dot")
       .data(data)
     .enter().append("circle")
       .attr("r", function(d) {return d.Weight / 500;})
+      .attr('opacity', '50%')
+      .attr('fill',function(d){return color(d.Manufacturer)} )
       .attr("cx", function(d) { return x(d.Weight); })
       .attr("cy", function(d) { return y(d.MPG); });
 
