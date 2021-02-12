@@ -28,7 +28,7 @@
         data: {"url": "cars-sample.csv"},
         mark: 'circle',
         encoding: {
-          y: {field: 'MPG', type: 'quantitative'},
+          y: {field: 'MPG', type: 'quantitative', "scale": {"domain": [5,45]}},
           x: {
             field: 'Weight',
             type: 'quantitative'
