@@ -1,0 +1,98 @@
+<title>D3 Plot</title>
+
+<script src=https://d3js.org/d3.v6.js></script>
+<style>
+    body {
+      font: 11px sans-serif;
+    }
+</style>
+
+<body>
+    <div id="plot"></div>
+</body>
+
+<script>
+    //ref: https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
+    var margin = {top: 10, right: 30, bottom: 30, left: 30},
+        width = 700 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    var svg = d3.select("#plot")
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+    // background
+    svg.append("rect")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .attr("fill", "#7a7a7a")
+        .attr("transform", "translate(" + -margin.left + "," + -margin.top + ")");
+
+    function getColor(manufacturer)
+    {
+        var color = "#ff0000"
+        switch(manufacturer)
+        {
+            case "bmw": color = "#ff0000";
+                break;
+
+            case "ford": color = "#ffff00";
+                break;
+
+            case "honda": color = "#00ff00";
+                break;
+
+            case "mercedes": color = "#0000ff";
+                break;
+
+            case "toyota": color = "#ff00ff";
+                break;
+        }
+        return color;
+    }
+
+    d3.csv("https://raw.githubusercontent.com/Fish1naTank/02-DataVis-5Ways-1/main/cars-sample.csv").then(function(data){
+
+    // X axis
+    var x = d3.scaleLinear()
+        .domain([1400, 5000])
+        .range([ 0, width ]);
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x))
+    
+    svg.append("text")
+        .attr("x", width - margin.right)
+        .attr("y", height - 6)
+        .text("Weight");
+
+    // Y axis
+    var y = d3.scaleLinear()
+        .domain([7, 50])
+        .range([ height, 0]);
+    svg.append("g")
+        .call(d3.axisLeft(y));
+    
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -20)
+        .attr("y", 12)
+        .text("MPG");
+    // points
+    svg.append('g')
+        .selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) { return x(d.Weight); })
+        .attr("cy", function (d) { return y (d.MPG === "NA" ? -50 : d.MPG); })
+        .attr("r", function (d) { return (d.Weight *0.003); })
+        .style("fill", function (d) { return (getColor(d.Manufacturer))})
+        .attr("opacity","0.5")
+    })
+
+</script>

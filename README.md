@@ -3,63 +3,6 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-features to preserve
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-features not required:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-done
-
-- R + ggplot2
-- Flourish
-
-next
-
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-
-maybe
-
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau <- `<- popular last year`
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
 - Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
 Other Requirements
@@ -90,6 +33,12 @@ Matplotlib was a bit more familiar territory for me. I have use some of the libr
 ![Matplot](img/MatPlot_1.png)
 
 Docs: <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html" target="_blank">Matplotlib.pyplot</a>
+
+# D3
+
+I still have a lot to learn when it comes to D3 and the syntax is still a bit tricky. I was able to find a simple scatter plot example (<a href=https://www.d3-graph-gallery.com/graph/scatter_basic.html target="_blank"> Basic scatterplot in d3.js</a>) that really helped me get started. It’s still a handful jumping between HTML, D3 and JS docks, but, before long I was able to replicate the plot.
+
+![D3Plot](img/D3Plot.png)
 
 # Flourish
 
