@@ -13,9 +13,13 @@ Standards
 - Size mapping to Weight.
 - Opacity of circles set to 0.5 or 50%.
 
+Technical & Design
+---
+I tried to keep the colors and the circle radii as consistent as possible throughout every graph.
+
 # Flourish
 
-![ggplot2](img/flourishvisualization.png)
+![Flourish Screenshot](img/flourishvisualization.png)
 
 Flourish is an extremely easy method of data visualization that relies on a visual interface.
 
@@ -25,13 +29,25 @@ Overall, this tool was extremely easy to use with extremely satisfactory results
 
 # R + ggplot2
 
-![ggplot2](img/Rplot.png)
+![R + ggplot2 Screenshot](img/Rplot.png)
 
 R is a language I am wholly unfamiliar with that is typically used for statistical computing, while ggplot2 is a common library to help make data visualizations in R.
 
 I utilized a ggplot bubble plot to map weight to X, MPG to y, and weight to size. ggplot's `geom_point` was also useful in customizing aesthetics - in particular, the 50% opacity and using color to separate manufacturers.
 
-While this tool combination required a lot of time and effort to understand the syntax, read through the documentation, and find the right commands, it came out with a highly satisfactory result. I believe it will take less time to create similar plots in the future.
+While this tool combination required a lot of time and effort to understand the syntax, read through the documentation, and find the right commands, it came out with a highly satisfactory result. I believe it will take less time to create similar plots in the future. Maybe.
+
+# D3 + HTML
+
+![D3 Screenshot](img/d3.png)
+
+D3 is a JavaScript library commonly used to manipulate and format documents based on data-driven transformations. HTML is the standard markup language for any documents meant to be displayed in a web browser.
+
+Almost the entirety of this plot uses D3 (HTML was only used for the background color). I got familiar with the overall workings of D3 in the last assignment, so this one did not take nearly as long as the R + ggplot2 one did. I used a large amount of the code from the basic scatterplot documentation (https://www.d3-graph-gallery.com/graph/scatter_basic.html) to get started, while the majority was working on customizing things to better match the original graph or make it look prettier.
+
+No legend or gridlines in this plot, because my brain was shutting down. Sorry.
+
+The hardest part of this piece was actually loading the data. But after some reading, I now know more about localhosting!
 
 Libraries, Tools, Languages
 ---
@@ -74,26 +90,3 @@ Beware that these functions are *asynchronous*, meaning it's possible to "build"
 
 - *For web languages like d3* Don't forget to run a local webserver when you're debugging.
 See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project.
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
