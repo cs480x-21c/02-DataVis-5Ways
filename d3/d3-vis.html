@@ -1,0 +1,293 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div id="value"> </div>
+<svg id="vis"> </svg>
+
+<script>
+     console.log(d3); // test if d3 is loaded
+     
+    //Set the graph dimensions
+    var margin = {top: 30, right: 100, bottom: 80, left: 60},
+        width = 1000 - margin.left - margin.right,
+        height = 700 - margin.top - margin.bottom;
+
+    //Make the svg background space
+    var svg = d3.select('#vis')
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform","translate(" + margin.left + "," + margin.top + ")");
+    
+    //The scatterplot
+    d3.csv("cars-sample.csv").then(
+            function(data)
+            {
+                // Add X axis
+                var xScale = d3.scaleLinear()
+                .domain([1500, 5000])
+                .range([0, width])
+                .nice();
+  
+                svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(xScale))
+
+                svg
+                .append("text")
+                .attr("transform","translate(" + width / 2 + " ," + (height + margin.top + 30) + ")")
+                .style("text-anchor", "middle")
+                .text("Weight")
+
+                // Add Y axis
+                var yScale = d3.scaleLinear()
+                .domain([8, 50])
+                .range([ height, 0])
+                .nice();
+        
+                svg.append("g")
+                .call(d3.axisLeft(yScale))
+
+                svg
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", 0 - height / 2)
+                .style("text-anchor", "middle")
+                .text("MPG");
+
+                //Set colors
+                let color = d3.scaleOrdinal()
+                    .domain(["bmw", "ford", "honda", "mercedes", "toyota"])
+                    .range(["red", "orange", "green", "blue","purple"]); 
+
+                //Clean the data set
+                allData = []
+                for(var i = 0; i < data.length; i++)
+                {
+                    if(data[i]["MPG"] == 'NA')
+                    {
+                        continue
+                    }
+                    else
+                    {
+                      allData.push(data[i])  
+                    }
+                }
+                
+                //Dot points
+                svg
+                 .append('g')
+                 .selectAll("dot")
+                 .data(allData)
+                 .enter()
+                 .append('circle')
+                    .attr("class", "dot")
+                    .attr('cx', function(d) {return xScale(d.Weight)})
+                    .attr('cy', function (d) {return yScale(d.MPG)})
+                    .attr('r',  function(d) {return d.Weight / 500})
+                    .attr('fill', function (d) {return color(d.Manufacturer)})
+                    .style("opacity", 0.5)
+                    .on('mouseover', 
+                        function(d, i)
+                        {
+                            //Highlight the circle
+                            d3.select(this)
+                             .attr('r', function(d) {return (d.Weight/500 + 5)})
+                             .style("opacity", 1.0) 
+
+                            //Coords for text with data point info
+                            var x = xScale(i.Weight) + 10
+                            var y = yScale(i.MPG)
+
+                            //The text with data point info
+                            svg
+                             .append('text')
+                             .attr("id", "theText")
+                             .attr('x', x)
+                             .attr('y', y)
+                             .text("Weight:" + i.Weight + ", MPG:" + i.MPG + "")
+                             .style('font-size', '12px')
+                             .attr("font-weight", 400)
+
+                        })
+                    .on('mouseout',
+                        function(d, i)
+                        {
+                            //Go back in your nice little box now data point
+                            //ie back to original form
+                            d3.select(this)
+                             .attr('r', function(d) {return (d.Weight/500)}) 
+                             .style('opacity', 0.5)
+
+                            //Get rid of the text
+                            d3.select("#theText").remove()
+                        })
+
+            });
+
+        //Add a label that is denotes what the colors exactly mean
+        //Title of the legend
+        svg
+         .append("text")
+         .attr("x", 690)
+         .attr("y", 120)
+         .text("Legend: Manufacturers")
+         .style("font-size", "20px")
+         .attr("alignment-baseline","middle")
+
+        //BMW
+        svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",150)
+         .attr("r", 6)
+         .style("fill", "red")
+         .style("opacity", 0.5)
+
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 150)
+         .text("bmw")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")
+
+         //Ford
+        svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",170)
+         .attr("r", 6)
+         .style("fill", "orange")
+         .style("opacity", 0.5)
+        
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 170)
+         .text("ford")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")
+
+        //Honda
+        svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",190)
+         .attr("r", 6)
+         .style("fill", "green")
+         .style("opacity", 0.5)
+        
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 190)
+         .text("honda")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")
+
+         //mercedes
+         svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",210)
+         .attr("r", 6)
+         .style("fill", "blue")
+         .style("opacity", 0.5)
+        
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 210)
+         .text("mercedes")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")
+
+         //toyota
+         svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",230)
+         .attr("r", 6)
+         .style("fill", "purple")
+         .style("opacity", 0.5)
+        
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 230)
+         .text("toyota")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")
+    
+    //Add a label that is denotes what the sizes exactly mean
+        //Title of the legend
+        svg
+         .append("text")
+         .attr("x", 690)
+         .attr("y", 300)
+         .text("Legend: Weight")
+         .style("font-size", "20px")
+         .attr("alignment-baseline","middle")
+
+         //A small circle size
+         svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",320)
+         .attr("r", 2000 / 500)
+         .style("fill", "black")
+         .style("opacity", 0.5)
+
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 320)
+         .text("Weight = 2000")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")   
+        
+         //A medium circle size
+         svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",340)
+         .attr("r", 3000 / 500)
+         .style("fill", "black")
+         .style("opacity", 0.5)
+
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 340)
+         .text("Weight = 3000")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")  
+
+        //A large circle size
+        svg
+         .append("circle")
+         .attr("cx",710)
+         .attr("cy",365)
+         .attr("r", 4000 / 500)
+         .style("fill", "black")
+         .style("opacity", 0.5)
+
+        svg
+         .append("text")
+         .attr("x", 730)
+         .attr("y", 365)
+         .text("Weight = 4000")
+         .style("font-size", "15px")
+         .attr("alignment-baseline","middle")  
+    
+    //The graph title
+    svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "underline")  
+        .text("MPG vs Weight of Specific Cars");
+
+</script>
