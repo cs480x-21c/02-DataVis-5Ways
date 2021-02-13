@@ -44,8 +44,8 @@ Flourish is a free, online data viz platform that allows users to quickly create
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Automatic hiding of n/a values in d3**
+- **Filtering out n/a values in PowerBI and reinterpreting datatype for MPG column**
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Re-vamped Apple's Design Philosophy**: Haha just kidding, I'm not smart enough for that
