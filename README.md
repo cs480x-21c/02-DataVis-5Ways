@@ -2,141 +2,72 @@
 
 Assignment 2 - Data Visualization, 5 Ways  
 ===
+In this assignment I used three librareis and two graphing tools.
+1. Python Matplotlib
+2. JavaScript d3 HTML CSS
+3. R ggplot2
+4. Matlab
+5. Flourish
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
+Python Matplotlib
 ---
+![5 Ways Python Matplotlib](https://user-images.githubusercontent.com/59973823/107841052-825ad180-6d85-11eb-945d-b6af04e60319.png)
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+This is the python implimentation with matplotlib.
+The users can clearly see the different between each Manufacturer, and background color is comfortable.
+## Technical Achievements
+The circle size of the legend is related to the average weight of all the correspond Manufacturer.
+I add the minor ticks and major ticks to the axis which is same as the example.
+### Design Achievements
+Perfect lol.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
+JavaScript d3 HTML CSS
 ---
+![5 Ways d3](https://user-images.githubusercontent.com/59973823/107840994-41fb5380-6d85-11eb-9d0b-276af9c4470c.PNG)
+This plot is created from d3 library.
+This plot might be the hardest one in this homework. We have to create every single component in this plot manully, including the axis, font size, tick size.....
+The graph is on a SVG component with all its dimension specified. There are many anonymous function in this section. 
+## Technical Achievements
+Besides the JavaScript and d3, I used some CSS to modify the font size and grid color.
+### Design Achievements
+None
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
+R ggplot2
 ---
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+![5 Ways ggplot2](https://user-images.githubusercontent.com/59973823/107841016-62c3a900-6d85-11eb-9a46-8bbba2684aff.png)
+The plot from ggplot2 + R is identical to the example.
+After reading the CSV file, we specify the files we want to plot and the size and color as two extra feature in the plot.
+We can add different component objects in the ggplot.
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
+I added the major and minor grid ticks.
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+It shows all the legends for Weight and Manufactuerers.
+
+Matlab
+---
+![5 Ways Matlab](https://user-images.githubusercontent.com/59973823/107841017-65be9980-6d85-11eb-9e32-65a5cced5a36.png)
+The legend is shown on the top right, and users can clearly distinguish all the samples from their size and color.
+The implementation is matlab is very simple.
+
+## Technical Achievements
+One of the triky part in the plot is square the Weight before we map them to circle size. If we linearly map the Weight to circle size, we cannot see too much difference between each circle :)
+### Design Achievements
+Users can click on each circle and see the actual value for each sample.
+
+![5 Ways Matlab Demo](https://user-images.githubusercontent.com/59973823/107841564-c7810280-6d89-11eb-8a6a-aa92ff69e5c8.png)
+
+
+Flourish
+---
+![5 Ways Flourish](https://user-images.githubusercontent.com/59973823/107840999-49baf800-6d85-11eb-8be6-e481a219d20a.png)
+
+![5 Ways Flourish demo](https://user-images.githubusercontent.com/59973823/107840997-46277100-6d85-11eb-886d-7b00b4ab40a3.PNG)
+This is the plot from Flourish tool. Similar as the previous plots, we can see the color coded and size coded samples.
+This tool is very simple to use. We can import out data to that website and select the rows or column we want to plot and the columns that we want to use as the extra features, such as size, color.
+## Technical Achievements
+### Design Achievements
+Users can use the slider on the top to see the data in a specific year.
+
+
+
