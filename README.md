@@ -2,7 +2,7 @@
 
 General Description
 ===
-The general format of the markdown includes a heading of the visualization tool used followed by a description of the visualization tool, design achievement done for that particular visualization tool and a technical achievement done for that particular visualization tool. Pictures will, of course, be included as well. Once the whole have been examined, the specific design and technical achievements will be listed that encompass the whole of the assignment. A section on references will be added at the end. 
+The general format of the markdown includes a heading of the visualization tool used followed by a description of the visualization tool, design achievement done for that particular visualization tool and a technical achievement done for that particular visualization tool. Pictures will, of course, be included as well. Once the whole have been examined, the specific design and technical achievements will be listed that encompass the whole of the assignment. A section on references will be added at the end. I do not know why some of the images are not appearing. Please see the image folder for the results - thank you! Some folders may not have really anything besides the original file in there and a file in all caps. Please read the all caps file for some detail/direction of where to find the produced scatterplot.
 
 
 # Excel
@@ -15,7 +15,7 @@ Description
 
 Pictures
 ===
-![caption](img/<ExcelIMAGE.1>)
+![caption](img/ExcelIMAGE.1)
 Above is the image of the completed scatterplot within Excel.
 
 Design Achievement
@@ -42,10 +42,10 @@ Description
 
 Pictures
 ===
-![caption](img/<d3IMAGE.1>)
+![caption](img/d3IMAGE.1)
 Above is the image of the base scatterplot in d3.
 
-![caption](img/<d3IMAGE.2>)
+![caption](img/d3IMAGE.2)
 Above is the image of the scatterplot when one of the points is moused over in d3.
 
 Design Achievement
@@ -73,13 +73,13 @@ Description
 
 Pictures
 ===
-![caption](img/<FlourishIMAGE.1>)
+![caption](img/FlourishIMAGE.1)
 Above is the data visualization of the graph produced via Flourish.
 
-![caption](img/<FlourishIMAGE.2>)
+![caption](img/FlourishIMAGE.2)
 Above is an image that displays the mouseover feature of the data points.
 
-![caption](img/<FlourishIMAGE.3>)
+![caption](img/FlourishIMAGE.3)
 Above is the csv dataset that was used, and how each particular type is factored into the scatterplot. Weight was set as the x-values. MPG was set as the y-values. Color was based on manufacturer data. Size was based on the Weight/500 for visual appeal and designation - similarly to d3.
 
 Design Achievement
@@ -103,7 +103,7 @@ This data visualization tool was my personal favorite of the five used in this a
 
 Pictures
 ===
-![caption](img/<RGGPlotImage.1)
+![caption](img/RGGPlotImage.1)
 Above is the plot from R + ggplot that I created from the R code.
 
 Design Achievement
@@ -125,7 +125,7 @@ The data visualization was not completely easy, but somewhat hard. Finding the e
 
 Pictures
 ===
-![caption](img/<PythonMatplotlibIMAGE.1>)
+![caption](img/PythonMatplotlibIMAGE.1)
 Above is pictured the scatterplot visualized using Python and matplotlib.
 
 Design Achievement
