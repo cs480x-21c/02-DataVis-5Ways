@@ -45,10 +45,27 @@ size and car company, making the dot size increase with weight and color coding 
 
 ![TableauImage](img/TableauImage.png)
 
+# d3
+
+d3 proved very challenging for me, the whole process of making the scales of the graph as global functions
+because the file has not made that section yet is very confusing to me. Additionally, the process of 
+inverting axes was hard. I ended up making the graph by taking the csv file and extracting only the
+rows which had an MPG, the categories from each row were put in variables and the graph was made of the variables.
+I was not able to change the color or increase the size of the dots based on the weight, but I beleive that I will
+be able to do so going forward.
+
+Information for making the graph was taking from Learn d3.js by Helder da Rocha 
+(It is a physical book)
+
+![d3Image](img/d3Image.png)
+
 ## Technical Achievements
 - Used the three input excel scatterplot to make the size of the dots increase with vehicle weight.
 - Created the color set and mapped the colors to it in python.
 - Used viridis for the cmap.
+- flip the axes of the d3 graph
+- create a grid in the d3 graph
+- make the scales of the d3 graph global functions
 
 ### Design Achievements
 - Downloaded the given graph and used a color picker to select colors for the Rplot graph
