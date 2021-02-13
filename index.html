@@ -1,0 +1,120 @@
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<body>
+<script>
+    console.log(d3); // test if d3 is loaded
+
+    // SVG dimensions
+    var SVGWidth = 800;
+    var SVGHeight = 600;
+
+    // Margins
+    var margins = {left: 50, right: 50, top: 50, bottom: 50},
+        width = SVGWidth - margins.left - margins.right,
+        height = SVGHeight - margins.top - margins.bottom;
+
+    // Axis limits and bubble profiles
+    var x = d3.scaleLinear().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+    var bubbleSize = d3.scaleLinear().range([3, 20]);
+    var bubbleColors = d3.scaleOrdinal().range(["red", "blue", "orange", "green", "purple"]);
+
+    // SVG
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", SVGWidth)
+        .attr("height", SVGHeight)
+        .append("g")
+        .attr("transform", "translate(" + margins.left + "," + margins.top + ")");
+
+    // Load CSV
+    d3.csv("cars-sample.csv", function(error, data){
+        if (error) throw error;
+
+        // Format
+        data.forEach(function(d) {
+            d.Weight = +d.Weight;
+            d.MPG = +d.MPG;
+            d.size = +d.Weight;
+        });
+
+        // Domains
+        x.domain([1500, 5200]);
+        y.domain([8, 48]);
+        bubbleSize.domain([1500, 5000]);
+        bubbleColors.domain(["ford", "toyota", "bmw", "honda", "mercedes"]);
+
+        // Define major and minor ticks & grid
+        function xGridLines(){
+            return d3.axisBottom(x);
+        }
+
+        function yGridLines(){
+            return d3.axisLeft(y);
+        }
+
+        // Draw major and minor ticks & grid
+        svg.append("g")
+            .attr("class", "major-axis-grid")
+            .attr("transform", "translate(0, " + height + ")")
+            .call(xGridLines().tickSize(-height).tickFormat(""));
+
+        svg.append("g")
+            .attr("class", "major-axis-grid")
+            .call(yGridLines().tickSize(-width).tickFormat(""));
+
+        // Axes
+        svg.append("g")
+            .attr("transform", "translate(0, " + height + ")")
+            .call(d3.axisBottom(x).ticks(3));
+
+        svg.append("g")
+            .call(d3.axisLeft(y).ticks(4));
+
+        // Axis labels
+        svg.append("text")
+            .attr("transform", "translate(" + (width/2) + ", " + (height + margins.top - 10) + ")")
+            .style("text-anchor", "middle")
+            .text("Weight")
+            .style("font", "18px arial")
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margins.left)
+            .attr("x", 0 - (height/2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG")
+            .style("font", "18px arial");
+
+        // Bubble Plot
+        svg.selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("r", function(d) { return bubbleSize(d.size);})
+            .attr("cx", function(d) { return x(d.Weight);})
+            .attr("cy", function(d) { return y(d.MPG);})
+            .style("fill", function(d) { return bubbleColors(d.Manufacturer);})
+            .attr("fill-opacity", 0.5);
+
+
+
+
+    });
+
+
+</script>
+</body>
+
+<style>
+    svg{
+        background-color: white;
+    }
+    .major-axis-grid line{
+        stroke: #AAAAAA;
+    }
+
+    .minor-axis-grid line{
+        stroke: #CCCCCC
+    }
+</style>
