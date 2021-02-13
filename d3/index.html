@@ -1,0 +1,192 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<div id="chart">
+  <svg id="leftAxis"></svg>
+  <svg id="chartArea"></svg>
+  <svg id="legend"></svg>
+</div>
+
+<div id="CarLabel"></div>
+
+
+<script>
+  // adapted from https://www.tutorialsteacher.com/d3js/create-bar-chart-using-d3js
+  var windowWidth = 800;
+  var windowHeight = 400;
+  var legendWidth = 100;
+  var legendHeight = windowHeight;
+  var marginSize = 5;
+
+  var colorCategories = ["bmw", "ford", "honda", "mercedes", "toyota"];
+  var colorMapping = d3.scaleOrdinal().domain(colorCategories).range(d3.schemeSet2);
+
+  var sizeDomain = [1,2,3,4];
+  var sizeRange = [3,5,7,9];
+  var sizeMapping = d3.scaleOrdinal().domain(sizeDomain).range(sizeRange);
+
+  var textHeadersLegend = ["Manufacturer", "Weight"];
+  var textHeaderPlacementLegend = [60, 230];
+  var legendHeadingMap = d3.scaleOrdinal().domain(textHeadersLegend).range(textHeaderPlacementLegend);
+
+  const prom = d3.csv("/cars-sample-clean.csv").then(function(data) {
+
+    //d3.csv("/cars-sample-cleaned.csv", function(data, error) {
+      
+    var xscale = d3.scaleLinear()
+      .domain([1500, 5000])
+      .range([0, windowWidth]);
+
+    var yscale = d3.scaleLinear()
+    .domain([7, 46]) // make the scale dependant on the height of the max of the data
+    .range([0, windowHeight]);
+
+    var svg = d3.select("#chartArea")
+    .attr('width', windowWidth)
+    .attr('height', windowHeight);
+
+    var rect = [0,0];
+    //rectangle border around chart area
+    svg.selectAll('rect')
+      .data(rect)
+      .enter()
+      .append('rect')
+      .attr('x', marginSize)
+      .attr('y', marginSize)
+      .attr('width', windowWidth-(2*marginSize))
+      .attr('height', windowHeight-(4.5*marginSize))
+      .attr('stroke-width', 3).attr('stroke', 'black')
+      .attr('fill', 'none');
+    
+    
+      //data points
+      svg.selectAll('circle')
+      .data(data)
+      .enter().append('circle')
+      .attr('cx', function(d) {
+        //console.log(d);
+        return Math.round(xscale(parseInt(d["Weight"])));})
+      .attr('cy', function(d) { return windowHeight-Math.round(yscale(parseInt(d["MPG"])));})
+      .attr('fill', function(d) { return colorMapping(d["Manufacturer"])})
+      .attr('r', function(d) {
+        return sizeMapping(Math.floor(parseInt(d["Weight"])/1000));
+      })
+      .attr('fill-opacity', 0.7)
+      
+      .on('mouseover', function(mouseEvent, val) {
+        d3.select(this).attr('stroke-width', 1).attr('stroke', 'black');
+        d3.select("#CarLabel").text("Car Model: "+val["Manufacturer"] + " " + val["Car"])
+      })
+      .on('mouseout', function() {
+        d3.select(this).attr('stroke-width', 0).attr('stroke', 'steelblue');
+      });
+
+      //tic marks x axis
+
+      //text x axis
+      var XAxisTitle = ["Weight"];
+      var XAxisRange = [[windowWidth/2,windowHeight-4]];
+      var XAxisMapping = d3.scaleOrdinal().domain(XAxisTitle).range(XAxisRange);
+      svg.selectAll("xaxisTitle")
+      .data(XAxisTitle)
+      .enter()
+      .append('text')
+      .attr('x', function(d) {
+        return XAxisMapping(d)[0]})
+      .attr('y', function(d){ return XAxisMapping(d)[1]})
+      .text(function(d){return d})
+
+
+      
+      //chart manufacturer legend- adapted from https://www.d3-graph-gallery.com/graph/custom_legend.html
+      var legend = d3.select("#legend")
+      .attr('width', legendWidth)
+      .attr('height', legendHeight);
+      
+      //section 1: Manufacturer -> color
+      legend.selectAll('circle')
+        .data(colorCategories)
+        .enter()
+        .append('circle')
+        .attr('cx', marginSize*2)
+        .attr('cy', function(d,i) { return 75+i*25})
+        .attr('r', 7)
+        .style('fill', function(d) {return colorMapping(d)});
+      
+      legend.selectAll("text")
+        .data(colorCategories)
+        .enter()
+        .append('text')
+        .attr('x', marginSize*4)
+        .attr('y', function(d,i) { return 75+i*25})
+        .text(function(d) {return d;})
+        .style('fill', function(d) {return colorMapping(d)})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle");
+
+      //section 2: Weight -> size of dot
+      legend.selectAll('mytest')
+        .data(sizeDomain)
+        .enter()
+        .append('circle')
+        .attr('cx', marginSize*2)
+        .attr('cy', function(d,i) { return 250+i*25})
+        .attr('r', function(d) {return sizeMapping(d);})
+        .style('fill', 'gray')
+        .style('stroke', 'black').style('stroke-width', 1);
+      
+      legend.selectAll("testtext")
+        .data(sizeDomain)
+        .enter()
+        .append('text')
+        .attr('x', marginSize*4)
+        .attr('y', function(d,i) { return 250+i*25})
+        .text(function(d) {return d*1000;})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle");
+
+      //headers
+      legend.selectAll("legendHeaders")
+        .data(textHeadersLegend)
+        .enter()
+        .append('text')
+        .attr('x', marginSize*1)
+        .attr('y', function (d){return legendHeadingMap(d)})
+        .text(function(d){return d});
+
+      
+      //section 3: Left Margin
+      var axisWidth = legendWidth/2;
+      var minusPlacement = axisWidth-20;
+      var leftAxis = d3.select("#leftAxis")
+      .attr('width', axisWidth)
+      .attr('height', legendHeight);
+      
+      //placed these down here because they are dependant on the x/y scales
+      var leftAxisData = ["40", "- ", "30", "-  ", "MPG", "20", "-   ", "10", "-    "];
+      var leftAxisRange = [
+        [minusPlacement, windowHeight-yscale(40)], [minusPlacement+16, windowHeight-yscale(40)],
+        [minusPlacement, windowHeight-yscale(30)], [minusPlacement+16, windowHeight-yscale(30)],
+        [5, windowHeight-yscale(25)],
+        [minusPlacement, windowHeight-yscale(20)], [minusPlacement+16, windowHeight-yscale(20)],
+        [minusPlacement, windowHeight-yscale(10)], [minusPlacement+16, windowHeight-yscale(10)]
+      ];
+      var leftAxisMap = d3.scaleOrdinal().domain(leftAxisData).range(leftAxisRange);
+
+      leftAxis.selectAll("ticmarcsandText")
+      .data(leftAxisData)
+      .enter()
+      .append('text')
+      .attr('x', function(d) {
+        return leftAxisMap(d)[0]})
+      .attr('y', function(d){ return leftAxisMap(d)[1]})
+      .text(function(d){return d})
+
+    }).catch(function(error){
+    console.log(error);
+      });
+
+    //}
+    //buildAll();
+  </script>
+
+  
