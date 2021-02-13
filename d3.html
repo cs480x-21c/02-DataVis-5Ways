@@ -1,0 +1,143 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<svg id="scatterplot" ></svg>
+<script>
+  console.log(d3); // test if d3 is loaded
+  
+  var margin = {top: 20, right:20, bottom:80, left:50}, //setting margins so there's room for axes
+	width = 500 - margin.left - margin.right;
+	height = 500 - margin.top - margin.bottom;
+	
+  // Add an SVG
+  var svg = d3.select('#scatterplot')
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  //axes scales/ranges
+  var x = d3.scaleLinear()
+	.domain([1625, 5000])
+	.range([0, width]);
+  var y = d3.scaleLinear()
+	.domain([9, 47])
+	.range([height, 0]);
+  var pointSize = d3.scaleLinear()
+	.domain([1630, 5000])
+	.range([3, 7]);
+  
+  //import data from CSV
+  d3.csv("cars-sample.csv").then(function(data) {
+
+	
+	//adding scatterplot, only points with valid MPG Values
+	svg.selectAll("dot")
+		.data(data)
+	  .enter().append("circle")
+		.attr("r", function(d) {return pointSize(d.Weight); })
+		.attr("cx", function(d) { return x(d.Weight); })
+		.attr("cy", function(d) { return y(d.MPG); })
+		.attr('fill', function(d){
+			if(d.Manufacturer=="bmw"){return 'darkblue'}
+			else if (d.Manufacturer=="ford"){return 'lightblue'}
+			else if (d.Manufacturer=="honda"){return 'green'}
+			else if (d.Manufacturer=="mercedes"){return 'brown'}
+			else if(d.Manufacturer=="toyota"){return 'red'}
+		})
+		.attr('opacity', function (d){  //catching cars with NA MPG values and not displaying them
+			if(d.MPG == "NA"){
+				return '0';
+			}else{
+				return '0.5';
+			}
+		})
+	//adding X axis
+	svg.append("g")
+		.attr("transform", "translate(0," + height + ")")
+		.call(d3.axisBottom(x))
+	
+	//adding X axis label
+	svg.append("text")
+		.text("Weight")
+		.attr("transform",
+			  "translate(" + (width/2) + " ," +     //axis label centered
+			                 (height + margin.top + 20) + ")")   //make it slightly farther down than height + margin, so it's below axis
+		.style("text-anchor", "middle");
+		
+	//adding Y axis
+	svg.append("g")
+		.call(d3.axisLeft(y));
+		
+	//adding Y axis label
+	svg.append("text")
+		.text("MPG")
+		.attr("transform", "rotate(-90)")  //rotate text to vertical
+		.attr("y", 0 - margin.left)
+		.attr("x", 0 - (height/2))  
+		.attr("dy", "1em")			//"1em" height of one unit of text size. Shift to right to display properly on svg
+		.style("text-anchor", "middle");
+		
+	//adding legend
+	svg.append("text")
+		.attr("x", (0*width/4))
+		.attr("y", height+margin.top+40)
+		.style("text-anchor", "middle")
+		.text("BMW")
+		.style("fill", "darkblue")
+	svg.append("circle")
+		.attr("cx", (0*width/4) + 30)
+		.attr("cy", height+margin.top+36)
+		.attr("r", 5)
+		.style("fill", "darkblue")
+		
+	svg.append("text")
+		.attr("x", (1*width/4))
+		.attr("y", height+margin.top+40)
+		.style("text-anchor", "middle")
+		.text("Ford")
+		.style("fill", "lightblue")
+	svg.append("circle")
+		.attr("cx", (1*width/4) + 30)
+		.attr("cy", height+margin.top+36)
+		.attr("r", 5)
+		.style("fill", "lightblue")
+		
+	svg.append("text")
+		.attr("x", (2*width/4))
+		.attr("y", height+margin.top+40)
+		.style("text-anchor", "middle")
+		.text("Honda")
+		.style("fill", "green")
+	svg.append("circle")
+		.attr("cx", (2*width/4) + 30)
+		.attr("cy", height+margin.top+36)
+		.attr("r", 5)
+		.style("fill", "green")
+		
+	svg.append("text")
+		.attr("x", (3*width/4))
+		.attr("y", height+margin.top+40)
+		.style("text-anchor", "middle")
+		.text("Mercedes")
+		.style("fill", "brown")
+	svg.append("circle")
+		.attr("cx", (3*width/4) + 40)
+		.attr("cy", height+margin.top+36)
+		.attr("r", 5)
+		.style("fill", "brown")
+		
+	svg.append("text")
+		.attr("x", (4*width/4)-15)
+		.attr("y", height+margin.top+40)
+		.style("text-anchor", "middle")
+		.text("Toyota")
+		.style("fill", "red")
+	svg.append("circle")
+		.attr("cx", (4*width/4) + 15)
+		.attr("cy", height+margin.top+36)
+		.attr("r", 5)
+		.style("fill", "red")
+	
+	})	
+  
+</script>
