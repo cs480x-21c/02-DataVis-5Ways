@@ -1,0 +1,82 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<svg id="vis"> </svg>
+
+<script>
+  console.log(d3); // test if d3 is loaded
+
+  var lines = [[1500,9,5050,9], [1500,10,5050,10], [1500,20,5050,20], [1500,30,5050,30], [1500,40,5050,40],
+      [1500,9,1500,46], [2000,9,2000,46], [3000,9,3000,46], [4000,9,4000,46], [5000,9,5000,46]];
+
+  var text = [[1400, 10, '10'], [1400, 20, '20'], [1400, 30, '30'], [1400, 40, '40'],
+  [2000, 7.5, '2000'], [3000, 7.5, '3000'], [4000, 7.5, '4000'], [5000, 7.5, '5000']];
+
+  d3.csv("/cars-sample.csv").then(function(d) {
+      console.log(d);
+      populateVis(d)
+  });
+  
+
+  function populateVis(data){
+      var svg = d3.select("#vis")
+          .attr('width', 600)
+          .attr('height', 600);
+
+      var xScale = d3.scaleLinear()
+          .domain([1500, 5050])
+          .range([50, 600]);
+
+      var yScale = d3.scaleLinear()
+          .domain([9, 46])
+          .range([550, 0]);
+
+      var size = d3.scaleLinear()
+          .domain([1500, 5050])
+          .range([4, 8]);
+
+      svg.selectAll('circle')
+          .data(data)
+          .enter().append('circle')
+          .attr('cx', function(d) {return xScale(d.Weight);})
+          .attr('cy', function(d) {
+              if(d.MPG === "NA"){
+                  return yScale(-100); //Don't show dots with a value of NA for MPG
+              }
+              return yScale(d.MPG);
+          })
+          .attr('r', function(d) {return size(d.Weight);})
+          .attr('fill', function(d) {
+              switch(d.Manufacturer){
+                  case "bmw":
+                      return 'orange';
+                  case "ford":
+                      return 'yellow';
+                  case "honda":
+                      return 'green';
+                  case "mercedes":
+                      return 'cyan';
+                  case "toyota":
+                      return 'pink';
+              }
+          })
+          .attr('fill-opacity', 0.5);
+
+      svg.selectAll('line')
+          .data(lines)
+          .enter().append('line')
+          .attr('x1', function(d) {return xScale(d[0]);})
+          .attr('y1', function(d) {return yScale(d[1]);})
+          .attr('x2', function(d) {return xScale(d[2]);})
+          .attr('y2', function(d) {return yScale(d[3]);})
+          .attr('stroke', 'black')
+          .attr('stroke-width', 1);
+
+      svg.selectAll('text')
+          .data(lines)
+          .enter().append('text')
+          .attr('x', function(d) {return xScale(d[0]);})
+          .attr('y', function(d) {return yScale(d[1]);})
+          .attr('content', function(d) {return d[2];});
+  }
+
+</script>
