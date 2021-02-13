@@ -5,8 +5,11 @@
 Resources:
 
 https://www.d3-graph-gallery.com/graph/scatter_basic.html
+
 https://www.d3-graph-gallery.com/graph/custom_theme.html
+
 https://www.d3-graph-gallery.com/graph/scatter_tooltip.html
+
 https://www.digitalocean.com/community/tutorials/js-filter-array-method
 
 After the introduction of d3 last week, I think that really helped me get a hang of things this week to make more progress and become more familiar with the toolset. The resources I used listed above were mostly starter code that were very helpful in formatting and learning about the specific plot we were required to make. It was very helpful in getting me to understand good coding practices when making visualizations with d3. Compared to the other methods of showing visualizations, I really liked how d3 had more of a separative approach when adding filters and other attributes such as the weighted plot points, categorical coloring, and the axis limitations. I thought this library was very good in organizing the different attributes and filters and the code seemed to be more readable than other libraries. Overall, I thought that this method of creating a visualization was really straightforward. This method seemed to work for a variety of datasets as we can specify very clearly what we want in a visualization.
@@ -26,3 +29,15 @@ Resources:
 https://www.mathworks.com/matlabcentral/answers/72545-how-to-import-csv-file-in-matlab
 
 My MATLAB expereince was pretty simple. After taking a course using and coding in MATLAB, I thought this was a pretty simple task to plot a loaded dataset. With simple if and else statements along with the strcmp (string compare) function, I thought that it was a very easy process in trying to categorize each manufacturer and graphing the data that way. This did make it more difficult to create a legend in order to specify each manufacturer, which is more of a trade off depending on what is more important to the user. MATLAB also has many different functions for all different kinds of plots and it had one for scatter plots as well which was very useful in our case here. It was also very simple to set the x and y limits as those are also built in functions to specify the range of the axis. I think this method of visualization would be very useful for datasets like this one or simpler ones. I don't think the MATLAB library would be very useful in complex datasets especially with its difficulties in fulfilling simple tasks such as creating legends. 
+
+# R+ggplot2
+
+<img src="img/CarsPlotR.png" width="500">
+
+Resources:
+
+https://jcoliver.github.io/learn-r/004-intro-ggplot.html
+
+By far, I thought that this method was the most simplistic and concise method in plotting this type of data. While the plot we were trying to replicate was done in this library, I was able to recreate the plot in mere seconds with very few lines. The resources online that I've listed played such a big role in helping me understand the R language and recreating this plot. The geom_point() stated in the example was very useful in adding the weighted points attribute to the plots as well as stylistic and aesthetic uses to make the points 50% opacity. This library was great for this dataset and very useful for statistical analysis and creating charts and graphs such as these at a very low and minimal effort. 
+
+
