@@ -36,7 +36,21 @@ carManufacturer = column(cars, 2)
 print(carManufacturer)
 
 #removing "NA" points
+badIndicies = []
+currentIndex = 0
+for x in carMPG:  #locate indicies with "NA" MPG
+    if(x==0):
+        badIndicies.append(currentIndex)
+        currentIndex = currentIndex - 1  #required as indicies shift after pop
+    currentIndex = currentIndex + 1
 
+print(badIndicies)
+
+for x in badIndicies:  #remove data associated with indicies
+    carMPG.pop(x)
+    carWeight.pop(x)
+    carManufacturer.pop(x)
+    
 
 weightSize = []
 for x in carWeight:
