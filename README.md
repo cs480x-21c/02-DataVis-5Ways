@@ -9,13 +9,17 @@ For this project, I implemented the graph in five different ways:
 
 # JavaScript + d3
 
-(TBD)
+JavaScript is the primary web scripting language, and d3 is a library for JavaScript that is designed to assist the user in implementing visualization. In order to implement this graph, I used the d3 documentation and d3's example scatter plots.
+
+To visualize the cars dataset, I first loaded the csv using d3, filtered it to remove cars with N/A as MPG, used d3 to create an svg graph with labeled axes and tickmarks, and placed the cars on it as a scatter plot. The cars are colored based on manufacturer and sized based on weight. Additionally, this is the implementation with the technical & design achievements.
+
+![javascriptd3](img/javascriptd3.png)
 
 # R + ggplot2
 
 R is a language targeted at statistic modeling and computing, and ggplot2 is a very popular library for graphing in R. In order to learn the basics of using ggplot2, I used [this](http://r-statistics.co/Complete-Ggplot2-Tutorial-Part2-Customizing-Theme-With-R-Code.html) tutorial.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+To visualize the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
 
 ![ggplot2](img/rggplot2.png)
 
@@ -45,8 +49,14 @@ To create the graph in excel, I first manipulated the data some; I stratified it
 
 
 ## Technical Achievements
-- A
-- B
+Please note that these achievements are all on the JavaScript / D3 version
+
+- Tooltip appears when mousing over a dot on scatter plot
+- Tooltip shows the information associated with the car
+- Cars with N/A MPG are filtered out
 
 ### Design Achievements
-- C
+Please note that these achievements are all on the JavaScript / D3 version
+
+- Graph is centered in page with title
+- Used materialize.css to make tooltip follow Google's material design language
