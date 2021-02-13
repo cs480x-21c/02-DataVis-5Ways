@@ -69,12 +69,30 @@ In many cases the library provided too many methods to choose from.
 In the future I would use JFreeChart if I found a good reason to use it.
 The set up took a long time, but I like the result.
 
-![J Free](img/jfreechart.jpg)
+![JFreeChart Vis](img/jfreechart.jpg)
 
 You can run the jar to remake the chart, 
 see ./JFreeChart/JFreeChartCarSample/chart.jar
 
+# Flourish
 
+I saw flourish on the list, and lots of the results looked professional so I decided to try it.
+
+Importing the data was easy, since Flourish interprets csvs.
+I could simply select which columns were my data. The series making was fully automatic.
+The tool provides a ton of options to customize the axes, colors, and background.
+I was able to replicate the axis numbers and style accurately. 
+Compared to the other tools/libraries, I found this one to be the easiest to use.
+
+In the future I would use flourish if I know what kind of chart I want to make, 
+and I have data files that I can import.
+
+![Flourish vis](img/FlourishVis.png)
+
+I could not include proper files for the vis. I included an HTML file, but it does not work properly so please use the link.
+
+You can check out the vis at
+https://public.flourish.studio/visualisation/5283934/
 
 Design Achievements
 --

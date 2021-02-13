@@ -1,0 +1,5 @@
+This is the link to the chart I made.
+
+https://public.flourish.studio/visualisation/5283934/
+
+The HTML file displayes the vis, with some problems.
