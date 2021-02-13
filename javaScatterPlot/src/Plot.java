@@ -6,9 +6,6 @@ import java.awt.geom.Point2D;
 import java.io.*;
 import java.util.ArrayList;
 
-
-
-
 public class Plot extends JFrame{
     private static ArrayList content = new ArrayList<Car>();
     private int width = 900;

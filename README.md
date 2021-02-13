@@ -3,19 +3,14 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Tech used:
-3 libraries
-  -   D3
-  -   R + ggplot2
-  -   Java 2d
-Other 2
-  - Tableau
-  - Excel
-FIX THE colors
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
 # R + ggplot2
+
+To visualize the cars dataset in R, I used ggplot's aes() functionality to draw the circles
+in different sizes and colors and geom_point() layer to modify the opacity of the circles
+
+![RPlot](img/Rplot.png)
+
 
 Resources Used:
 
@@ -23,42 +18,44 @@ http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-soft
 
 https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-![RPlot](img/Rplot.png)
-
-
 # d3
 
-Templates Used from:
+I used d3.csv() to load the sample csv file into d3. All other factors of this
+visualization are made with d3 shape building and data binding.
+
+![D3](img/d3.JPG)
+
+Templates Used:
 
 https://www.d3-graph-gallery.com/graph/scatter_basic.html
 
 https://www.d3-graph-gallery.com/graph/custom_theme.html
 
-![D3](img/d3.JPG)
-
 
 # Java 2d
 
+To visualize this dataset in Java JFrame, I utilized the Graphics2D class.
+
+![Java](img/java.jpg)
+
+Template Used:
+
+http://forum.codecall.net/topic/54232-making-scatter-plot-graphs-in-java/
+
 # Tableau
 
-![Tableau](img/Tableau.png)
+![Tableau](img/tableau.png)
 
 
-# Excel
+# Flourish
+I used the free version of Flourish. Due to some constraints,
+the tick marks could not be adjusted.
 
+![Flourish](img/tableau.png)
 
 
 ## Technical Achievements
-- **Colored Background**: All Plots have a gray colored background
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **non-requirements**: d3, Tableau, ggplot have a gray colored background and background pane
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **colors**: matched the colors of the original reference circles
