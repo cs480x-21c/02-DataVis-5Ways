@@ -9,24 +9,19 @@
 <div id="value"></div>
 <svg id="vis"></svg>
 
-<!--TODO:
-- Fix colors
-- Fix lick mark spacing
-- Fix axis label spacing
-- Make legend
--->
-
-
 <script>
     // Dimensions and margins of graph
     var margin = {top: 10, right: 20, bottom: 30, left: 50},
         width = 500 - margin.left - margin.right,
         height = 420 - margin.top - margin.bottom;
 
+    let brand = ['bmw', 'ford', 'honda', 'mercedes', 'toyota']
+    let bubble_color = ['orange', 'olive', 'turquoise', 'deepskyblue', 'magenta']
+
     // Set up svg
     let svg = d3.select('#vis')
         .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
+        .attr('height', height + margin.top + margin.bottom + 30)
         .append('g')
         .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
@@ -45,7 +40,7 @@
         svg.append('text')
             .attr('text-anchor', 'end')
             .attr('x', width)
-            .attr('y', height - 50)
+            .attr('y', height + 50)
             .text('Weight')
 
         // Add Y-axis
@@ -70,8 +65,8 @@
 
         // Scale for bubble color
         var color = d3.scaleOrdinal()
-            .domain(['bmw', 'ford', 'honda', 'mercedes', 'toyota'])
-            .range(['orange', 'chartreuse', 'turquoise', 'deepskyblue', 'magenta'])
+            .domain(brand)
+            .range(bubble_color)
 
         // Add data points
         svg.append('g')
@@ -95,5 +90,4 @@
             .style('stroke-width', '0px')
 
     });
-
 </script>

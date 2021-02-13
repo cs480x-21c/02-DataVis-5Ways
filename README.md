@@ -14,7 +14,7 @@ While the task itself was relively straight forward, the difficulty with this li
 using d3 v4 (the version used in the guides I found) and d3 v6 (The version used in class) and how to overcome their subtle differences
 
 ## Design Achievements - d3
-In order to make the legend I needed to create a new object, similar assignment 1 and place it next to the chart.
+
 
 ## Resources - d3
 
