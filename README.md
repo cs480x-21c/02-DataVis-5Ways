@@ -7,9 +7,9 @@ Assignment 2 - Data Visualization, 5 Ways
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R, having never used R before, I was a bit apprehensive, however, it turned out to be relatively
-straightforward to use. The nicest part of R in my opintion is the ease at which it converts the csv file, as in the user does not need to
+straightforward to use. The nicest part of R in my opinion is the ease at which it converts the csv file, as in the user does not need to
 remove incomplete rows. The built in ggplot features were used to create the different sizes, the colors were selected using a color picker on the 
-original graph give in the assignment in an attempt to create an image as close to the original as possible.
+original graph given in the assignment in an attempt to create an image as close to the original as possible.
 
 For R I used information from this webpage: https://statisticsglobe.com/plot-in-r-example as well as the R documentaion on import and graphing: http://lib.stat.cmu.edu/R/CRAN/manuals.html
 
