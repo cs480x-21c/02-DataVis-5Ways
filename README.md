@@ -15,6 +15,8 @@ d3.js is the library that we have mostly been working with in this class. This w
 SAS JMP
 ---
 
+JMP by SAS is a personal favorite of mine, and what I used to do the major of my data visualization work in medical research. The inuitive GUI and powerful scripting language make it an amazing tool for pretty much all users, and I would highly reccomend it to anyone looking to plot data. A JMP notebook and script is included in the `jmp/` folder.
+
 ![SAS JMP](img/car-jmp.png)
 
 Python ggplot2
