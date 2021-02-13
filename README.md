@@ -13,7 +13,7 @@ The attempted graph:
 # R + ggplot2 
 I ran into a lot of bugs when trying to set up R and ggplot (and I also learned that most of the help out there is based on RStudio). However, once I got it up and running it was super simple to implement! Really surprised me. R seems to be the tool to use when you just want to visualize things and don't really care about incorporating it into a website. To visualize the data, I used ggplot2's geom_point
 
-I  relied on documentation and this website (https://365datascience.com/tutorials/r-tutorials/ggplot2-scatter-plot/) to implement the visualization
+I  relied on documentation and this website (https://365datascience.com/tutorials/r-tutorials/ggplot2-scatter-plot/) and https://www.datanovia.com/en/blog/how-to-create-a-bubble-chart-in-r-using-ggplot2/to implement the visualization
 ![ggplot2](img/ggplot2.png)
 
 # Python + Altair + pandas
@@ -30,7 +30,7 @@ I mostly used this website (https://www.geeksforgeeks.org/python-altair-scatter-
 # Python + Matplotlib + pandas
 Like with Altair, I put the data that was needed in a dictionary for easier use. I ran into some difficulties getting everything set up but once i got it to work it was pretty simple. However, I did run into problems trying to implement the colors (which I eventually figured out and helped me implement it in js). It seemes like Altair is the fancy way of doing visualizations but Matplotlib seems like it has the most resources out there for Python
 
-I used this website (https://pythonspot.com/matplotlib-scatterplot/)
+I used this website (https://pythonspot.com/matplotlib-scatterplot/) and https://kanoki.org/2020/08/30/matplotlib-scatter-plot-color-by-category-in-python/ and https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.scatter.html
 
 ![matplotlib](img/python-matplotlib.png)
 
