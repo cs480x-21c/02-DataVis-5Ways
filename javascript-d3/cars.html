@@ -1,0 +1,85 @@
+<!-- example code from https://www.d3-graph-gallery.com/graph/scatter_basic.html was used as a guide for this viz -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cars-sample</title>
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+    </head>
+    <body>
+        <!-- Create a div where the graph will take place -->
+        <div id="car_viz">
+            <script>
+                // set the dimensions and margins of the graph
+                var margin = {top: 10, right: 30, bottom: 60, left: 60},
+                    width = 690 - margin.left - margin.right,
+                    height = 600 - margin.top - margin.bottom
+
+                // append the svg object to the body of the page
+                var svg = d3.select("#car_viz")
+                .append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform",
+                        "translate(" + margin.left + "," + margin.top + ")")
+                
+                // Add X axis label
+                svg.append("text")
+                    .attr("y", height + margin.bottom/2)
+                    .attr("x", width/2)
+                    .style("text-anchor", "middle")
+                    .text("Weight")
+
+                // Add X axis
+                var x = d3.scaleLinear()
+                    .domain([1500, 5050])
+                    .range([0, width])
+                svg.append("g")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(d3.axisBottom(x))
+                
+                // Add Y axis label
+                svg.append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", 0 - margin.left/2)
+                    .attr("x", 0 - (height/2))
+                    .style("text-anchor", "middle")
+                    .text("MPG")
+
+                // Add Y axis
+                var y = d3.scaleLinear()
+                    .domain([8, 50])
+                    .range([height, 0])
+                svg.append("g")
+                    .call(d3.axisLeft(y))
+                
+                d3.csv("/cars-sample.csv", function(data)
+                {
+                    // Add dots
+                    svg.append("circle")
+                        .datum(data)
+                        .attr("cx", function (d) { return x(d.Weight) } )
+                        .attr("cy", function (d) { return y(d.MPG) } )
+                        .attr("r", function (d) {return d.Weight/500} )
+                        .style("fill", function(d)
+                        {
+                            switch(d.Manufacturer)
+                            {
+                                case "bmw": return "red"
+                                case "ford": return "yellow"
+                                case "honda": return "green"
+                                case "mercedes": return "blue"
+                                case "toyota": return "purple"
+                            }
+                        })
+                        .style("opacity", 0.5)
+                        .style("stroke", "black")
+                        .style("visibility", function(d) { return ( (x(d.Weight) && y(d.MPG))? "visible" : "hidden" ) } ) // hide n/a values
+                })
+            
+            </script>
+        </div>
+    </body>
+</html>
