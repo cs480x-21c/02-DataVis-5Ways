@@ -3,20 +3,6 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
 Plots
 ---
 
@@ -28,7 +14,7 @@ Without much experience in R I was quite hesitant to pick up this library, oh ma
 
 # Matplotlib
 
-Matplotlib was a bit more familiar territory for me. I have use some of the library and Python in a previous class, so I was able to load the csv and make a scatter plot fairly quickly. The documentation came in quite handy for scaling the points and coloring them. I have not gotten the legend to work yet, I plan to tackle that one soon.
+Matplotlib was a bit more familiar territory for me. I have use some of the library and Python in a previous class, so I was able to load the csv and make a scatter plot fairly quickly. The documentation came in quite handy for scaling the points and coloring them. After a while I came back to add the grid lines and the legend *see Design Achievement*.
 
 ![Matplot](img/MatPlot_1.png)
 
@@ -36,7 +22,7 @@ Docs: <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html" target
 
 # D3
 
-I still have a lot to learn when it comes to D3 and the syntax is still a bit tricky. I was able to find a simple scatter plot example (<a href=https://www.d3-graph-gallery.com/graph/scatter_basic.html target="_blank"> Basic scatterplot in d3.js</a>) that really helped me get started. It’s still a handful jumping between HTML, D3 and JS docks, but, before long I was able to replicate the plot.
+I still have a lot to learn when it comes to D3 and the syntax is still a bit tricky. I was able to find a simple scatter plot example (<a href=https://www.d3-graph-gallery.com/graph/scatter_basic.html target="_blank"> Basic scatterplot in d3.js</a>) that really helped me get started. It’s still a handful jumping between HTML, D3 and JS docks, but, before long I was able to replicate the plot.I still have difficulties lining things up with divs and margins and makes for a lot of “Magic” numbers that hurt code readability.
 
 ![D3Plot](img/D3Plot.png)
 
@@ -58,8 +44,7 @@ Excel would not be my first choice when making a vis. It was easy to separate th
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- None this time around :(
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- For a while I had been making graphs with matplotlib without gridlines, legends, or even labels. Finally, I decided to end this madness by taking advantage of powerful tools like plt.grid, plt.legend, and patches. Though my colors could probably use some work I think this turned out to be one of the better-looking graphs.
