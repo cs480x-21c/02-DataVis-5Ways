@@ -35,6 +35,16 @@ For matplot I used information from: https://kanoki.org/2020/08/30/matplotlib-sc
 
 ![PythonImage](img/PythonAssignment2Image.png)
 
+# Tableau
+
+Tableau is a highly intuitive data analysis program, it is probably the single most user friendly
+interface that I have ever laid my hands on. I downloaded the csv, tableau automatically converted 
+it to a table, and I dragged and dropped the columns I would like to use for the x and y axis,
+tableau also makes it so you can drag and drop columns to use as data markers, which I did for both
+size and car company, making the dot size increase with weight and color coding the dots by company.
+
+![TableauImage](img/TableauImage.png)
+
 ## Technical Achievements
 - Used the three input excel scatterplot to make the size of the dots increase with vehicle weight.
 - Created the color set and mapped the colors to it in python.
