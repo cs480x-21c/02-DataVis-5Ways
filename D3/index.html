@@ -1,0 +1,164 @@
+<style>
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 65px;
+    height: 25px;
+    padding: 2px;
+    font-size: 8px;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+</style>
+
+<body>
+<script src='https://d3js.org/d3.v6.min.js'></script>
+  <script>
+    console.log(d3); // test if d3 is loaded
+
+    var margin = {top: 10, right: 30, bottom: 40, left: 60},
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("text")
+            .attr("transform",
+                    "translate(" + (width/2) + " ," +
+                    (height + margin.bottom - 10) + ")")
+            .style("text", "middle")
+            .text("Weight");
+
+    svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x",0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG");
+
+    var Tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+
+    // Accessing the values from csv
+  d3.csv("cars-sample.csv").then(function(data) {
+    data.forEach(function(d) {
+      d.MPG = +d.MPG;
+      d.Weight = +d.Weight;
+    })
+    console.log(data);
+
+    var maxMPG = d3.max(data, function(d){return d.MPG})
+    var minMPG = d3.min(data, function(d){return d.MPG})
+
+    var maxWeight = d3.max(data, function(d){return d.Weight})
+    var minWeight = d3.min(data, function(d){return d.Weight})
+
+    // Creating X Scale
+
+    var xScale = d3.scaleLinear()
+      .domain([0, 0])
+      .range([0, width])
+    svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .attr("class", 'myXaxis')
+            .call(d3.axisBottom(xScale))
+            .attr('opacity', "0");
+
+    var yScale = d3.scaleLinear()
+      .domain([minMPG, maxMPG])
+      .range([height, 0]);
+    svg.append("g")
+            .call(d3.axisLeft(yScale));
+
+    var mouseOut = function(d){
+      Tooltip.transition()
+              . duration(200)
+              .style("opacity", 0)
+    }
+
+    svg.append('g')
+      .selectAll("dot")
+      .data(data)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d){return xScale(d.Weight); })
+        .attr("cy", function(d){return yScale(d.MPG); })
+        .attr("r", function(d){return d.Weight/500})
+         .style("opacity", "50%")
+        .style("fill", function(d){
+          if(d.Manufacturer == "ford"){
+            return "red"
+          }
+          if(d.Manufacturer == "bmw"){
+            return "silver";
+          }
+          if(d.Manufacturer == "mercedes"){
+            return "black";
+          }
+          if(d.Manufacturer == "toyota"){
+            return "green";
+          }
+          if(d.Manufacturer == "honda"){
+            return "blue";
+          }
+        })
+            .on("mouseover", function(e, data){
+              Tooltip.transition()
+                      .duration(200)
+                      .style("opacity", 1)
+              Tooltip.html("[MPG]: " + data.MPG + "<br/> [Weight]" +  data.Weight + "<br/> [Model]:" + data.Car)
+              .style("left", d3.select(this).attr("cx") + "px")
+              .style("top", d3.select(this).attr("cy") + "px");
+            })
+      .on("mouseout", mouseOut);
+
+
+        xScale.domain([minWeight, maxWeight])
+      svg.select(".myXaxis")
+            .transition()
+            .duration(2000)
+            .attr("opacity", "1")
+            .call(d3.axisBottom(xScale));
+
+      svg.selectAll("circle")
+            .transition()
+              .ease(d3.easeBounce)
+            .delay(function(d){
+              if(d.Manufacturer == "ford"){
+                return 1000;
+              }
+              if(d.Manufacturer == "bmw"){
+                return 2000;
+              }
+              if(d.Manufacturer == "mercedes"){
+                return 3000;
+              }
+              if(d.Manufacturer == "toyota"){
+                return 4000;
+              }
+              if(d.Manufacturer == "honda"){
+                return 5000;
+              }
+            })
+            .duration(2000)
+            .attr("cx", function (d) { return xScale(d.Weight); } )
+            .attr("cy", function (d) { return yScale(d.MPG); } )
+
+
+
+  });
+
+  </script>
+</body>
