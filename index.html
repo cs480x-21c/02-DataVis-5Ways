@@ -61,7 +61,7 @@
                 .attr("cx", function (d) { return x(d.Weight); })
                 .attr("cy", function (d) { return y(removeNA(d.MPG)); })
                 .attr("r", function (d) { return d.Weight / weightScale; })
-                .style("fill", "red")
+                .style("fill", function (d) { return hardCodeColor(d.Manufacturer); })
                 .style("fill-opacity", 0.5)
                 .style("stroke", "black")
         })
@@ -69,6 +69,18 @@
         // Treat NA data as -10 to plot below the plot bounds. Out of sight...
         function removeNA(someData) {
             return (someData == 'NA' ? -10 : someData)
+        }
+
+        var hardCodeDict = {
+            "bmw":d3.color("red"),
+            "ford":d3.color("yellow"),
+            "honda":d3.color("green"),
+            "mercedes":d3.color("lightblue"),
+            "toyota":d3.color("purple")
+        }
+
+        function hardCodeColor(someBrand) {
+            return hardCodeDict[someBrand]
         }
 
     </script>
