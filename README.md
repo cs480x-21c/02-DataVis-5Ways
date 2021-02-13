@@ -23,7 +23,7 @@ Because this library was created for JavaScript, it was a little bit weird to us
 
 To correctly load the csv file, I used to pandas library and I put the data I needed in a dictionary. 
 
-I mostly used this website (https://www.geeksforgeeks.org/python-altair-scatter-plot/) to visualize the data. I also relied on the official documentation to figure out the scaling of the circles and to debug. 
+I mostly used this website (https://www.geeksforgeeks.org/python-altair-scatter-plot/) and https://altair-viz.github.io/getting_started/starting.html to visualize the data. I also relied on the official documentation to figure out the scaling of the circles and to debug. 
 
 ![altair](img/altair-python.svg)
 
