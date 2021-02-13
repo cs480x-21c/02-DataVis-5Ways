@@ -35,7 +35,7 @@ https://www.d3-graph-gallery.com/graph/custom_theme.html
 
 To visualize this dataset in Java JFrame, I utilized the Graphics2D class.
 
-![Java](img/java.jpg)
+![Java](img/java.JPG)
 
 Template Used:
 
