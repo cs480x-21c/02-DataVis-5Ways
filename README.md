@@ -1,142 +1,57 @@
-# 02-DataVis-5ways
+# d3, HTML, Javascript
 
-Assignment 2 - Data Visualization, 5 Ways  
-===
+<img src="img/CarsPlotD3.png" width="500">
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+Resources:
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+https://www.d3-graph-gallery.com/graph/scatter_basic.html
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+https://www.d3-graph-gallery.com/graph/custom_theme.html
 
-Your goal is to use 5 different tools to make the following chart:
+https://www.d3-graph-gallery.com/graph/scatter_tooltip.html
 
-![ggplot2](img/ggplot2.png)
+https://www.digitalocean.com/community/tutorials/js-filter-array-method
 
-These features should be preserved as much as possible in your replication:
+After the introduction of d3 last week, I think that really helped me get a hang of things this week to make more progress and become more familiar with the toolset. The resources I used listed above were mostly starter code that were very helpful in formatting and learning about the specific plot we were required to make. It was very helpful in getting me to understand good coding practices when making visualizations with d3. Compared to the other methods of showing visualizations, I really liked how d3 had more of a separative approach when adding filters and other attributes such as the weighted plot points, categorical coloring, and the axis limitations. I thought this library was very good in organizing the different attributes and filters and the code seemed to be more readable than other libraries. Overall, I thought that this method of creating a visualization was really straightforward. This method seemed to work for a variety of datasets as we can specify very clearly what we want in a visualization.
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# Excel
 
-Other features are not required. This includes:
+<img src="img/CarsExcel.png" width="500">
 
-- The background grid.
-- The legends.
+Using Excel was surprisingly one of the more difficult methods that I chose this week out of the five ways of replicating the graph. It took much longer than I expected to figure out the Excel tool. The data importing functionality in Excel was very useful for users that aren't as keen on coding. With this, I found it took a good amount of time to figure out that the Excel tool did not process that the "MPG" column has numerical data instead of text or "general" data. If I had more experience with this tool, I think that would be clearer from the beginning, however, it took quite a long time to figure this out. I think that with more use, the filter option on the Excel tool turned out to be very useful especially when it was time to filter out the rows with MPGs of "NA" value. I found it to be somewhat pretty obnoxious when trying to graph all the different colors and linking these categorically with the manufacturer of each car. This took awhile to get used to since we had to create a "series" and basically plot the datasets, after we filter them by manufacturer, on top of one another. I think this method of visualization would be very more useful for smaller datasets since it doesn't have a lot of complex capabilities. While I did try, I was not able to figure out how to plot the points with respect to the weights and the color of each manufacturer was pre loaded from already existing themes and those seemed to be more difficult to deviate from. Excel was, however, more user friendly when trying to add a legend after creating all the separate series. 
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+# MATLAB
 
-Improvements are also welcome as part of Technical and Design achievements.
+<img src="img/CarsMatlab.png" width="500">
 
-Libraries, Tools, Languages
----
+Resources:
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+https://www.mathworks.com/matlabcentral/answers/72545-how-to-import-csv-file-in-matlab
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+My MATLAB expereince was pretty simple. After taking a course using and coding in MATLAB, I thought this was a pretty simple task to plot a loaded dataset. With simple if and else statements along with the strcmp (string compare) function, I thought that it was a very easy process in trying to categorize each manufacturer and graphing the data that way. This did make it more difficult to create a legend in order to specify each manufacturer, which is more of a trade off depending on what is more important to the user. MATLAB also has many different functions for all different kinds of plots and it had one for scatter plots as well which was very useful in our case here. It was also very simple to set the x and y limits as those are also built in functions to specify the range of the axis. I think this method of visualization would be very useful for datasets like this one or simpler ones. I don't think the MATLAB library would be very useful in complex datasets especially with its difficulties in fulfilling simple tasks such as creating legends. 
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+# R+ggplot2
 
-I have marked a few that are strongly suggested.
+<img src="img/CarsPlotR.png" width="500">
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+Resources:
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+https://jcoliver.github.io/learn-r/004-intro-ggplot.html
 
-Tips
----
+By far, I thought that this method was the most simplistic and concise method in plotting this type of data. While the plot we were trying to replicate was done in this library, I was able to recreate the plot in mere seconds with very few lines. The resources online that I've listed played such a big role in helping me understand the R language and recreating this plot. The geom_point() stated in the example was very useful in adding the weighted points attribute to the plots as well as stylistic and aesthetic uses to make the points 50% opacity. This library was great for this dataset and very useful for statistical analysis and creating charts and graphs such as these at a very low and minimal effort. 
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+# Flourish
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+https://public.flourish.studio/visualisation/5283874/ (This is the link to the public flourish data)
 
+<img src="img/CarsFourish.png" width="500">
 
-Readme Requirements
----
+This was a very new software for me and just being a beginner creating visualizations, I thought that this was amazing! Flourish was so simple to use and it would be an amazing tool to create quick and easy visualizations with very limited experience. This software is very user friendly and requires no coding whatsoever. I also really like the visualization aspect in which when the user hovers over the points, it gives all the data that I've specified to show in a pop up box. I thought the user experience was superb and this was such an amazing tool overall. With the basic account, however, it may have limitations on some capabilities but with this assignment, I thought recreating the scatterplot was perfect for this software and it was done with ease. 
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+# Technical / Design Achievements
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+<img src="img/CarsPlotD3TechAchievement.png" width="500">
 
-Other Requirements
----
+For my technical design achievement this week, I chose to add a hover and mouseover event in my d3 implementation. This was done with some help online since last week I struggled with mouseover events. The technical design achievement is done in which when the user hovers their mouse over a point, it would display in a textbox, as seen in the screen capture above, the exact MPG value. This could also be done with other data specifications. I wanted to try something like this to have an interaction between user and visualization as to me, it seems to be a useful tool for different visualizations. Additionally, I thought that with a couple of my other methods of implementation, it comes with this sort of capability for the user so it was really nice to see that I could replicate this in d3 as well.
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+As for the design achievements, in all of my plots, other than two, I was able to replicate almost the exact color scheme that was shown on the example plot. This was done using several tools online to figure out the hex values of the color specified in the example plot. I tried to get it as close as possible in this way to the original colors and for the plots that I didn't succeed in doing this for, that's how I gauged the difficulty in changing the color markers for a typical visualization. Additionally, in my MATLAB plot, I was also able to mimick the tick marks done in the original plot and the spacing and numbering. This was done with help of online resources in order to accurately replicate the original plot as much as possible. 
