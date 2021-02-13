@@ -34,6 +34,7 @@ https://www.d3-graph-gallery.com/graph/custom_theme.html
 # Java 2d
 
 To visualize this dataset in Java JFrame, I utilized the Graphics2D class.
+Opacity is at 50%, but the lack of background makes the circles look lighter.
 
 ![Java](img/java.JPG)
 
