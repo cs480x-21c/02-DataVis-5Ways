@@ -101,8 +101,10 @@ However, I did find that Google has documentation to use their API with JavaScri
 It was suprisingly easy to make this graph with Tableau. Here's a screenshot of the settings I used and the graph I created: 
 ![tableau](img/tableau.png)
 
+![tableau](img/tableau-2.png)
+
 # Flourish
-Flourish was also really easy to use. Here's a screenshot of the settings I used and the graph: 
+Flourish was also really easy to use! I can see how customizing parts of it might be hard
 ![flourish](img/flourish.png)
 
 ## Technical Achievements
