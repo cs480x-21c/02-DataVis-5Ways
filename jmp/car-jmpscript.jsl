@@ -1,0 +1,53 @@
+
+Graph Builder(
+	Size( 463, 423 ),
+	Show Control Panel( 0 ),
+	Variables( X( :Weight ), Y( :MPG ), Color( :Manufacturer ), Size( :Weight ) ),
+	Elements( Points( X, Y, Legend( 3 ) ) ),
+	SendToReport(
+		Dispatch(
+			{},
+			"Weight",
+			ScaleBox,
+			{Min( 1500 ), Max( 5036.28 ), Inc( 1000 ), Minor Ticks( 1 ),
+			Label Row(
+				{Major Grid Line Color( 2 ), Minor Grid Line Color( -13488080 ),
+				Show Major Grid( 1 ), Show Minor Grid( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"MPG",
+			ScaleBox,
+			{Min( 8.53769102040817 ), Max( 46.0623089795918 ), Inc( 10 ),
+			Minor Ticks( 1 ), Label Row(
+				{Major Grid Line Color( 2 ), Minor Grid Line Color( -14080216 ),
+				Show Major Grid( 1 ), Show Minor Grid( 1 )}
+			)}
+		),
+		Dispatch(
+			{},
+			"400",
+			ScaleBox,
+			{Legend Model(
+				3,
+				Properties(
+					1,
+					{Line Color( 19 ), Transparency( 0.5 )},
+					Item ID( "bmw", 1 )
+				),
+				Properties( 2, {Line Color( 25 )}, Item ID( "ford", 1 ) ),
+				Properties( 4, {Line Color( 10 )}, Item ID( "mercedes", 1 ) ),
+				Properties( 5, {Line Color( 43 )}, Item ID( "toyota", 1 ) )
+			)}
+		),
+		Dispatch( {}, "graph title", TextEditBox, {Set Text( "JMP" )} ),
+		Dispatch(
+			{},
+			"Graph Builder",
+			FrameBox,
+			{Background Color( -12567234 ), Marker Drawing Mode( "Normal" ),
+			Left( 0 ), Right( 0 ), Top( 0 ), Bottom( 0 )}
+		)
+	)
+);

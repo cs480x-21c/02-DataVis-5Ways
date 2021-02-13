@@ -1,0 +1,1467 @@
+<?xml version="1.0" encoding="UTF-8"?><GraphPadPrismFile PrismXMLVersion="5.00">
+<Created>
+<OriginalVersion CreatedByProgram="GraphPad Prism" CreatedByVersion="9.0.1.128" Login="yoniweiner" DateTime="2021-02-12T19:50:23-05:00"></OriginalVersion>
+<MostRecentVersion CreatedByProgram="GraphPad Prism" CreatedByVersion="9.0.1.128" Login="yoniweiner" DateTime="2021-02-12T20:15:27-05:00"></MostRecentVersion>
+</Created>
+<InfoSequence>
+<Ref ID="Info0" Selected="1"></Ref>
+</InfoSequence>
+<Info ID="Info0">
+<Title>Project info 1</Title>
+<Notes></Notes>
+<Constant><Name>Experiment Date</Name><Value>2021-02-13</Value></Constant>
+<Constant><Name>Experiment ID</Name><Value></Value></Constant>
+<Constant><Name>Notebook ID</Name><Value></Value></Constant>
+<Constant><Name>Project</Name><Value></Value></Constant>
+<Constant><Name>Experimenter</Name><Value></Value></Constant>
+<Constant><Name>Protocol</Name><Value></Value></Constant>
+</Info>
+
+<TableSequence>
+<Ref ID="Table0" Selected="1"></Ref>
+</TableSequence>
+<Table ID="Table0" XFormat="none" TableType="OneWay" ExtTableType="MultipleVariables" EVFormat="AsteriskAfterNumber">
+<Title>cars-sample</Title>
+<RowTitlesColumn Width="1">
+<Subcolumn></Subcolumn>
+</RowTitlesColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Continues" statDecimals="0" statNumbers="97" statTexts="0">
+<Title></Title>
+<Subcolumn>
+<d CellType="Integer" UserText="5">5</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="18">18</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="30">30</d>
+<d CellType="Integer" UserText="32">32</d>
+<d CellType="Integer" UserText="38">38</d>
+<d CellType="Integer" UserText="39">39</d>
+<d CellType="Integer" UserText="44">44</d>
+<d CellType="Integer" UserText="48">48</d>
+<d CellType="Integer" UserText="51">51</d>
+<d CellType="Integer" UserText="56">56</d>
+<d CellType="Integer" UserText="61">61</d>
+<d CellType="Integer" UserText="65">65</d>
+<d CellType="Integer" UserText="69">69</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="88">88</d>
+<d CellType="Integer" UserText="90">90</d>
+<d CellType="Integer" UserText="92">92</d>
+<d CellType="Integer" UserText="96">96</d>
+<d CellType="Integer" UserText="100">100</d>
+<d CellType="Integer" UserText="108">108</d>
+<d CellType="Integer" UserText="112">112</d>
+<d CellType="Integer" UserText="116">116</d>
+<d CellType="Integer" UserText="120">120</d>
+<d CellType="Integer" UserText="131">131</d>
+<d CellType="Integer" UserText="134">134</d>
+<d CellType="Integer" UserText="138">138</d>
+<d CellType="Integer" UserText="139">139</d>
+<d CellType="Integer" UserText="144">144</d>
+<d CellType="Integer" UserText="147">147</d>
+<d CellType="Integer" UserText="152">152</d>
+<d CellType="Integer" UserText="157">157</d>
+<d CellType="Integer" UserText="163">163</d>
+<d CellType="Integer" UserText="167">167</d>
+<d CellType="Integer" UserText="174">174</d>
+<d CellType="Integer" UserText="175">175</d>
+<d CellType="Integer" UserText="176">176</d>
+<d CellType="Integer" UserText="179">179</d>
+<d CellType="Integer" UserText="182">182</d>
+<d CellType="Integer" UserText="189">189</d>
+<d CellType="Integer" UserText="198">198</d>
+<d CellType="Integer" UserText="201">201</d>
+<d CellType="Integer" UserText="206">206</d>
+<d CellType="Integer" UserText="208">208</d>
+<d CellType="Integer" UserText="213">213</d>
+<d CellType="Integer" UserText="214">214</d>
+<d CellType="Integer" UserText="218">218</d>
+<d CellType="Integer" UserText="219">219</d>
+<d CellType="Integer" UserText="222">222</d>
+<d CellType="Integer" UserText="224">224</d>
+<d CellType="Integer" UserText="236">236</d>
+<d CellType="Integer" UserText="240">240</d>
+<d CellType="Integer" UserText="243">243</d>
+<d CellType="Integer" UserText="244">244</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="253">253</d>
+<d CellType="Integer" UserText="256">256</d>
+<d CellType="Integer" UserText="262">262</d>
+<d CellType="Integer" UserText="263">263</d>
+<d CellType="Integer" UserText="272">272</d>
+<d CellType="Integer" UserText="275">275</d>
+<d CellType="Integer" UserText="278">278</d>
+<d CellType="Integer" UserText="287">287</d>
+<d CellType="Integer" UserText="290">290</d>
+<d CellType="Integer" UserText="294">294</d>
+<d CellType="Integer" UserText="298">298</d>
+<d CellType="Integer" UserText="305">305</d>
+<d CellType="Integer" UserText="318">318</d>
+<d CellType="Integer" UserText="322">322</d>
+<d CellType="Integer" UserText="326">326</d>
+<d CellType="Integer" UserText="329">329</d>
+<d CellType="Integer" UserText="336">336</d>
+<d CellType="Integer" UserText="337">337</d>
+<d CellType="Integer" UserText="344">344</d>
+<d CellType="Integer" UserText="345">345</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="353">353</d>
+<d CellType="Integer" UserText="356">356</d>
+<d CellType="Integer" UserText="359">359</d>
+<d CellType="Integer" UserText="360">360</d>
+<d CellType="Integer" UserText="363">363</d>
+<d CellType="Integer" UserText="364">364</d>
+<d CellType="Integer" UserText="370">370</d>
+<d CellType="Integer" UserText="374">374</d>
+<d CellType="Integer" UserText="382">382</d>
+<d CellType="Integer" UserText="390">390</d>
+<d CellType="Integer" UserText="391">391</d>
+<d CellType="Integer" UserText="392">392</d>
+<d CellType="Integer" UserText="393">393</d>
+<d CellType="Integer" UserText="398">398</d>
+<d CellType="Integer" UserText="399">399</d>
+<d CellType="Integer" UserText="402">402</d>
+<d CellType="Integer" UserText="405">405</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Categorical" statDecimals="0" statNumbers="1" statTexts="96">
+<Title>Car</Title>
+<CategoryDictionary>
+<d id="0" firstRowUsage="0" numUsage="1" numExcluded="0">torino</d>
+<d id="1" firstRowUsage="1" numUsage="3" numExcluded="0">galaxie 500</d>
+<d id="2" firstRowUsage="2" numUsage="1" numExcluded="0">torino (sw)</d>
+<d id="3" firstRowUsage="3" numUsage="1" numExcluded="0">mustang boss 302</d>
+<d id="4" firstRowUsage="4" numUsage="1" numExcluded="0">corona mark ii</d>
+<d id="5" firstRowUsage="5" numUsage="5" numExcluded="0">maverick</d>
+<d id="6" firstRowUsage="6" numUsage="1" numExcluded="0">2002</d>
+<d id="7" firstRowUsage="7" numUsage="1" numExcluded="0">f250</d>
+<d id="8" firstRowUsage="8" numUsage="4" numExcluded="0">corona</d>
+<d id="9" firstRowUsage="9" numUsage="6" numExcluded="0">pinto</d>
+<d id="10" firstRowUsage="10" numUsage="1" numExcluded="0">torino 500</d>
+<d id="11" firstRowUsage="12" numUsage="2" numExcluded="0">country squire (sw)</d>
+<d id="12" firstRowUsage="13" numUsage="1" numExcluded="0">mustang</d>
+<d id="13" firstRowUsage="14" numUsage="2" numExcluded="0">corolla 1200</d>
+<d id="14" firstRowUsage="15" numUsage="1" numExcluded="0">corona hardtop</d>
+<d id="15" firstRowUsage="16" numUsage="1" numExcluded="0">pinto runabout</d>
+<d id="16" firstRowUsage="18" numUsage="2" numExcluded="0">gran torino (sw)</d>
+<d id="17" firstRowUsage="19" numUsage="1" numExcluded="0">pinto (sw)</d>
+<d id="18" firstRowUsage="20" numUsage="1" numExcluded="0">corona mark ii (sw)</d>
+<d id="19" firstRowUsage="21" numUsage="1" numExcluded="0">corolla 1600 (sw)</d>
+<d id="20" firstRowUsage="22" numUsage="3" numExcluded="0">gran torino</d>
+<d id="21" firstRowUsage="23" numUsage="2" numExcluded="0">ltd</d>
+<d id="22" firstRowUsage="25" numUsage="1" numExcluded="0">country</d>
+<d id="23" firstRowUsage="26" numUsage="1" numExcluded="0">carina</d>
+<d id="24" firstRowUsage="28" numUsage="2" numExcluded="0">mark ii</d>
+<d id="25" firstRowUsage="35" numUsage="3" numExcluded="0">civic</d>
+<d id="26" firstRowUsage="38" numUsage="1" numExcluded="0">mustang ii</d>
+<d id="27" firstRowUsage="39" numUsage="5" numExcluded="0">corolla</d>
+<d id="28" firstRowUsage="43" numUsage="2" numExcluded="0">civic cvcc</d>
+<d id="29" firstRowUsage="47" numUsage="1" numExcluded="0">granada ghia</d>
+<d id="30" firstRowUsage="51" numUsage="1" numExcluded="0">280s</d>
+<d id="31" firstRowUsage="52" numUsage="1" numExcluded="0">f108</d>
+<d id="32" firstRowUsage="53" numUsage="1" numExcluded="0">accord cvcc</d>
+<d id="33" firstRowUsage="54" numUsage="1" numExcluded="0">granada</d>
+<d id="34" firstRowUsage="55" numUsage="1" numExcluded="0">thunderbird</d>
+<d id="35" firstRowUsage="56" numUsage="1" numExcluded="0">corolla liftback</d>
+<d id="36" firstRowUsage="57" numUsage="1" numExcluded="0">mustang ii 2+2</d>
+<d id="37" firstRowUsage="58" numUsage="1" numExcluded="0">320i</d>
+<d id="38" firstRowUsage="59" numUsage="1" numExcluded="0">fiesta</d>
+<d id="39" firstRowUsage="61" numUsage="1" numExcluded="0">fairmont (auto)</d>
+<d id="40" firstRowUsage="62" numUsage="1" numExcluded="0">fairmont (man)</d>
+<d id="41" firstRowUsage="63" numUsage="1" numExcluded="0">futura</d>
+<d id="42" firstRowUsage="65" numUsage="1" numExcluded="0">celica gt liftback</d>
+<d id="43" firstRowUsage="66" numUsage="1" numExcluded="0">accord lx</d>
+<d id="44" firstRowUsage="67" numUsage="1" numExcluded="0">fairmont 4</d>
+<d id="45" firstRowUsage="68" numUsage="1" numExcluded="0">ltd landau</d>
+<d id="46" firstRowUsage="70" numUsage="1" numExcluded="0">300d</d>
+<d id="47" firstRowUsage="71" numUsage="1" numExcluded="0">corolla tercel</d>
+<d id="48" firstRowUsage="72" numUsage="1" numExcluded="0">fairmont</d>
+<d id="49" firstRowUsage="73" numUsage="1" numExcluded="0">corona liftback</d>
+<d id="50" firstRowUsage="75" numUsage="1" numExcluded="0">240d</d>
+<d id="51" firstRowUsage="76" numUsage="1" numExcluded="0">civic 1500 gl</d>
+<d id="52" firstRowUsage="77" numUsage="1" numExcluded="0">mustang cobra</d>
+<d id="53" firstRowUsage="78" numUsage="2" numExcluded="0">accord</d>
+<d id="54" firstRowUsage="79" numUsage="1" numExcluded="0">starlet</d>
+<d id="55" firstRowUsage="80" numUsage="1" numExcluded="0">civic 1300</d>
+<d id="56" firstRowUsage="81" numUsage="1" numExcluded="0">tercel</d>
+<d id="57" firstRowUsage="82" numUsage="1" numExcluded="0">escort 4w</d>
+<d id="58" firstRowUsage="83" numUsage="1" numExcluded="0">escort 2h</d>
+<d id="59" firstRowUsage="84" numUsage="1" numExcluded="0">prelude</d>
+<d id="60" firstRowUsage="86" numUsage="1" numExcluded="0">cressida</d>
+<d id="61" firstRowUsage="87" numUsage="1" numExcluded="0">granada gl</d>
+<d id="62" firstRowUsage="88" numUsage="1" numExcluded="0">fairmont futura</d>
+<d id="63" firstRowUsage="92" numUsage="1" numExcluded="0">civic (auto)</d>
+<d id="64" firstRowUsage="93" numUsage="1" numExcluded="0">granada l</d>
+<d id="65" firstRowUsage="94" numUsage="1" numExcluded="0">celica gt</d>
+<d id="66" firstRowUsage="95" numUsage="1" numExcluded="0">mustang gl</d>
+<d id="67" firstRowUsage="96" numUsage="1" numExcluded="0">ranger</d>
+</CategoryDictionary>
+<Subcolumn>
+<d CellType="Text" UserText="torino" num="0">torino</d>
+<d CellType="Text" UserText="galaxie 500" num="1">galaxie 500</d>
+<d CellType="Text" UserText="torino (sw)" num="2">torino (sw)</d>
+<d CellType="Text" UserText="mustang boss 302" num="3">mustang boss 302</d>
+<d CellType="Text" UserText="corona mark ii" num="4">corona mark ii</d>
+<d CellType="Text" UserText="maverick" num="5">maverick</d>
+<d CellType="Integer" UserText="2002" num="6">2002</d>
+<d CellType="Text" UserText="f250" num="7">f250</d>
+<d CellType="Text" UserText="corona" num="8">corona</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="torino 500" num="10">torino 500</d>
+<d CellType="Text" UserText="galaxie 500" num="1">galaxie 500</d>
+<d CellType="Text" UserText="country squire (sw)" num="11">country squire (sw)</d>
+<d CellType="Text" UserText="mustang" num="12">mustang</d>
+<d CellType="Text" UserText="corolla 1200" num="13">corolla 1200</d>
+<d CellType="Text" UserText="corona hardtop" num="14">corona hardtop</d>
+<d CellType="Text" UserText="pinto runabout" num="15">pinto runabout</d>
+<d CellType="Text" UserText="galaxie 500" num="1">galaxie 500</d>
+<d CellType="Text" UserText="gran torino (sw)" num="16">gran torino (sw)</d>
+<d CellType="Text" UserText="pinto (sw)" num="17">pinto (sw)</d>
+<d CellType="Text" UserText="corona mark ii (sw)" num="18">corona mark ii (sw)</d>
+<d CellType="Text" UserText="corolla 1600 (sw)" num="19">corolla 1600 (sw)</d>
+<d CellType="Text" UserText="gran torino" num="20">gran torino</d>
+<d CellType="Text" UserText="ltd" num="21">ltd</d>
+<d CellType="Text" UserText="maverick" num="5">maverick</d>
+<d CellType="Text" UserText="country" num="22">country</d>
+<d CellType="Text" UserText="carina" num="23">carina</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="mark ii" num="24">mark ii</d>
+<d CellType="Text" UserText="maverick" num="5">maverick</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="corolla 1200" num="13">corolla 1200</d>
+<d CellType="Text" UserText="gran torino" num="20">gran torino</d>
+<d CellType="Text" UserText="gran torino (sw)" num="16">gran torino (sw)</d>
+<d CellType="Text" UserText="corona" num="8">corona</d>
+<d CellType="Text" UserText="civic" num="25">civic</d>
+<d CellType="Text" UserText="maverick" num="5">maverick</d>
+<d CellType="Text" UserText="ltd" num="21">ltd</d>
+<d CellType="Text" UserText="mustang ii" num="26">mustang ii</d>
+<d CellType="Text" UserText="corolla" num="27">corolla</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="corona" num="8">corona</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="civic cvcc" num="28">civic cvcc</d>
+<d CellType="Text" UserText="gran torino" num="20">gran torino</d>
+<d CellType="Text" UserText="maverick" num="5">maverick</d>
+<d CellType="Text" UserText="civic" num="25">civic</d>
+<d CellType="Text" UserText="granada ghia" num="29">granada ghia</d>
+<d CellType="Text" UserText="corolla" num="27">corolla</d>
+<d CellType="Text" UserText="pinto" num="9">pinto</d>
+<d CellType="Text" UserText="mark ii" num="24">mark ii</d>
+<d CellType="Text" UserText="280s" num="30">280s</d>
+<d CellType="Text" UserText="f108" num="31">f108</d>
+<d CellType="Text" UserText="accord cvcc" num="32">accord cvcc</d>
+<d CellType="Text" UserText="granada" num="33">granada</d>
+<d CellType="Text" UserText="thunderbird" num="34">thunderbird</d>
+<d CellType="Text" UserText="corolla liftback" num="35">corolla liftback</d>
+<d CellType="Text" UserText="mustang ii 2+2" num="36">mustang ii 2+2</d>
+<d CellType="Text" UserText="320i" num="37">320i</d>
+<d CellType="Text" UserText="fiesta" num="38">fiesta</d>
+<d CellType="Text" UserText="civic cvcc" num="28">civic cvcc</d>
+<d CellType="Text" UserText="fairmont (auto)" num="39">fairmont (auto)</d>
+<d CellType="Text" UserText="fairmont (man)" num="40">fairmont (man)</d>
+<d CellType="Text" UserText="futura" num="41">futura</d>
+<d CellType="Text" UserText="corona" num="8">corona</d>
+<d CellType="Text" UserText="celica gt liftback" num="42">celica gt liftback</d>
+<d CellType="Text" UserText="accord lx" num="43">accord lx</d>
+<d CellType="Text" UserText="fairmont 4" num="44">fairmont 4</d>
+<d CellType="Text" UserText="ltd landau" num="45">ltd landau</d>
+<d CellType="Text" UserText="country squire (sw)" num="11">country squire (sw)</d>
+<d CellType="Text" UserText="300d" num="46">300d</d>
+<d CellType="Text" UserText="corolla tercel" num="47">corolla tercel</d>
+<d CellType="Text" UserText="fairmont" num="48">fairmont</d>
+<d CellType="Text" UserText="corona liftback" num="49">corona liftback</d>
+<d CellType="Text" UserText="corolla" num="27">corolla</d>
+<d CellType="Text" UserText="240d" num="50">240d</d>
+<d CellType="Text" UserText="civic 1500 gl" num="51">civic 1500 gl</d>
+<d CellType="Text" UserText="mustang cobra" num="52">mustang cobra</d>
+<d CellType="Text" UserText="accord" num="53">accord</d>
+<d CellType="Text" UserText="starlet" num="54">starlet</d>
+<d CellType="Text" UserText="civic 1300" num="55">civic 1300</d>
+<d CellType="Text" UserText="tercel" num="56">tercel</d>
+<d CellType="Text" UserText="escort 4w" num="57">escort 4w</d>
+<d CellType="Text" UserText="escort 2h" num="58">escort 2h</d>
+<d CellType="Text" UserText="prelude" num="59">prelude</d>
+<d CellType="Text" UserText="corolla" num="27">corolla</d>
+<d CellType="Text" UserText="cressida" num="60">cressida</d>
+<d CellType="Text" UserText="granada gl" num="61">granada gl</d>
+<d CellType="Text" UserText="fairmont futura" num="62">fairmont futura</d>
+<d CellType="Text" UserText="accord" num="53">accord</d>
+<d CellType="Text" UserText="corolla" num="27">corolla</d>
+<d CellType="Text" UserText="civic" num="25">civic</d>
+<d CellType="Text" UserText="civic (auto)" num="63">civic (auto)</d>
+<d CellType="Text" UserText="granada l" num="64">granada l</d>
+<d CellType="Text" UserText="celica gt" num="65">celica gt</d>
+<d CellType="Text" UserText="mustang gl" num="66">mustang gl</d>
+<d CellType="Text" UserText="ranger" num="67">ranger</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="88" Decimals="0" Subcolumns="1" MVType="Categorical" statDecimals="0" statNumbers="0" statTexts="97">
+<Title>Manufacturer</Title>
+<CategoryDictionary>
+<d id="0" firstRowUsage="0" numUsage="53" numExcluded="0">ford</d>
+<d id="1" firstRowUsage="4" numUsage="26" numExcluded="0">toyota</d>
+<d id="2" firstRowUsage="6" numUsage="2" numExcluded="0">bmw</d>
+<d id="3" firstRowUsage="35" numUsage="13" numExcluded="0">honda</d>
+<d id="4" firstRowUsage="51" numUsage="3" numExcluded="0">mercedes</d>
+</CategoryDictionary>
+<Subcolumn>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="bmw" num="2">bmw</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="mercedes" num="4">mercedes</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="bmw" num="2">bmw</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="mercedes" num="4">mercedes</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="mercedes" num="4">mercedes</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="honda" num="3">honda</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="toyota" num="1">toyota</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+<d CellType="Text" UserText="ford" num="0">ford</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="1" Subcolumns="1" MVType="Manual|Continues" statDecimals="35" statNumbers="60" statTexts="2">
+<Title>MPG</Title>
+<Subcolumn>
+<d CellType="Integer" UserText="17">17</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Text" UserText="NA">(Bad value)</d>
+<d CellType="Text" UserText="NA">(Bad value)</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Integer" UserText="26">26</d>
+<d CellType="Integer" UserText="10">10</d>
+<d CellType="Integer" UserText="25">25</d>
+<d CellType="Integer" UserText="25">25</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="18">18</d>
+<d CellType="Integer" UserText="31">31</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="22">22</d>
+<d CellType="Integer" UserText="23">23</d>
+<d CellType="Integer" UserText="27">27</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="18">18</d>
+<d CellType="Integer" UserText="12">12</d>
+<d CellType="Integer" UserText="20">20</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Integer" UserText="20">20</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Integer" UserText="26">26</d>
+<d CellType="Integer" UserText="32">32</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="31">31</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="29">29</d>
+<d CellType="Integer" UserText="23">23</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="18">18</d>
+<d CellType="Integer" UserText="33">33</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="33">33</d>
+<d CellType="Integer" UserText="18">18</d>
+<d CellType="Integer" UserText="28">28</d>
+<d CellType="Decimal" UserText="26.5">26.5</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Decimal" UserText="31.5">31.5</d>
+<d CellType="Decimal" UserText="18.5">18.5</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Integer" UserText="26">26</d>
+<d CellType="Decimal" UserText="25.5">25.5</d>
+<d CellType="Decimal" UserText="21.5">21.5</d>
+<d CellType="Decimal" UserText="36.1">36.1</d>
+<d CellType="Decimal" UserText="36.1">36.1</d>
+<d CellType="Decimal" UserText="20.2">20.2</d>
+<d CellType="Decimal" UserText="25.1">25.1</d>
+<d CellType="Decimal" UserText="18.1">18.1</d>
+<d CellType="Decimal" UserText="27.5">27.5</d>
+<d CellType="Decimal" UserText="21.1">21.1</d>
+<d CellType="Decimal" UserText="29.5">29.5</d>
+<d CellType="Decimal" UserText="22.3">22.3</d>
+<d CellType="Decimal" UserText="17.6">17.6</d>
+<d CellType="Decimal" UserText="15.5">15.5</d>
+<d CellType="Decimal" UserText="25.4">25.4</d>
+<d CellType="Decimal" UserText="38.1">38.1</d>
+<d CellType="Decimal" UserText="26.4">26.4</d>
+<d CellType="Decimal" UserText="29.8">29.8</d>
+<d CellType="Decimal" UserText="32.2">32.2</d>
+<d CellType="Integer" UserText="30">30</d>
+<d CellType="Decimal" UserText="44.6">44.6</d>
+<d CellType="Decimal" UserText="23.6">23.6</d>
+<d CellType="Decimal" UserText="32.4">32.4</d>
+<d CellType="Decimal" UserText="39.1">39.1</d>
+<d CellType="Decimal" UserText="35.1">35.1</d>
+<d CellType="Decimal" UserText="37.7">37.7</d>
+<d CellType="Decimal" UserText="34.4">34.4</d>
+<d CellType="Decimal" UserText="29.9">29.9</d>
+<d CellType="Decimal" UserText="33.7">33.7</d>
+<d CellType="Decimal" UserText="32.4">32.4</d>
+<d CellType="Decimal" UserText="25.4">25.4</d>
+<d CellType="Decimal" UserText="20.2">20.2</d>
+<d CellType="Integer" UserText="24">24</d>
+<d CellType="Integer" UserText="36">36</d>
+<d CellType="Integer" UserText="34">34</d>
+<d CellType="Integer" UserText="38">38</d>
+<d CellType="Integer" UserText="32">32</d>
+<d CellType="Integer" UserText="22">22</d>
+<d CellType="Integer" UserText="32">32</d>
+<d CellType="Integer" UserText="27">27</d>
+<d CellType="Integer" UserText="28">28</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Continues" statDecimals="0" statNumbers="97" statTexts="0">
+<Title>Cylinders</Title>
+<Subcolumn>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="5">5</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="6">6</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+<d CellType="Integer" UserText="4">4</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="90" Decimals="0" Subcolumns="1" MVType="Continues" statDecimals="0" statNumbers="97" statTexts="0">
+<Title>Displacement</Title>
+<Subcolumn>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="429">429</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="113">113</d>
+<d CellType="Integer" UserText="200">200</d>
+<d CellType="Integer" UserText="121">121</d>
+<d CellType="Integer" UserText="360">360</d>
+<d CellType="Integer" UserText="113">113</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="400">400</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="113">113</d>
+<d CellType="Integer" UserText="122">122</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="122">122</d>
+<d CellType="Integer" UserText="120">120</d>
+<d CellType="Integer" UserText="97">97</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="400">400</d>
+<d CellType="Integer" UserText="97">97</d>
+<d CellType="Integer" UserText="122">122</d>
+<d CellType="Integer" UserText="156">156</d>
+<d CellType="Integer" UserText="200">200</d>
+<d CellType="Integer" UserText="122">122</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="120">120</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="97">97</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="134">134</d>
+<d CellType="Integer" UserText="171">171</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="200">200</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="97">97</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="156">156</d>
+<d CellType="Integer" UserText="168">168</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="250">250</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="97">97</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="121">121</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="200">200</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="134">134</d>
+<d CellType="Integer" UserText="134">134</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="302">302</d>
+<d CellType="Integer" UserText="351">351</d>
+<d CellType="Integer" UserText="183">183</d>
+<d CellType="Integer" UserText="89">89</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="134">134</d>
+<d CellType="Integer" UserText="108">108</d>
+<d CellType="Integer" UserText="146">146</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="107">107</d>
+<d CellType="Integer" UserText="79">79</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="89">89</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="98">98</d>
+<d CellType="Integer" UserText="107">107</d>
+<d CellType="Integer" UserText="108">108</d>
+<d CellType="Integer" UserText="168">168</d>
+<d CellType="Integer" UserText="200">200</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="107">107</d>
+<d CellType="Integer" UserText="108">108</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="91">91</d>
+<d CellType="Integer" UserText="232">232</d>
+<d CellType="Integer" UserText="144">144</d>
+<d CellType="Integer" UserText="140">140</d>
+<d CellType="Integer" UserText="120">120</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="82" Decimals="0" Subcolumns="1" MVType="Categorical" statDecimals="0" statNumbers="94" statTexts="3">
+<Title>Horsepower</Title>
+<CategoryDictionary>
+<d id="0" firstRowUsage="0" numUsage="5" numExcluded="0">140</d>
+<d id="1" firstRowUsage="1" numUsage="1" numExcluded="0">198</d>
+<d id="2" firstRowUsage="2" numUsage="3" numExcluded="0">153</d>
+<d id="3" firstRowUsage="4" numUsage="5" numExcluded="0">95</d>
+<d id="4" firstRowUsage="5" numUsage="3" numExcluded="0">85</d>
+<d id="5" firstRowUsage="6" numUsage="1" numExcluded="0">113</d>
+<d id="6" firstRowUsage="7" numUsage="1" numExcluded="0">215</d>
+<d id="7" firstRowUsage="9" numUsage="3" numExcluded="0">NA</d>
+<d id="8" firstRowUsage="10" numUsage="9" numExcluded="0">88</d>
+<d id="9" firstRowUsage="12" numUsage="1" numExcluded="0">170</d>
+<d id="10" firstRowUsage="14" numUsage="4" numExcluded="0">65</d>
+<d id="11" firstRowUsage="16" numUsage="3" numExcluded="0">86</d>
+<d id="12" firstRowUsage="20" numUsage="3" numExcluded="0">97</d>
+<d id="13" firstRowUsage="22" numUsage="1" numExcluded="0">137</d>
+<d id="14" firstRowUsage="23" numUsage="1" numExcluded="0">158</d>
+<d id="15" firstRowUsage="25" numUsage="1" numExcluded="0">167</d>
+<d id="16" firstRowUsage="28" numUsage="1" numExcluded="0">122</d>
+<d id="17" firstRowUsage="30" numUsage="1" numExcluded="0">80</d>
+<d id="18" firstRowUsage="34" numUsage="1" numExcluded="0">52</d>
+<d id="19" firstRowUsage="36" numUsage="3" numExcluded="0">72</d>
+<d id="20" firstRowUsage="37" numUsage="1" numExcluded="0">148</d>
+<d id="21" firstRowUsage="38" numUsage="2" numExcluded="0">129</d>
+<d id="22" firstRowUsage="39" numUsage="7" numExcluded="0">75</d>
+<d id="23" firstRowUsage="40" numUsage="1" numExcluded="0">83</d>
+<d id="24" firstRowUsage="41" numUsage="2" numExcluded="0">96</d>
+<d id="25" firstRowUsage="43" numUsage="2" numExcluded="0">53</d>
+<d id="26" firstRowUsage="44" numUsage="1" numExcluded="0">152</d>
+<d id="27" firstRowUsage="45" numUsage="1" numExcluded="0">81</d>
+<d id="28" firstRowUsage="47" numUsage="1" numExcluded="0">78</d>
+<d id="29" firstRowUsage="50" numUsage="1" numExcluded="0">108</d>
+<d id="30" firstRowUsage="51" numUsage="1" numExcluded="0">120</d>
+<d id="31" firstRowUsage="52" numUsage="1" numExcluded="0">130</d>
+<d id="32" firstRowUsage="53" numUsage="2" numExcluded="0">68</d>
+<d id="33" firstRowUsage="54" numUsage="1" numExcluded="0">98</d>
+<d id="34" firstRowUsage="55" numUsage="1" numExcluded="0">149</d>
+<d id="35" firstRowUsage="57" numUsage="1" numExcluded="0">89</d>
+<d id="36" firstRowUsage="58" numUsage="1" numExcluded="0">110</d>
+<d id="37" firstRowUsage="59" numUsage="1" numExcluded="0">66</d>
+<d id="38" firstRowUsage="60" numUsage="3" numExcluded="0">60</d>
+<d id="39" firstRowUsage="63" numUsage="1" numExcluded="0">139</d>
+<d id="40" firstRowUsage="69" numUsage="1" numExcluded="0">142</d>
+<d id="41" firstRowUsage="70" numUsage="1" numExcluded="0">77</d>
+<d id="42" firstRowUsage="73" numUsage="1" numExcluded="0">90</d>
+<d id="43" firstRowUsage="75" numUsage="4" numExcluded="0">67</d>
+<d id="44" firstRowUsage="79" numUsage="1" numExcluded="0">58</d>
+<d id="45" firstRowUsage="81" numUsage="1" numExcluded="0">62</d>
+<d id="46" firstRowUsage="86" numUsage="1" numExcluded="0">116</d>
+<d id="47" firstRowUsage="88" numUsage="1" numExcluded="0">92</d>
+<d id="48" firstRowUsage="90" numUsage="1" numExcluded="0">70</d>
+<d id="49" firstRowUsage="93" numUsage="1" numExcluded="0">112</d>
+<d id="50" firstRowUsage="96" numUsage="1" numExcluded="0">79</d>
+</CategoryDictionary>
+<Subcolumn>
+<d CellType="Integer" UserText="140" num="0">140</d>
+<d CellType="Integer" UserText="198" num="1">198</d>
+<d CellType="Integer" UserText="153" num="2">153</d>
+<d CellType="Integer" UserText="140" num="0">140</d>
+<d CellType="Integer" UserText="95" num="3">95</d>
+<d CellType="Integer" UserText="85" num="4">85</d>
+<d CellType="Integer" UserText="113" num="5">113</d>
+<d CellType="Integer" UserText="215" num="6">215</d>
+<d CellType="Integer" UserText="95" num="3">95</d>
+<d CellType="Text" UserText="NA" num="7">NA</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="153" num="2">153</d>
+<d CellType="Integer" UserText="170" num="9">170</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="65" num="10">65</d>
+<d CellType="Integer" UserText="95" num="3">95</d>
+<d CellType="Integer" UserText="86" num="11">86</d>
+<d CellType="Integer" UserText="153" num="2">153</d>
+<d CellType="Integer" UserText="140" num="0">140</d>
+<d CellType="Integer" UserText="86" num="11">86</d>
+<d CellType="Integer" UserText="97" num="12">97</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="137" num="13">137</d>
+<d CellType="Integer" UserText="158" num="14">158</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="167" num="15">167</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="85" num="4">85</d>
+<d CellType="Integer" UserText="122" num="16">122</d>
+<d CellType="Text" UserText="NA" num="7">NA</d>
+<d CellType="Integer" UserText="80" num="17">80</d>
+<d CellType="Integer" UserText="65" num="10">65</d>
+<d CellType="Integer" UserText="140" num="0">140</d>
+<d CellType="Integer" UserText="140" num="0">140</d>
+<d CellType="Integer" UserText="52" num="18">52</d>
+<d CellType="Integer" UserText="97" num="12">97</d>
+<d CellType="Integer" UserText="72" num="19">72</d>
+<d CellType="Integer" UserText="148" num="20">148</d>
+<d CellType="Integer" UserText="129" num="21">129</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="83" num="23">83</d>
+<d CellType="Integer" UserText="96" num="24">96</d>
+<d CellType="Integer" UserText="97" num="12">97</d>
+<d CellType="Integer" UserText="53" num="25">53</d>
+<d CellType="Integer" UserText="152" num="26">152</d>
+<d CellType="Integer" UserText="81" num="27">81</d>
+<d CellType="Integer" UserText="53" num="25">53</d>
+<d CellType="Integer" UserText="78" num="28">78</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="72" num="19">72</d>
+<d CellType="Integer" UserText="108" num="29">108</d>
+<d CellType="Integer" UserText="120" num="30">120</d>
+<d CellType="Integer" UserText="130" num="31">130</d>
+<d CellType="Integer" UserText="68" num="32">68</d>
+<d CellType="Integer" UserText="98" num="33">98</d>
+<d CellType="Integer" UserText="149" num="34">149</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="89" num="35">89</d>
+<d CellType="Integer" UserText="110" num="36">110</d>
+<d CellType="Integer" UserText="66" num="37">66</d>
+<d CellType="Integer" UserText="60" num="38">60</d>
+<d CellType="Integer" UserText="85" num="4">85</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="139" num="39">139</d>
+<d CellType="Integer" UserText="95" num="3">95</d>
+<d CellType="Integer" UserText="95" num="3">95</d>
+<d CellType="Integer" UserText="68" num="32">68</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="129" num="21">129</d>
+<d CellType="Integer" UserText="142" num="40">142</d>
+<d CellType="Integer" UserText="77" num="41">77</d>
+<d CellType="Integer" UserText="60" num="38">60</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="90" num="42">90</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="67" num="43">67</d>
+<d CellType="Integer" UserText="67" num="43">67</d>
+<d CellType="Text" UserText="NA" num="7">NA</d>
+<d CellType="Integer" UserText="72" num="19">72</d>
+<d CellType="Integer" UserText="58" num="44">58</d>
+<d CellType="Integer" UserText="60" num="38">60</d>
+<d CellType="Integer" UserText="62" num="45">62</d>
+<d CellType="Integer" UserText="65" num="10">65</d>
+<d CellType="Integer" UserText="65" num="10">65</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="116" num="46">116</d>
+<d CellType="Integer" UserText="88" num="8">88</d>
+<d CellType="Integer" UserText="92" num="47">92</d>
+<d CellType="Integer" UserText="75" num="22">75</d>
+<d CellType="Integer" UserText="70" num="48">70</d>
+<d CellType="Integer" UserText="67" num="43">67</d>
+<d CellType="Integer" UserText="67" num="43">67</d>
+<d CellType="Integer" UserText="112" num="49">112</d>
+<d CellType="Integer" UserText="96" num="24">96</d>
+<d CellType="Integer" UserText="86" num="11">86</d>
+<d CellType="Integer" UserText="79" num="50">79</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Continues" statDecimals="0" statNumbers="97" statTexts="0">
+<Title>Weight</Title>
+<Subcolumn>
+<d CellType="Integer" UserText="3449">3449</d>
+<d CellType="Integer" UserText="4341">4341</d>
+<d CellType="Integer" UserText="4034">4034</d>
+<d CellType="Integer" UserText="3353">3353</d>
+<d CellType="Integer" UserText="2372">2372</d>
+<d CellType="Integer" UserText="2587">2587</d>
+<d CellType="Integer" UserText="2234">2234</d>
+<d CellType="Integer" UserText="4615">4615</d>
+<d CellType="Integer" UserText="2228">2228</d>
+<d CellType="Integer" UserText="2046">2046</d>
+<d CellType="Integer" UserText="3302">3302</d>
+<d CellType="Integer" UserText="4154">4154</d>
+<d CellType="Integer" UserText="4746">4746</d>
+<d CellType="Integer" UserText="3139">3139</d>
+<d CellType="Integer" UserText="1773">1773</d>
+<d CellType="Integer" UserText="2278">2278</d>
+<d CellType="Integer" UserText="2226">2226</d>
+<d CellType="Integer" UserText="4129">4129</d>
+<d CellType="Integer" UserText="4294">4294</d>
+<d CellType="Integer" UserText="2395">2395</d>
+<d CellType="Integer" UserText="2506">2506</d>
+<d CellType="Integer" UserText="2100">2100</d>
+<d CellType="Integer" UserText="4042">4042</d>
+<d CellType="Integer" UserText="4363">4363</d>
+<d CellType="Integer" UserText="3021">3021</d>
+<d CellType="Integer" UserText="4906">4906</d>
+<d CellType="Integer" UserText="2279">2279</d>
+<d CellType="Integer" UserText="2310">2310</d>
+<d CellType="Integer" UserText="2807">2807</d>
+<d CellType="Integer" UserText="2875">2875</d>
+<d CellType="Integer" UserText="2451">2451</d>
+<d CellType="Integer" UserText="1836">1836</d>
+<d CellType="Integer" UserText="4141">4141</d>
+<d CellType="Integer" UserText="4638">4638</d>
+<d CellType="Integer" UserText="1649">1649</d>
+<d CellType="Integer" UserText="2489">2489</d>
+<d CellType="Integer" UserText="3158">3158</d>
+<d CellType="Integer" UserText="4657">4657</d>
+<d CellType="Integer" UserText="3169">3169</d>
+<d CellType="Integer" UserText="2171">2171</d>
+<d CellType="Integer" UserText="2639">2639</d>
+<d CellType="Integer" UserText="2702">2702</d>
+<d CellType="Integer" UserText="2984">2984</d>
+<d CellType="Integer" UserText="1795">1795</d>
+<d CellType="Integer" UserText="4215">4215</d>
+<d CellType="Integer" UserText="3012">3012</d>
+<d CellType="Integer" UserText="1795">1795</d>
+<d CellType="Integer" UserText="3574">3574</d>
+<d CellType="Integer" UserText="2155">2155</d>
+<d CellType="Integer" UserText="2565">2565</d>
+<d CellType="Integer" UserText="2930">2930</d>
+<d CellType="Integer" UserText="3820">3820</d>
+<d CellType="Integer" UserText="3870">3870</d>
+<d CellType="Integer" UserText="2045">2045</d>
+<d CellType="Integer" UserText="3525">3525</d>
+<d CellType="Integer" UserText="4335">4335</d>
+<d CellType="Integer" UserText="2265">2265</d>
+<d CellType="Integer" UserText="2755">2755</d>
+<d CellType="Integer" UserText="2600">2600</d>
+<d CellType="Integer" UserText="1800">1800</d>
+<d CellType="Integer" UserText="1800">1800</d>
+<d CellType="Integer" UserText="2965">2965</d>
+<d CellType="Integer" UserText="2720">2720</d>
+<d CellType="Integer" UserText="3205">3205</d>
+<d CellType="Integer" UserText="2560">2560</d>
+<d CellType="Integer" UserText="2515">2515</d>
+<d CellType="Integer" UserText="2135">2135</d>
+<d CellType="Integer" UserText="2890">2890</d>
+<d CellType="Integer" UserText="3725">3725</d>
+<d CellType="Integer" UserText="4054">4054</d>
+<d CellType="Integer" UserText="3530">3530</d>
+<d CellType="Integer" UserText="1968">1968</d>
+<d CellType="Integer" UserText="2870">2870</d>
+<d CellType="Integer" UserText="2711">2711</d>
+<d CellType="Integer" UserText="2265">2265</d>
+<d CellType="Integer" UserText="3250">3250</d>
+<d CellType="Integer" UserText="1850">1850</d>
+<d CellType="Integer" UserText="2905">2905</d>
+<d CellType="Integer" UserText="2290">2290</d>
+<d CellType="Integer" UserText="1755">1755</d>
+<d CellType="Integer" UserText="1760">1760</d>
+<d CellType="Integer" UserText="2050">2050</d>
+<d CellType="Integer" UserText="2045">2045</d>
+<d CellType="Integer" UserText="2380">2380</d>
+<d CellType="Integer" UserText="2210">2210</d>
+<d CellType="Integer" UserText="2350">2350</d>
+<d CellType="Integer" UserText="2900">2900</d>
+<d CellType="Integer" UserText="3060">3060</d>
+<d CellType="Integer" UserText="2865">2865</d>
+<d CellType="Integer" UserText="2205">2205</d>
+<d CellType="Integer" UserText="2245">2245</d>
+<d CellType="Integer" UserText="1965">1965</d>
+<d CellType="Integer" UserText="1965">1965</d>
+<d CellType="Integer" UserText="2835">2835</d>
+<d CellType="Integer" UserText="2665">2665</d>
+<d CellType="Integer" UserText="2790">2790</d>
+<d CellType="Integer" UserText="2625">2625</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="84" Decimals="1" Subcolumns="1" MVType="Continues" statDecimals="69" statNumbers="28" statTexts="0">
+<Title>Acceleration</Title>
+<Subcolumn>
+<d CellType="Decimal" UserText="10.5">10.5</d>
+<d CellType="Integer" UserText="10">10</d>
+<d CellType="Integer" UserText="11">11</d>
+<d CellType="Integer" UserText="8">8</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Decimal" UserText="12.5">12.5</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Decimal" UserText="15.5">15.5</d>
+<d CellType="Decimal" UserText="13.5">13.5</d>
+<d CellType="Integer" UserText="12">12</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Decimal" UserText="15.5">15.5</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Integer" UserText="13">13</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Decimal" UserText="12.5">12.5</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Decimal" UserText="18.5">18.5</d>
+<d CellType="Decimal" UserText="13.5">13.5</d>
+<d CellType="Integer" UserText="17">17</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Integer" UserText="14">14</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Decimal" UserText="16.5">16.5</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Decimal" UserText="19.5">19.5</d>
+<d CellType="Decimal" UserText="13.5">13.5</d>
+<d CellType="Integer" UserText="12">12</d>
+<d CellType="Integer" UserText="16">16</d>
+<d CellType="Integer" UserText="17">17</d>
+<d CellType="Decimal" UserText="13.5">13.5</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Decimal" UserText="17.5">17.5</d>
+<d CellType="Decimal" UserText="12.8">12.8</d>
+<d CellType="Decimal" UserText="17.6">17.6</d>
+<d CellType="Decimal" UserText="17.4">17.4</d>
+<d CellType="Integer" UserText="21">21</d>
+<d CellType="Decimal" UserText="16.4">16.4</d>
+<d CellType="Decimal" UserText="13.6">13.6</d>
+<d CellType="Decimal" UserText="15.5">15.5</d>
+<d CellType="Decimal" UserText="16.7">16.7</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Decimal" UserText="18.5">18.5</d>
+<d CellType="Integer" UserText="19">19</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Decimal" UserText="18.2">18.2</d>
+<d CellType="Decimal" UserText="15.8">15.8</d>
+<d CellType="Decimal" UserText="12.8">12.8</d>
+<d CellType="Decimal" UserText="14.4">14.4</d>
+<d CellType="Decimal" UserText="16.4">16.4</d>
+<d CellType="Decimal" UserText="15.8">15.8</d>
+<d CellType="Decimal" UserText="15.4">15.4</d>
+<d CellType="Decimal" UserText="11.2">11.2</d>
+<d CellType="Decimal" UserText="14.2">14.2</d>
+<d CellType="Decimal" UserText="14.8">14.8</d>
+<d CellType="Decimal" UserText="16.6">16.6</d>
+<d CellType="Decimal" UserText="17.3">17.3</d>
+<d CellType="Decimal" UserText="13.4">13.4</d>
+<d CellType="Decimal" UserText="14.3">14.3</d>
+<d CellType="Decimal" UserText="20.1">20.1</d>
+<d CellType="Decimal" UserText="18.8">18.8</d>
+<d CellType="Decimal" UserText="18.1">18.1</d>
+<d CellType="Decimal" UserText="15.5">15.5</d>
+<d CellType="Decimal" UserText="15.2">15.2</d>
+<d CellType="Decimal" UserText="21.8">21.8</d>
+<d CellType="Decimal" UserText="13.8">13.8</d>
+<d CellType="Decimal" UserText="14.3">14.3</d>
+<d CellType="Integer" UserText="17">17</d>
+<d CellType="Decimal" UserText="16.9">16.9</d>
+<d CellType="Decimal" UserText="16.1">16.1</d>
+<d CellType="Decimal" UserText="17.3">17.3</d>
+<d CellType="Decimal" UserText="16.2">16.2</d>
+<d CellType="Decimal" UserText="20.7">20.7</d>
+<d CellType="Decimal" UserText="14.4">14.4</d>
+<d CellType="Decimal" UserText="16.8">16.8</d>
+<d CellType="Decimal" UserText="12.6">12.6</d>
+<d CellType="Decimal" UserText="17.1">17.1</d>
+<d CellType="Decimal" UserText="16.4">16.4</d>
+<d CellType="Decimal" UserText="14.5">14.5</d>
+<d CellType="Decimal" UserText="16.9">16.9</d>
+<d CellType="Integer" UserText="15">15</d>
+<d CellType="Decimal" UserText="15.7">15.7</d>
+<d CellType="Decimal" UserText="14.7">14.7</d>
+<d CellType="Decimal" UserText="13.9">13.9</d>
+<d CellType="Decimal" UserText="15.6">15.6</d>
+<d CellType="Decimal" UserText="18.6">18.6</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Continues" statDecimals="0" statNumbers="97" statTexts="0">
+<Title>Model.Year</Title>
+<Subcolumn>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="70">70</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="71">71</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="72">72</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="73">73</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="74">74</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="75">75</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="76">76</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="77">77</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="78">78</d>
+<d CellType="Integer" UserText="79">79</d>
+<d CellType="Integer" UserText="79">79</d>
+<d CellType="Integer" UserText="79">79</d>
+<d CellType="Integer" UserText="79">79</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="80">80</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="81">81</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+<d CellType="Integer" UserText="82">82</d>
+</Subcolumn>
+</YColumn>
+<YColumn Width="81" Decimals="0" Subcolumns="1" MVType="Categorical" statDecimals="0" statNumbers="0" statTexts="97">
+<Title>Origin</Title>
+<CategoryDictionary>
+<d id="0" firstRowUsage="0" numUsage="53" numExcluded="0">American</d>
+<d id="1" firstRowUsage="4" numUsage="39" numExcluded="0">Japanese</d>
+<d id="2" firstRowUsage="6" numUsage="5" numExcluded="0">European</d>
+</CategoryDictionary>
+<Subcolumn>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="European" num="2">European</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="European" num="2">European</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="European" num="2">European</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="European" num="2">European</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="European" num="2">European</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="Japanese" num="1">Japanese</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+<d CellType="Text" UserText="American" num="0">American</d>
+</Subcolumn>
+</YColumn>
+</Table>
+
+<!--Analyses, graphs and layouts as compressed binary. Don&apos;t edit this part of the file.-->
+
+<Template dt:dt="bin.base64" xmlns:dt="urn:schemas-microsoft-com:datatypes">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</Template></GraphPadPrismFile>
