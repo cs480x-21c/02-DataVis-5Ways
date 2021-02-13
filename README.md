@@ -3,19 +3,10 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
+The attempted graph: 
 ![ggplot2](img/ggplot2.png)
 
-These features should be preserved as much as possible in your replication:
-
+Requirements:
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
 - Scales: Note the scales do not start at 0.
 - Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
@@ -23,58 +14,8 @@ These features should be preserved as much as possible in your replication:
 - Size mapping to Weight.
 - Opacity of circles set to 0.5 or 50%.
 
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
 Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
 Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
 
 
 Readme Requirements
@@ -83,8 +24,6 @@ Readme Requirements
 A good readme with screenshots and structured documentation is required for this project. 
 It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
 - Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
 Other Requirements
@@ -126,38 +65,49 @@ R Markdown is a document format that compiles to HTML or PDF and allows you to i
 
 To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
+I used X website to make this graph
 ![ggplot2](img/ggplot2.png)
 
 # d3.js 
+This is the graph that was made using d3.js. I used the D3.js documentation to create it. Having worked on this after having worked on it in Python, I am starting to appreciate some of the features that JavaScript has that Python does not.
 
 (And so on...)
 
 ![d3](img/d3-js-pic.png)
 
 # Python + Altair 
+When I saw that Altair/Vega-lite had a Python version, I decided to give it a try! It did take a lot of debugging to get everything installed and ready to go, but it's kind of cool how you can just export the graph to an html file using Python. It also has a lot of possibilities for interactivity. 
+
+Because this library was created for JavaScript, it was a little bit weird to use JS-like syntax for python. 
+
+To correctly load the csv file, I used to pandas library and I put the data I needed in a dictionary. 
 
 ![altair](img/altair-python.png)
 
 # Python + Matplotlib
-
+Like with Altair, I put the data that was needed in a dictionary for easier use. 
 ![matplotlib](img/python-matplotlib.png)
 
 # Google Sheets
+I decided to explore how this would be done with Google Sheets, since they do have a graph option. However, I then realized that you can't add transparency to google sheets charts and you also can't change the radious of the circles. Which looks like this:
 
 ![google](img/chart-google.png)
 
+However, I did find that Google has documentation to use their API with JavaScript! It was pretty cool and I am glad that I looked into it. It was fairly simple to add things to the graph, but I can see how it can get very difficult to do specific things to the graphs. 
+
+![google-upgrade](img/google.gif)
+
 # Tableau
-
+It was suprisingly easy to make this graph with Tableau. Here's a screenshot of the settings I used and the graph I created: 
 ![tableau](img/tableau.png)
-# Flourish
 
+# Flourish
+Flourish was also really easy to use. Here's a screenshot of the settings I used and the graph: 
 ![flourish](img/flourish.png)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Google API**: Used the Google Graph Documentation to create the chart to allow for the customization
+- **Adding Interactivity**: When you hover over the google graph, you can see the specific attributes of the plot
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Trying my best to maintain the same color scheme in all of the graphs (except for the Google Graph update with JS) :)

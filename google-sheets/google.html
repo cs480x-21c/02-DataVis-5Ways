@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+        d3.csv("cars-sample.csv").then(function(dat){
+            console.log(dat)
+
+            var completeData = [['ID', 'Weight', 'MPG', 'Manufacturer', 'Weight']]
+            var i;
+            for(i=0;i<97;i++){
+                completeData.push([" ",Number(dat[i].Weight),Number(dat[i].MPG),dat[i].Manufacturer,Number(dat[i].Weight)])
+            }
+
+            console.log(completeData)
+
+            var data = google.visualization.arrayToDataTable(completeData);
+
+            var options = {
+                title: 'MPG vs Weight',
+                hAxis: {title: 'MPG', baseline:1500},
+                vAxis: {title: 'Weight', baseline:8},
+                bubble: {
+                    textStyle: {
+                        fontSize: 12,
+                        fontName: 'Times-Roman',
+                        color: 'green',
+                        bold: true,
+                        italic: true
+                    }
+                }
+            };
+
+            var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+            chart.draw(data, options);
+            });
+    }
+    </script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
