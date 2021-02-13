@@ -15,7 +15,7 @@ I thought this was one of the easier tools to use which is why I started with it
 Tableau Software is an American interactive data visualization software company. The tool was extremely easy to use and user friendly. I think I enjoyed using this tool the most. I was able to drag the values I wanted to display from a list and place them to display the plot. It automatically generated the legends on the side but I was unable to figure out how to change the scale of the weight legend as it starts at 1,649 and ends 4,906 instead of even numbers. I would definetly use this tool in the future.
 
 # Javascript and d3
-![d3](img/d3CarVisualization.PNG)
+
 
 D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. I had a lot of trouble with this tool and trying to figure out where to start. I eventually found some resources to help me get started. I also had problems with centering the labels on the axes and it took me a while to figure out what values needed to change. This was not my favorite tool but we will have to use it in class so I will definitely be using it in the future. I added the file to Github pages so this link also shows the plot: https://vygrasso.github.io/02-DataVis-5Ways/d3/index
 
