@@ -1,6 +1,12 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
+Project By: Benjamin M'Sadoques <br>
+For CS480x <br>
+
+For this assignment I created the same chart 5 times with different tools and libraries.
+For tools I used Excel and Flourish. For Libraries I used d3, r and ggplot, and JFreeChart.
+
 # Excel
 
 Excel is an extremely common tool used for making charts. So I thought I should finally make something using it.
@@ -146,10 +152,10 @@ I used d3 annotations to add the annotation.
 I displayed the annotation this way because it does not cut off any information for any of the data points.
 Adding more information from the CSV is doable but I think it would be too much information.
 
-D3 annotations was interesting to use, it somehow works in d3-v6, even though it is meant for d3-v4;
+D3 annotations was an interesting library to use, it somehow works in d3-v6, even though it is meant for d3-v4;
 so there may be some features I did not explore that no longer work.
 
 ![Technical Achievement](img/TechnicalAchievement.jpg)
 
-D3 Annotations: <br>
+D3 Annotations Library: <br>
 https://d3-annotation.susielu.com/
