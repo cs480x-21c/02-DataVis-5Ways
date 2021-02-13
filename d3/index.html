@@ -100,17 +100,16 @@ d3.csv("../cars-sample.csv").then(function(data) {
   }
   
   //Added color legend
-  svg.append("circle").attr("cx",290).attr("cy",30).attr("r", 6).style("fill", "hotPink").style("fill-opacity", 0.5)
-  svg.append("circle").attr("cx",290).attr("cy",60).attr("r", 6).style("fill", "orange").style("fill-opacity", 0.5)
-  svg.append("circle").attr("cx",290).attr("cy",90).attr("r", 6).style("fill", "green").style("fill-opacity", 0.5)
-  svg.append("circle").attr("cx",290).attr("cy",120).attr("r", 6).style("fill", "purple").style("fill-opacity", 0.5)
-  svg.append("circle").attr("cx",290).attr("cy",150).attr("r", 6).style("fill", "RoyalBlue").style("fill-opacity", 0.5)
-  svg.append("text").attr("x", 310).attr("y", 30).text("bmw").style("font-size", "15px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", 310).attr("y", 60).text("ford").style("font-size", "15px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", 310).attr("y", 90).text("honda").style("font-size", "15px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", 310).attr("y", 120).text("mercedes").style("font-size", "15px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", 310).attr("y", 150).text("toyota").style("font-size", "15px").attr("alignment-baseline","middle")
-  svg.append("rect").attr("x", 275).attr("y", 20).attr("width", 70).attr("height", 140).attr("fill", "none").attr("stroke-width", 5)
+  svg.append("circle").attr("cx",290).attr("cy",45).attr("r", 6).style("fill", "hotPink").style("fill-opacity", 0.5)
+  svg.append("circle").attr("cx",290).attr("cy",75).attr("r", 6).style("fill", "orange").style("fill-opacity", 0.5)
+  svg.append("circle").attr("cx",290).attr("cy",105).attr("r", 6).style("fill", "green").style("fill-opacity", 0.5)
+  svg.append("circle").attr("cx",290).attr("cy",135).attr("r", 6).style("fill", "purple").style("fill-opacity", 0.5)
+  svg.append("circle").attr("cx",290).attr("cy",165).attr("r", 6).style("fill", "RoyalBlue").style("fill-opacity", 0.5)
+  svg.append("text").attr("x", 310).attr("y", 45).text("bmw").style("font-size", "15px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 310).attr("y", 75).text("ford").style("font-size", "15px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 310).attr("y", 105).text("honda").style("font-size", "15px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 310).attr("y", 135).text("mercedes").style("font-size", "15px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 310).attr("y", 165).text("toyota").style("font-size", "15px").attr("alignment-baseline","middle")
   
 })
 
