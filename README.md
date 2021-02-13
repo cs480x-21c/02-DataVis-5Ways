@@ -31,12 +31,12 @@ Matplotlib is a plotting library for the Python programming language. I had the 
 - **ggplot** Used manual color to adjust what colors were assigned to each manufacturer
 - **matplotlib** Added a legend for weight to show what the size of the dots represented
 
-### Design Achievements
+## Design Achievements
 - **All**: I chose different colors for each manufacturer and kept it consistent across all 5 plots
 
-### Resources
+# Resources
 Javascript and d3
----
+--
 http://learnjsdata.com/read_data.html
 https://github.com/d3/d3-fetch/blob/v2.0.0/README.md#csv
 https://stackoverflow.com/questions/15988455/how-can-i-change-the-radius-and-opacity-of-a-circle-in-d3
@@ -44,14 +44,14 @@ https://www.d3-graph-gallery.com/graph/scatter_basic.html
 https://stackoverflow.com/questions/11189284/d3-axis-labeling
 
 R and ggplot
----
+--
 http://monashbioinformaticsplatform.github.io/2015-11-30-intro-r/ggplot.html
 https://rpubs.com/lokraj/github_csv
 http://www.sthda.com/english/wiki/ggplot2-scatter-plots-quick-start-guide-r-software-and-data-visualization
 http://www.sthda.com/english/wiki/ggplot2-colors-how-to-change-colors-automatically-and-manually
 
 Python and matplotlib
----
+--
 https://stackabuse.com/matplotlib-scatterplot-tutorial-and-examples/
 https://www.w3schools.com/python/pandas_plotting.asp
 https://www.w3schools.com/python/python_functions.asp
