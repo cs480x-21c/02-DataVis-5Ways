@@ -48,4 +48,4 @@ Flourish is a free, online data viz platform that allows users to quickly create
 - **Filtering out n/a values in PowerBI and reinterpreting datatype for MPG column**
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: Haha just kidding, I'm not smart enough for that
+- **Actually re-vamped Apple's Design Philosophy**: Haha just kidding, I'm not smart enough for that
