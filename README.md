@@ -1,5 +1,3 @@
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
 # D3
 
 The first data vizualiation tool I used for this assignment was D3. Since I am relativley new to D3 it took me some time
