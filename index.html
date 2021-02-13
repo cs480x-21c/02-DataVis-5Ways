@@ -1,0 +1,180 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<style>
+  div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 3px;
+  border-color: black;
+  border-radius: 8px;
+  pointer-events: none;
+}
+</style>
+
+<svg id="vis"></svg>
+
+<script>
+  
+  var margin = {top: 10, right: 10, bottom: 10, left: 60}
+  var width = 600 - margin.left - margin.right
+  var height = 400 - margin.top - margin.bottom
+
+  var svg = d3.select('#vis')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+  
+  // Scatter
+  d3.csv("cars-way-5.csv").then(function(data){
+    console.log(data)
+
+    // Scale
+    var x_scale = d3.scaleLinear()
+      .domain([1500, d3.max(data, function(d) {return d.Weight})])
+      .range([50, width])
+      .nice()
+
+    var y_scale = d3.scaleLinear()
+      .domain([9, d3.max(data, function(d) {return d.MPG})])
+      .range([height, 0])
+      .nice()
+
+    // Axes
+    var x_axis = d3.axisBottom()
+      .scale(x_scale)
+      .tickValues([2000,3000,4000,5000]);
+    
+    var y_axis = d3.axisLeft()
+      .scale(y_scale)
+      .tickValues([10,20,30,40]);
+
+    svg.append('g')
+      .attr("transform", "translate(0," + (height) + ")")  
+      .call(x_axis)
+
+    svg.append('g')
+      .attr("transform", "translate(50, 0)")  
+      .call(y_axis)
+
+    // Color scale
+    var color = d3.scaleOrdinal()
+      .domain(['bmw', 'ford', 'honda', 'mercedes', 'toyota']) 
+      .range(['#ff3333', '#b3b300', '#00cc7a', '#33adff', '#ff80ff'])
+      // for a bigger scale problem:
+      //  domain: could use d.Manufacturer 
+      //  range: could use d3.schemeCategory10
+    
+    // var tip = d3.select('#vis')
+    //   .append('rect')
+    //     .style("opacity", 0)
+    //     .attr('stroke', 'black')
+    //     .attr('fill', 'white')
+    //     .attr('x', 10)
+    //     .attr('y', 10)
+    //     .attr('width', 80)
+    //     .attr('height', 40)
+    //   // .append("text")
+    //   //   // .attr("font-size", "2em")
+    //   //   .attr("dy", "-.35em")
+    //   //   .attr('opacity', 1)
+    //   //   .attr("color", "black")
+    //   //   .text("hello")
+
+    // var mouseover = function(d, dot) {
+    //   tip
+    //     .style("opacity", 1)
+    //     .attr('stroke', dot.attr('fill'))
+    //     .attr('x', function (d) {
+    //       return (dot.attr('cx') - (d3.select(this).attr('width') / 2))
+    //     })
+    //     .attr('y', function (d) {
+    //       return (dot.attr('cy') - dot.attr('r') - (d3.select(this).attr('height')) - 10)
+    //     })
+    //     .html(function (d) {
+    //       "hello"
+    //       // console.log(dot.Manufacturer)
+    //       // return "Manufacturer: " + dot.Manufacturer
+    //     })
+
+
+        
+        
+    // }
+
+    // var mouseout = function(d) {
+    //   tip
+    //     .style("opacity", 0)
+    // }
+
+    // var tooltip = d3.select("#vis")
+    //   .append("div")
+    //     .style("opacity", 0)
+    //     .attr("class", "tooltip")
+    //     .style("background-color", "black")
+    //     .style("border-radius", "5px")
+    //     .style("padding", "10px")
+    //     .style("color", "white")
+    
+    // var mouseover = function(d, dot) {
+    //   console.log('mouseover')
+    //   tooltip
+    //     .transition()
+    //     .duration(200)
+    //   tooltip
+    //     .style("opacity", 1)
+    //     // .html(function (d) {
+    //     //   console.log(dot.Manufacturer)
+    //     //   return "Manufacturer: " + dot.Manufacturer
+    //     // })
+        
+    //     .style("left", dot.attr('cx'))
+    //     .style("top", dot.attr('cy'))
+    //     console.log(dot.attr('cx'))
+    //     // .style("left", (dot.attr('cx') - (d3.select(this).attr('width') / 2) + "px"))
+    //     // .style("top", ((dot.attr('cy') - dot.attr('r') - (d3.select(this).attr('height')) - 10 + "px")))
+    // }
+
+    // var mouseout = function(d) {
+    //   console.log('mouseout')
+    //   tooltip
+    //     .style("opacity", 0)
+    // }
+
+    var div = d3.select("#vis").append("div")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+
+    var dots = svg.selectAll('circle')
+      .data(data)
+      .enter().append('circle')
+        .attr('cx', function (d) {return x_scale(+d.Weight) })
+        .attr('cy', function (d) {return y_scale(+d.MPG) })
+        .attr('r', function (d){return (+d.Size)})
+        .attr('fill', function (d){return color(d.Manufacturer)})
+        .attr("stroke", function(d){ return color(d.Manufacturer) })
+        .attr("fill-opacity", .5)
+        .on("mouseover", function(event, d) {
+          d3.select(this).attr("fill-opacity", 1)
+          div.transition()
+            .duration(200)
+            .style("opacity", .9)
+          div.html("hello" + "<br/>" + "hi")
+            .style("left", (event.pageX) + "px")
+            .style("top", (event.pageY - 28) + "px");
+      //  })
+          // mouseover(d, d3.select(this))
+        })
+        .on("mouseout", function(d) {
+          d3.select(this).attr("fill-opacity", .5)
+          div.transition()
+            .duration(500)
+            .style("opacity", 0)
+          // mouseout(d)
+        })
+  }) 
+  
+</script>
