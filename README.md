@@ -25,7 +25,7 @@ To correctly load the csv file, I used to pandas library and I put the data I ne
 
 I mostly used this website (https://www.geeksforgeeks.org/python-altair-scatter-plot/) to visualize the data. I also relied on the official documentation to figure out the scaling of the circles and to debug. 
 
-![altair](img/altair-python.png)
+![altair](img/altair-python.svg)
 
 # Python + Matplotlib + pandas
 Like with Altair, I put the data that was needed in a dictionary for easier use. I ran into some difficulties getting everything set up but once i got it to work it was pretty simple. However, I did run into problems trying to implement the colors (which I eventually figured out and helped me implement it in js). It seemes like Altair is the fancy way of doing visualizations but Matplotlib seems like it has the most resources out there for Python
