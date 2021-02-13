@@ -49,6 +49,16 @@ No legend or gridlines in this plot, because my brain was shutting down. Sorry.
 
 The hardest part of this piece was actually loading the data. But after some reading, I now know more about localhosting!
 
+# Microsoft Excel
+
+![Excel Screenshot](img/excel.png)
+
+Microsoft Excel is a spreadsheet software with many features including calculation, tables, graphing tools, and conditional formatting.
+
+I haven't really touched Excel in years, so it took me a bit to find where everything was. It was nice that it had a bubble chart option, but it took me a bit to understand how to format and select the data in a way it liked. Otherwise, it was actually extremely easy to customize to be exactly what I wanted with its interface!
+
+No legend, because my brain totally shut off and I forgot to add one. Sorry :(
+
 Libraries, Tools, Languages
 ---
 
