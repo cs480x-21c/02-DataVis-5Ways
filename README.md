@@ -3,18 +3,8 @@
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 5 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
+Standards
+---
 
 - Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
 - Scales: Note the scales do not start at 0.
@@ -23,15 +13,25 @@ These features should be preserved as much as possible in your replication:
 - Size mapping to Weight.
 - Opacity of circles set to 0.5 or 50%.
 
-Other features are not required. This includes:
+# Flourish
 
-- The background grid.
-- The legends.
+![ggplot2](img/flourishvisualization.png)
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+Flourish is an extremely easy method of data visualization that relies on a visual interface.
 
-Improvements are also welcome as part of Technical and Design achievements.
+To use it, I uploaded the data file, selected which columns held data I wanted to show, and customized it to my needs (with legends, colors, opacity, gridlines, etc). The axis minimum and maximum were customized, and while premade color palettes exist for the mapping, an easy override option allowed me to handpick colors for each grouping (which is why the colors pretty much match the sample graph). Lastly, the size mapping of the dots was a bit of a struggle. The smallest dot for 5 is very close in size to the largest dot for 405. I ended up realizing that they scaled the dots based on the maximum and minimum, so keeping those numbers close to the actual scale would basically allow for the biggest difference. Although the font is a little different, the closest free option is what I selected (the rest were all serified).
+
+Overall, this tool was extremely easy to use with extremely satisfactory results.
+
+# R + ggplot2
+
+![ggplot2](img/Rplot.png)
+
+R is a language I am wholly unfamiliar with that is typically used for statistical computing, while ggplot2 is a common library to help make data visualizations in R.
+
+I utilized a ggplot bubble plot to map weight to X, MPG to y, and weight to size. ggplot's `geom_point` was also useful in customizing aesthetics - in particular, the 50% opacity and using color to separate manufacturers.
+
+While this tool combination required a lot of time and effort to understand the syntax, read through the documentation, and find the right commands, it came out with a highly satisfactory result. I believe it will take less time to create similar plots in the future.
 
 Libraries, Tools, Languages
 ---
@@ -62,8 +62,8 @@ I have marked a few that are strongly suggested.
 - PowerBI
 - SPSS
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+You may write everything from scratch, or start with demo programs from books or the web.
+If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing.
 
 Tips
 ---
@@ -79,7 +79,7 @@ See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_
 Readme Requirements
 ---
 
-A good readme with screenshots and structured documentation is required for this project. 
+A good readme with screenshots and structured documentation is required for this project.
 It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
 
 - Each visualization should start with a top-level heading (e.g. `# d3`)
@@ -97,46 +97,3 @@ Other Requirements
   - Some ideas include interaction, such as mousing over to see more detail about the point selected.
 - Description of the Design achievements you attempted with this visualization.
   - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
