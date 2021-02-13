@@ -32,7 +32,7 @@ https://bl.ocks.org/d3noob/f46a355d35077a7dc12f9a97aeb6bc5d
 http://bl.ocks.org/weiglemc/6185069
 https://www.d3-graph-gallery.com/graph/scatter_basic.html
 
-<img src="img/d3.png" width="600">
+<img src="img/d3-2.png" width="600">
 
 Using d3 to construct this scatterplot was faily involved, but had its strengths in comparison to other tools (like Excel). Importing the data from the CSV was surprisingly easy to accomplish, and d3 also makes it really easy to iterate through the data and add the points using the select all -> data -> enter -> append methodology. Structuring the import this way also allowed to add conditions farily easily, so it was pretty easy to assign different colored points to the different manufacturers using a simple series of if statements. It was also easy to using d3's built in linear scale functions both for plotting the points on the axes and for customizing the scale of the point sizing. 
 If there's any weakness for d3, it's the relative complexity of adding the axes themselves and the labels. This required a fair amount of attribute changing for svg text which I was not really familiar with outside of the tutorials I was consulting. In the end it all made sense but it was still a little complex to understand. 
@@ -71,4 +71,6 @@ Python and Matplotlib required significantly more work than the other tools to f
 While I understand that there was no specific requirement for handling the "NA" cars a certain way, I wanted to set it up this way to match the other plots I created using different tools. In addition, I wanted a solution that worked even if the data set changed (I could have manually removed the specific problematic rows in this data set, but I wanted a more substantial solution). 
 
 ## Design Achievements
+- **Addition of a category legend on the Javascript/d3 Plot**:
+While some tools such as R/ggplot2 and Flourish create category legends representing the manufacturer (in this case) automatically, in d3 this required some extra work to achieve. Using additional svg.append statements, additional text fields and circles were added across the bottom of the plot (below the x-axis label) to represent the different colors used by the points for the manufacturers. Fortunately, I was able to use some of the "constants" already established in the creation of the plot and axes in order to calculate the proper x/y placement for these additional elements. The "height" of these elemtns were calculated by simply adding the top margin, height and 40 additional pixels (20 more than the x axis label). The horizontal placement of these coordinates used fractions of the plot's width to achieve an even spacing, allong with center justified text. The final label (Toyota) did need some adjusting to ensure it didn't spill off the right edge of the svg.
 
