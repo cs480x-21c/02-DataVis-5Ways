@@ -16,7 +16,7 @@ I ran into a lot of bugs when trying to set up R and ggplot (and I also learned 
 I  relied on documentation and this website (https://365datascience.com/tutorials/r-tutorials/ggplot2-scatter-plot/) to implement the visualization
 ![ggplot2](img/ggplot2.png)
 
-# Python + Altair 
+# Python + Altair + pandas
 When I saw that Altair/Vega-lite had a Python version, I decided to give it a try! It did take a lot of debugging to get everything installed and ready to go, but it's kind of cool how you can just export the graph to an html file using Python. It also has a lot of possibilities for interactivity. 
 
 Because this library was created for JavaScript, it was a little bit weird to use JS-like syntax for python. 
@@ -27,7 +27,7 @@ I mostly used this website (https://www.geeksforgeeks.org/python-altair-scatter-
 
 ![altair](img/altair-python.png)
 
-# Python + Matplotlib
+# Python + Matplotlib + pandas
 Like with Altair, I put the data that was needed in a dictionary for easier use. I ran into some difficulties getting everything set up but once i got it to work it was pretty simple. However, I did run into problems trying to implement the colors (which I eventually figured out and helped me implement it in js). It seemes like Altair is the fancy way of doing visualizations but Matplotlib seems like it has the most resources out there for Python
 
 I used this website (https://pythonspot.com/matplotlib-scatterplot/)
@@ -41,7 +41,7 @@ I used this website (https://www.d3-graph-gallery.com/graph/scatter_basic.html)
 
 ![d3](img/d3-js-pic.png)
 
-# Google Sheets
+# Google Sheets + d3
 I decided to explore how this would be done with Google Sheets instead of Excel. However, I quickly  realized that you can't add transparency to colors in google sheets charts and you also can't change the radius of the circles. Which looks like this:
 
 ![google](img/chart-google.png)
