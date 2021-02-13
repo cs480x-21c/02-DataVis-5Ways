@@ -1,0 +1,22 @@
+---
+title: "Cars Sample Scatter Plot In R Studio"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("ggplot2")
+load("carsSample.Rdata")
+```
+
+## Visualization for Assingment 2 in CS480X
+### By Lucas Fernandes
+
+My first R project and visualization
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r, echo=FALSE}
+data <- ggplot(carsSample, aes(x=Weight, y=MPG, color=Manufacturer, size=Weight), na.rm=TRUE)+geom_point(alpha=.5)
+suppressWarnings(print(data))
+```
