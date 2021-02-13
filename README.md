@@ -15,9 +15,9 @@ I thought this was one of the easier tools to use which is why I started with it
 Tableau Software is an American interactive data visualization software company. The tool was extremely easy to use and user friendly. I think I enjoyed using this tool the most. I was able to drag the values I wanted to display from a list and place them to display the plot. It automatically generated the legends on the side but I was unable to figure out how to change the scale of the weight legend as it starts at 1,649 and ends 4,906 instead of even numbers. I would definetly use this tool in the future.
 
 # Javascript and d3
+![d3](img/d3CarVisualization.PNG)
 
-
-D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. I had a lot of trouble with this tool and trying to figure out where to start. I eventually found some resources to help me get started. I also had problems with centering the labels on the axes and it took me a while to figure out what values needed to change. This was not my favorite tool but we will have to use it in class so I will definitely be using it in the future. I added the file to Github pages so this link also shows the plot: https://vygrasso.github.io/02-DataVis-5Ways/d3/index
+D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. I had a lot of trouble with trying to figure out where to start. I eventually found some resources to help me. I also had problems with centering the labels on the axes and it took me a while to figure out what values needed to change. I decided to add a legend for color and manipulated coordinates to get it where I wanted on the plot. This was not my favorite tool but we will have to use it in class so I will definitely be using it in the future. I added the file to Github pages so this link also shows the plot: https://vygrasso.github.io/02-DataVis-5Ways/d3/index
 
 # R and ggplot2
 ![ggplot2](img/ggplotCarVisualization.png)
@@ -32,12 +32,12 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 Matplotlib is a plotting library for the Python programming language. I had the most trouble assigning colors to the manufacturers and had to try different techniques and made different functions until I found a resource that explained dictionaries and map. As this was my first time coding in Python, there was a learning curve. I also found a resource that helped generate a legend for size of the dots. I would probably use this tool again.
 
 # Technical Achievements
-- **d3** Added a remove null function to check for any null values in mpg or weight columns
-- **ggplot** Used manual color to adjust what colors were assigned to each manufacturer
-- **matplotlib** Added a legend for weight to show what the size of the dots represented
+- **d3** Added a remove null function to check for any null values in mpg or weight columns. I also added a legend for the colors of manufacturers.
+- **ggplot** Used manual color to adjust what colors were assigned to each manufacturer.
+- **matplotlib** Added a legend for weight to show what the size of the dots represented.
 
 # Design Achievements
-- **All**: I chose different colors for each manufacturer and kept it consistent across all 5 plots
+- **All**: I chose different colors for each manufacturer and kept it consistent across all 5 plots.
 
 # Resources
 Javascript and d3
@@ -47,6 +47,7 @@ https://github.com/d3/d3-fetch/blob/v2.0.0/README.md#csv
 https://stackoverflow.com/questions/15988455/how-can-i-change-the-radius-and-opacity-of-a-circle-in-d3
 https://www.d3-graph-gallery.com/graph/scatter_basic.html
 https://stackoverflow.com/questions/11189284/d3-axis-labeling
+https://www.d3-graph-gallery.com/graph/custom_legend.html
 
 R and ggplot
 --
