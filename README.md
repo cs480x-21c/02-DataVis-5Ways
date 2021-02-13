@@ -25,8 +25,13 @@ Using the introductory tutorials provided by the application as my own experimen
 ![tableau2](tableau/carsScatterYearly.png)
 
 # R + ggplot2 + R Markdown
-This was also my first time working in R. Getting used to the language, the R Studio IDE, and the ggplot2 and R Markdown libraries was surprisingly more accessible than I originally imagined. R Markdown is similar in nature to those familiar with Jupyter Notebooks.
+This was also my first time working in R. Getting used to the language, the R Studio IDE, and the ggplot2 and R Markdown libraries was surprisingly more accessible than I originally imagined. R Markdown is similar in nature to Jupyter Notebooks which I've worked in previously. Generating the chart was incredibly easy using `ggplot()` in order to generate the chart which is identical to the example provided. With lack of experience and time I decided to not modify any aspect of the chart any further. The color scheme used is the default from ggplot. I learned R's syntax for creating the plot [here](https://rpubs.com/damiebahnmi/164539) and got a general introduction to RMarkdown from [RStudio's website.](https://rmarkdown.rstudio.com/articles_intro.html)
 
+Using RMakrdown's render function I did *knit* the file to an HTML page and captured the result which can be seen below.
+![R](R/Rpage.PNG)
+# Python + mathplotlib + pandas
+Moving into more familiar territory I used the [panda's library to import the CSV data](https://www.datacamp.com/community/tutorials/pandas-read-csv) into my project and then produced the chart using mathplotlib. I learned the library from its [documentation](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html). I did first test panda's scatter method but I found it more limited and decided to focus on mathplotlib as I hoped there was more documentation concerning customization. My efforts were still limited with mathplotlib, it was a challenge coloring data based on the manufacturer but that was resolved by having `color=Manufacturer.map(colors)` which map a dictionairy of colors linked with each manufacturer. Beyond that I was unable to adjust any other aspect of the chart besides addint axis titles. The color palette I used was from [cooler.co(link contains the palette)](https://coolors.co/29bf12-abff4f-08bdbd-f21b3f-ff9914) which is radom color palette picker. On the site I choose the protanopia color blindness mode and then modified the first color to be blue in order to add more contrast as originally there was two shades of green.
+![python](matplotlib/mathPlotCapture.PNG)
 
 
 
