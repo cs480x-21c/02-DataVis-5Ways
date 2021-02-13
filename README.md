@@ -61,7 +61,7 @@ Flourish was also really easy to use! I can see how customizing parts of it migh
 ![flourish](img/flourish.png)
 
 ## Technical Achievements
-- **Google API**: Used the Google Graph Documentation to create the chart to allow for the customization
+- **Google Charts**: Used the Google Graph Documentation to create the chart to allow for the customization
 - **Adding Interactivity**: When you hover over the google graph, you can see the specific attributes of the plot
 
 ### Design Achievements
