@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5 ways d3 plot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<iframe
+        width="560" height="315"
+        src="https://www.youtube.com/embed/_8V5o2UHG0E" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+
+</iframe>
+
+
+<body>
+<svg width="1200" height="800"></svg>
+
+
+<!--This is a example from https://www.youtube.com/watch?v=_8V5o2UHG0E&t=33209s
+I modified this code and added some new things-->
+<script>
+// read csv file
+
+    d3.csv('cars-sample.csv')
+        .then(data => {
+            data.forEach(d => {
+                d.MPG = +d.MPG;
+                d.Weight = +d.Weight;
+                // for some reason, it works without d.Manufacturer = + d.Manufacturer I do not know why
+            });
+            data_Plot(data);
+        });
+
+
+        'use strict';
+
+        const svg = d3.select('svg');
+
+        // the size of the plot
+        const width = +svg.attr('width');
+        console.log(width)
+        const height = +svg.attr('height');
+
+        const data_Plot = data => {
+            const title = '5 ways d3 plot';
+
+            const xValue = d => d.Weight;
+            const xAxisLabel = 'Weight';
+
+            const yValue = d => d.MPG;
+
+
+            const color = d => {
+
+                if(d.Manufacturer === 'bwm')
+                    return 'red';
+                else if (d.Manufacturer === 'ford')
+                    return 'green'
+
+                else if (d.Manufacturer === 'honda')
+                    return 'blue'
+
+                else if (d.Manufacturer === 'mercedes')
+                    return 'black'
+
+                else return 'pink';
+            }
+            // const circleRadius = 10 ;
+
+            const circleRadius = d => d.Weight ;
+
+
+            const yAxisLabel = 'MPG';
+
+            // specify the window size
+            const margin = { top: 200, right: 200, bottom: 200, left: 200 };
+
+            // axis size
+            const innerWidth = 800;
+            const innerHeight = 500;
+
+            // linearly map the data to this x axis
+            const xScale = d3.scaleLinear()
+                .domain(d3.extent(data, xValue))
+                .range([0, innerWidth])
+                .nice();
+
+            // map MPG
+            const yScale = d3.scaleLinear()
+                .domain(d3.extent(data, yValue))
+                .range([innerHeight-10, 0])
+                .nice();
+
+            // scale the r for each circle
+            // the circle size is mapped to 0-20
+            const rScale = d3.scaleLinear()
+                .domain(d3.extent(data, circleRadius))
+                .range([5, 20])
+                .nice();
+
+
+
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+
+            // i do not know how to change the tick size.....
+            const xAxis = d3.axisBottom(xScale)
+                .tickSize(-innerHeight)
+                .tickSizeOuter(1000)
+                .tickPadding(15);
+
+            const yAxis = d3.axisLeft(yScale)
+                .tickSize(-innerWidth)
+                .tickSizeOuter(10)
+                .tickPadding(10);
+
+            // create axis
+            const yAxisG = g.append('g').call(yAxis);
+            yAxisG.selectAll('.domain').remove();
+
+            // axis setting
+            yAxisG.append('text')
+                .attr('class', 'axis-label')
+                .attr('y', -93)
+                .attr('x', -innerHeight / 2)
+                .attr('fill', 'black')
+                .attr('transform', `rotate(-90)`)
+                .attr('text-anchor', 'middle')
+                .text(yAxisLabel);
+
+            const xAxisG = g.append('g').call(xAxis)
+                .attr('transform', `translate(0,${innerHeight})`);
+
+            xAxisG.select('.domain').remove();
+
+            // axis setting
+            xAxisG.append('text')
+                .attr('class', 'axis-label')
+                .attr('y', 70)
+                .attr('x', innerWidth / 2)
+                .attr('fill', 'black')
+                .text(xAxisLabel);
+
+            g.selectAll('circle').data(data)
+                .enter().append('circle')
+                .attr('cy', d => yScale(yValue(d)))
+                .attr('cx', d => xScale(xValue(d)))
+                .attr('r', d => rScale(circleRadius(d)))
+                .style("opacity", 0.5)
+                .attr('fill', d => color(d));
+
+            g.append('text')
+                .attr('class', 'title')
+                .attr('x', 200)
+                .text(title);
+        };
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+
+</html>
