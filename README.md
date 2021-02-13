@@ -45,8 +45,10 @@ Tableau is _yet another_ liscensed software (also provided by WPI _I think_). In
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- Checked for and handled `NA` values in `d3.js`
+- Added background grids to all graphs
+- _Hopefully was the first to use JSL_
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Constant color _range_ for manufacturers
+- Followed the given design? So any achievements should go to ggplot :)
