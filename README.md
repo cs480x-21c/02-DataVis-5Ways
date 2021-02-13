@@ -15,17 +15,21 @@ d3.js is the library that we have mostly been working with in this class. This w
 SAS JMP
 ---
 
-JMP by SAS is a personal favorite of mine, and what I used to do the major of my data visualization work in medical research. The inuitive GUI and powerful scripting language make it an amazing tool for pretty much all users, and I would highly reccomend it to anyone looking to plot data. A JMP notebook and script is included in the `jmp/` folder.
+JMP by SAS is a personal favorite of mine, and what I used to do the major of my data visualization work in medical research. The inuitive GUI and _very_ powerful scripting language make it an amazing tool for pretty much all users, and I would highly reccomend it to anyone looking to plot data. A JMP notebook and the script used to generate the graph is included in the `jmp/` folder. It does require a liscense.
 
 ![SAS JMP](img/car-jmp.png)
 
 Python ggplot2
 ---
 
+Using an implementation of ggplot for python by PlotNine, I was able to recreate the plot incredibly simply, and all of the default settings matched as expected. I am very glad to know that ggplot has a good python version because I find switching between languages often a bit challenging.
+
 ![ggplot2](img/ggplot_python.png)
 
 GraphPad Prism
 ---
+
+GraphPad Prism is another liscensed software (provided by WPI), and is also _very_ powerful. For this project most of the advanced features were not even touched, but the automatic data validation and checking made the process very smooth.
 
 ![GraphPad Prism](img/car-prism.png)
 
