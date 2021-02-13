@@ -1,142 +1,161 @@
-# 02-DataVis-5ways
-
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+Project By: Benjamin M'Sadoques <br>
+For CS480x <br>
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+For this assignment I created the same chart 5 times with different tools and libraries.
+For tools I used Excel and Flourish. For Libraries I used d3, r and ggplot, and JFreeChart.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Excel
 
-Your goal is to use 5 different tools to make the following chart:
+Excel is an extremely common tool used for making charts. So I thought I should finally make something using it.
 
-![ggplot2](img/ggplot2.png)
+Imputing the data was easy, but I had to do some manipulation. 
+I sorted the data by the manufacturer and manually created each series group. 
+I also deleted the values where the MPG was NA, since those bubbles would show up.
+Excel did not immediately recognize the data MPG as numbers, so I had to edit each box.
 
-These features should be preserved as much as possible in your replication:
+Excel has okay axis controls, but it lacks direct control. I was able to replicate the scale, 
+but I could not find a method to set the axes correctly. 
+I could not set the axis intersection value lower than the minimum since it would default to the minimum. 
+If I changed the minimum, then all the numbers would change. 
+If I could fix the axes, the background would fix itself.
+Getting tick marks without lines seems impossible, I saw some hacks for it that worked in older versions of excel.
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+In the future I would use Excel for quickly putting in data to see what it looked like or
+trying out different types of vis with the same dataset.
 
-Other features are not required. This includes:
+![Excel Vis](img/ExcelVis.jpg)
 
-- The background grid.
-- The legends.
+# d3
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+D3 is the main library we are using in this course, so it was an easy choice for this project.
 
-Improvements are also welcome as part of Technical and Design achievements.
+Using d3 feels a lot more manual. There are no plots, instead, I had to position the data,
+axes, and axes labels. With this control it takes a lot of tweaking to get the right plot, but 
+in return I have a lot of control over positioning. Adding additional functionality can be tricky,
+but it is always possible to make the vis interactive.
 
-Libraries, Tools, Languages
+In the future I would use d3 for creating an interactive vis, when I have already decided exactly 
+what I am making.
+
+![d3 Vis](img/d3Vis.jpg)
+
+# R and ggplot
+
+R with GG plot was the library used to create the original vis. So it should be able to re-create it.
+
+I found re-creating the graph to be easy once I understood how ggplot worked. 
+I am surprised I needed only 5 lines of code. 
+Though it was only easy because the vis used R's default color scheme.
+If the colors, font, axis, or other elements were different, 
+it would be difficult to re-create the vis in R.
+
+In the future I would use R if I need to make a simple static vis, or a quick plot.
+
+![R Vis](img/RVis.png)
+
+# JFreeChart 
+
+I have coded a lot of Java so I thought it would be easy to use a library there to make a chart.
+JFreeChart sounded like a good library for making charts.
+
+Turns out, I was wrong. It took a lot of set up for the project to run.
+First, JFreeChart relies on Maven, so I had to make my project into a Maven project to manage Maven dependencies.
+Then, JFreeChart does not distribute the jar, so I had to build it using Maven.
+Next, I found that the CSV class for JFreeChart was very bare bones, it expects all the attributes to be floats
+and could not parse the CSV. 
+Finally, I found another library to read the CSV called OpenCSV, so I could start making the chart. 
+
+The actual library functionality was not too hard to use.
+The axis names were easy to set, but the colors were hard to figure out.
+In many cases the library provided too many methods to choose from.
+
+In the future I would use JFreeChart if I found a good reason to use it.
+The set up took a long time, but I like the result.
+
+![JFreeChart Vis](img/jfreechart.jpg)
+
+You can run the jar to remake the chart, 
+see ./JFreeChart/JFreeChartCarSample/chart.jar
+
+# Flourish
+
+I saw flourish on the list, and lots of the results looked professional so I decided to try it.
+
+Importing the data was easy, since Flourish interprets csvs.
+I could simply select which columns were my data. The series making was fully automatic.
+The tool provides a ton of options to customize the axes, colors, and background.
+I was able to replicate the axis numbers and style accurately. 
+Compared to the other tools/libraries, I found this one to be the easiest to use.
+
+In the future I would use flourish if I know what kind of chart I want to make, 
+and I have data files that I can import.
+
+![Flourish vis](img/FlourishVis.png)
+
+I could not include proper files for the vis. I included an HTML file, but it does not work properly so please use the link.
+
+You can check out the vis at
+https://public.flourish.studio/visualisation/5283934/
+
+Design Achievements
+--
+
+The design achievement for this project was matching the color scheme as closely as possible. 
+I first tried to pick colors directly from the image using a simple color picker. 
+Unfortunately, the colors produced looked faded compared to the image, since the circles need to 
+have 50% transparency, on a light-colored background. 
+
+To get the actual colors I used a simple screen color picker tool I found, to match the output colors. 
+I took my first vis in Excel, added the matching light grey background, and the 50% circle transparency.
+With this simulation, I slowly changed the color inputs to match the color of the picture.
+
+![Design Achievement](img/DesignAchievement.jpg)
+
+This produced the following color hex codes I used for all my vis recreations:
+
+bmw: #F77973 
+<div style="width:10px;height:10px;background-color:#F77973;"></div>
+
+ford: #B0B24B
+<div style="width:10px;height:10px;background-color:#B0B24B;"></div>
+
+honda: #31BC80
+<div style="width:10px;height:10px;background-color:#31BC80;"></div>
+
+mercedes: #2FB1F6
+<div style="width:10px;height:10px;background-color:#2FB1F6;"></div>
+
+toyota:	#E86DF1
+<div style="width:10px;height:10px;background-color:#E86DF1;"></div>
+
+
+The color picker I used: <br>
+https://download.cnet.com/ScreenColorPicker/3000-2383_4-75796638.html
+
+
+Technical Achievements
 ---
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+The technical achievement for this project was adding group highlighting and annotations to the d3 plot.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
+The group highlighting changes the opacity to 1.0 for the selected brand when hovered over,
+and changes the opacity back to 0.5 when not hovered over.
+To do this process I added a class to each circle that represents its manufacturer. 
+Then I used d3 to select the manufacturer class.
+Finally I used d3 color to change the opacity of the manufacturer's color. 
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+The annotations adds the car name, MPG, and Weight to a circle when moused over.
+I used d3 annotations to add the annotation.
+I displayed the annotation this way because it does not cut off any information for any of the data points.
+Adding more information from the CSV is doable but I think it would be too much information.
 
-I have marked a few that are strongly suggested.
+D3 annotations was an interesting library to use, it somehow works in d3-v6, even though it is meant for d3-v4;
+so there may be some features I did not explore that no longer work.
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+![Technical Achievement](img/TechnicalAchievement.jpg)
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+D3 Annotations Library: <br>
+https://d3-annotation.susielu.com/
