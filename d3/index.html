@@ -110,6 +110,13 @@ d3.csv("../cars-sample.csv").then(function(data) {
   svg.append("text").attr("x", 310).attr("y", 90).text("honda").style("font-size", "15px").attr("alignment-baseline","middle")
   svg.append("text").attr("x", 310).attr("y", 120).text("mercedes").style("font-size", "15px").attr("alignment-baseline","middle")
   svg.append("text").attr("x", 310).attr("y", 150).text("toyota").style("font-size", "15px").attr("alignment-baseline","middle")
+  svg.append("rect")
+   .attr("x", 275)
+   .attr("y", 20)
+   .attr("width", 70)
+   .attr("height", 140)
+   .attr("fill", "none")
+   .attr("stroke-width", 2);
    
 })
 
