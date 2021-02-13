@@ -50,6 +50,31 @@ In the future I would use R if I need to make a simple static vis, or a quick pl
 
 ![R Vis](img/RVis.png)
 
+# JFreeChart 
+
+I have coded a lot of Java so I thought it would be easy to use a library there to make a chart.
+JFreeChart sounded like a good library for making charts.
+
+Turns out, I was wrong. It took a lot of set up for the project to run.
+First, JFreeChart relies on Maven, so I had to make my project into a Maven project to manage Maven dependencies.
+Then, JFreeChart does not distribute the jar, so I had to build it using Maven.
+Next, I found that the CSV class for JFreeChart was very bare bones, it expects all the attributes to be floats
+and could not parse the CSV. 
+Finally, I found another library to read the CSV called OpenCSV, so I could start making the chart. 
+
+The actual library functionality was not too hard to use.
+The axis names were easy to set, but the colors were hard to figure out.
+In many cases the library provided too many methods to choose from.
+
+In the future I would use JFreeChart if I found a good reason to use it.
+The set up took a long time, but I like the result.
+
+![J Free](img/jfreechart.jpg)
+
+You can run the jar to remake the chart, 
+see ./JFreeChart/JFreeChartCarSample/chart.jar
+
+
 
 Design Achievements
 --
