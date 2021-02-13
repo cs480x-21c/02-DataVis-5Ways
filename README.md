@@ -33,7 +33,11 @@ My third implementation uses D3 and JavaScript to create the visualization of th
 
 ![here](https://github.com/HHauptfeld/02-DataVis-5Ways/blob/main/img/d3js.PNG).
 
-An easy aspect of d3js was the accessibility to tutorials online that taught me how to use d3js. Their documentation is very detailed and includes some great examples of how to implement what you need to do. A difficul aspect of d3js is how complicated the code can become. It took me a really long time to fiddle around with the color aspect of the chart and visually display the manufacturers. I didn't have to use any hacks or data manipulation to get the right chart.
+An easy aspect of d3js was the accessibility to tutorials online that taught me how to use d3js. Their documentation is very detailed and includes some great examples of how to implement what you need to do. A difficul aspect of d3js is how complicated the code can become. It took me a really long time to fiddle around with the color aspect of the chart and visually display the manufacturers. I didn't have to use any hacks or data manipulation to get the right chart. In order to view the D3JS implementation in your browser in real time, do the following two commands in a terminal in which your current working directory is this repo:
+
+`npm install http-server`
+
+`npx http-server`
 
 Sources:
 * https://www.d3-graph-gallery.com/graph/bubble_basic.html
