@@ -1,5 +1,4 @@
 # 02-DataVis-5ways
-
 Assignment 2 - Data Visualization, 5 Ways  
 ===
 
@@ -51,7 +50,7 @@ http://forum.codecall.net/topic/54232-making-scatter-plot-graphs-in-java/
 I used the free version of Flourish. Due to some constraints,
 the tick marks could not be adjusted.
 
-![Flourish](img/tableau.png)
+![Flourish](img/flourish.png)
 
 
 ## Technical Achievements
