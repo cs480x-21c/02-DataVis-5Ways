@@ -40,4 +40,18 @@ https://jcoliver.github.io/learn-r/004-intro-ggplot.html
 
 By far, I thought that this method was the most simplistic and concise method in plotting this type of data. While the plot we were trying to replicate was done in this library, I was able to recreate the plot in mere seconds with very few lines. The resources online that I've listed played such a big role in helping me understand the R language and recreating this plot. The geom_point() stated in the example was very useful in adding the weighted points attribute to the plots as well as stylistic and aesthetic uses to make the points 50% opacity. This library was great for this dataset and very useful for statistical analysis and creating charts and graphs such as these at a very low and minimal effort. 
 
+# Flourish
 
+https://public.flourish.studio/visualisation/5283874/ (This is the link to the public flourish data)
+
+<img src="img/CarsFourish.png" width="500">
+
+This was a very new software for me and just being a beginner creating visualizations, I thought that this was amazing! Flourish was so simple to use and it would be an amazing tool to create quick and easy visualizations with very limited experience. This software is very user friendly and requires no coding whatsoever. I also really like the visualization aspect in which when the user hovers over the points, it gives all the data that I've specified to show in a pop up box. I thought the user experience was superb and this was such an amazing tool overall. With the basic account, however, it may have limitations on some capabilities but with this assignment, I thought recreating the scatterplot was perfect for this software and it was done with ease. 
+
+# Technical / Design Achievements
+
+<img src="img/CarsPlotD3TechAchievement.png" width="500">
+
+For my technical design achievement this week, I chose to add a hover and mouseover event in my d3 implementation. This was done with some help online since last week I struggled with mouseover events. The technical design achievement is done in which when the user hovers their mouse over a point, it would display in a textbox, as seen in the screen capture above, the exact MPG value. This could also be done with other data specifications. I wanted to try something like this to have an interaction between user and visualization as to me, it seems to be a useful tool for different visualizations. Additionally, I thought that with a couple of my other methods of implementation, it comes with this sort of capability for the user so it was really nice to see that I could replicate this in d3 as well.
+
+As for the design achievements, in all of my plots, other than two, I was able to replicate almost the exact color scheme that was shown on the example plot. This was done using several tools online to figure out the hex values of the color specified in the example plot. I tried to get it as close as possible in this way to the original colors and for the plots that I didn't succeed in doing this for, that's how I gauged the difficulty in changing the color markers for a typical visualization. Additionally, in my MATLAB plot, I was also able to mimick the tick marks done in the original plot and the spacing and numbering. This was done with help of online resources in order to accurately replicate the original plot as much as possible. 
