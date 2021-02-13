@@ -8,19 +8,27 @@ Assignment 2 - Data Visualization, 5 Ways
 d3
 ---
 
+![d3](img/car-d3.png)
 
 SAS JMP
 ---
 
+![SAS JMP](img/car-jmp.png)
 
 Python ggplot2
 ---
 
+![ggplot2](img/ggplot_python.png)
+
 GraphPad Prism
 ---
 
+![GraphPad Prism](img/car-prism.png)
+
 Tableau
 ---
+
+![Tableau](img/car-tableau.png)
 
 You are required to use 5 different tools or libraries.
 Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
