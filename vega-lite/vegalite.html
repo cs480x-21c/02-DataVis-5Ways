@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite Vis</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+      <!--Starting Template: https://vega.github.io/vega-lite/tutorials/getting_started.html-->
+    <h1>Vega-Lite Visualization</h1>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+      // Assign the specification to a local variable vlSpec.
+      var vlSpec = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        data: {"url": "cars-sample.csv"},
+        mark: 'circle',
+        width: 400,
+        height: 400,
+        opacity: 0.5,
+        encoding: {
+          y: {field: 'MPG', type: 'quantitative', scale: {domain: [7,45]}, axis: {tickCount: 5}},
+          x: {
+            field: 'Weight',
+            type: 'quantitative',
+            scale: {"domain": [1500,5000]},
+            axis: {tickCount: 3}
+          },
+          color: {
+            field: "Manufacturer",
+            type: 'nominal'
+          },
+          size: {
+              field: "Weight",
+              type: 'quantitative'
+          }
+        }
+      };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
