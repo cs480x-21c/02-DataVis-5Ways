@@ -1,142 +1,46 @@
 # 02-DataVis-5ways
 
 Assignment 2 - Data Visualization, 5 Ways  
-===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 5 times. 
+# Way 1: Javascript - D3
+![JavaScript - d3](way-1-d3.PNG)
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+d3 is a great tool for creating custom visualizations. For this chart, I appended a circle for each datapoint (loaded via d3.csv), choosing the x, y, size, and color based upon data values. Creating the axes scale, and plotting the points was relatively simple. Putting in the x and y axes the way they were in the original was a bit difficult but very managable. Instead of creating a legend, I had planned to make the chart interactive. My plan was to have the information of each car displayed when hovering over that point. I was quickly able to generate a rectangle right above each point as I hovered over them, but was unable to get text to appear. I then switched to using the 'div' type, and tried various methods I found online. Sadly, I was never able to get a tooltip fully working or displaying. I'll get it to work on a later assignment or after this course.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+## Reference Code Used for d3
+- https://www.d3-graph-gallery.com/graph/bubblemap_circleFeatures.html
+This was my starting point for determining how to adjust the bubble size based upon the Weight value. I followed their procedure of creating a column specifically for it. To do this, i used python to make a copy of the Weight column and scale the values between 2.5 and 10 as those provides sizes consistent with the original.
 
-Your goal is to use 5 different tools to make the following chart:
+- https://github.com/d3/d3-axis
+I used this source to understand the API for d3 axis
 
-![ggplot2](img/ggplot2.png)
+- https://github.com/bumbeishvili/d3-v6-tip
+- https://bl.ocks.org/d3noob/180287b6623496dbb5ac4b048813af52
+These were the main two sources I followed when attempting interactivity after deciding that my method of creating a rectangle and appending text inside was not the best approach. Unfortunatly, I was unable to get the tooltip working, though code I used which was taken and adapted from these sources remains commented out within my file.
 
-These features should be preserved as much as possible in your replication:
+# Way 2: R - ggplot2
+![R - ggplot2](way-2-ggplot2.png)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+It seems to me that this was how the original plot was generated. Using basic plotting functionality generated the exact plot without needing to adjust parameters in order to have the same colors, axes, and legend.
 
-Other features are not required. This includes:
+# Way 3: Flourish
+[Way 3 - Flourish](https://public.flourish.studio/visualisation/5235975/)
 
-- The background grid.
-- The legends.
+It was my first time using this visualization studio, and everything was intuitive. I was able to match the plot very similarly to the original without much effort. It was also easy to pick the range the axes covered, though slightly more difficulty to uncover the setting to either choose how many tick marks there were or manually input your preference. Lastly, choosing the size variable for the bubble chart was easy, but in the end I was not able to make the size range match that from the original. In the future, I may use this to create quick, interactive plots. Without much effort on my end, the plot looks clean and professional, and can easily be shared on the web. Without a paid version of Flourish, everything is kept public. I will have to keep that in mind for any future applications.
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+# Way 4: Python - Matplotlib and Seaborn
+![Python - Matplotlib and Seaborn](way-4-matplotlib-seaborn.png)
 
-Improvements are also welcome as part of Technical and Design achievements.
+Using python was relatively simple. I have experience creating scatterplots in python, and was able to quickly get very close. Customizing the x and y ticks a quick one liner. And I also had the freedom to customize the dot size range until it seemed like a perfect match for the original. For the colors, I decided to choose a preset palette which came out a great match. It is easy to create the legend and place it wherever you want. My only difficulty, was customizing the legend. I was unable to make it so that the "Weight" section looked identical. The spacing between the 'Manufacturer' and 'Weight' was also not perfect looking and I could not manage a fix. All in all, The plot quickly came out well enough, and I definetly plan to continue using python. It is super easy to functionalize plotting, which can then be run on many datasets, and easily re-run in the future.
 
-Libraries, Tools, Languages
----
+# Way 5: Tableau
+![Tableau](way-5-tableau.png)
 
-You are required to use 5 different tools or libraries.
-Of the 5 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+Similarly to Flourish, this was my first time using Tableau and it was quick to learn. The ploting looks very professional, and a close match to the original. I was unable to reorder the two legends, and customize the 'Weight' legend to be a perfect match. I now have the student version of tableau, and will certainly come back to it in the future for plotting. From my research, Tableau is very good for spatial/map plotting, which I'll definately make use of some time.
 
-Otherwise, you should seek tools and libraries to fill out your 5.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
-
+# Achievements:
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+A technical achievement in this project was creating an interactive plot using Florish. The information for each car can be easily and intuitively displayed by hovering over it's point. This allows for users to know the exact x and y coordinate of every point, as well as the cars name. Without this method, there is no way to display the name of the car. While the manufacturers are categorical, and can be displayed via color, there are too many cars to do so as well (by shape for example). Because of this, the only way to know which car they are looking at without interactivity is to find the coordinates and look it up on a table. This interactivity allows for more information to be displayed than before possible, for one point at a time.
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+## Design Achievements
+My design achievement was using consistent colors across my plots. I used an online color picker to choose suitable options, that fit the original. I was then able to input those hex codes into the various languages and programs I used for the other plots to result in a consistent product. 

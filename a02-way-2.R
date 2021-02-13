@@ -1,0 +1,6 @@
+library(ggplot2)
+setwd("/Users/lover/WPI/2021-C/CS480x/a2/02-DataVis-5Ways")
+cars <- read.csv("cars-sample.csv")
+
+p <- ggplot(cars, aes(x=Weight, y=MPG, color=Manufacturer)) + 
+  geom_point(aes(size=Weight), alpha=.5)
