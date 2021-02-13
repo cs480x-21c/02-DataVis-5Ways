@@ -21,6 +21,10 @@ Flourish is an online tool for creating data visualizations that has both free a
 
 In comparison to the other GUI tool I used (Excel), Flourish was WAY easier to use. Like, stupidly easy to use. I was able to import the .csv file easily, and immediately was prompted to choose which columns I wanted to map to the X axis and Y axis. In addition, I was also immediately prompted with options to assign axes to use for point size and point color data. Similar to Excel, however, I couldn't locate an option to adjust the difference between smallest and largest point size, so the difference is rather subtle. Still, this took me a fraction of the time it took to set up in Excel, and even made the addition of a legend for the manufacturers a simple click to add. It also truncated and adjusted the scales of the axes completely automatically with no input from me. 
 
+Since there is no code or files available for viewing how the Flourish rendition was set up, here are some additional screenshots:
+<img src="img/flourishsetup.png" width="1000">
+<img src="img/flourishsetup2.png" width="400">
+
 # Javascript and d3
 Sources/tutorials consulted while making this plot:
 https://bl.ocks.org/d3noob/5680dd0089abdc5b15f188d5efe48852
