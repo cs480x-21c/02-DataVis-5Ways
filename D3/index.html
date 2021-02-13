@@ -4,4 +4,89 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+<div id="scatterPlot"></div>
+<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 40, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#scatterPlot")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("cars-sample.csv", function(data) {
+    data = data.filter(function(d){
+        if(isNaN(d.MPG)){
+            return false;
+        }
+        d.value = parseInt(d.MPG, 10);
+        return true;
+    });
+
+  // Add X axis
+  var x = d3.scaleLinear()
+    .domain([1000, 6000])
+    .range([ 0, width]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([8, 47])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+    // Add X axis label
+    svg.append("text")
+        .attr("y", height + margin.bottom/1.2)
+        .attr("x", width/2)
+        .style("text-anchor", "middle")
+        .text("Weight");
+    
+    // Add Y axis label
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 0 - margin.left/2)
+        .attr("x", 0 - (height/2))
+        .style("text-anchor", "middle")
+        .text("MPG");
+    
+
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Weight); } )
+      .attr("cy", function (d) { return y(d.MPG); } )
+      .attr("r", function(d){return d.Weight/350})
+      .style("opacity", 0.5)
+      .style("fill", function (d){
+          switch(d.Manufacturer){
+            case "bmw": 
+                return "rgb(0, 0, 255)";
+            case "ford":
+                return "rgb(41, 191, 18)";
+            case "honda":
+                return "rgb(8, 189, 189)";
+            case "mercedes":
+                return "rgb(242, 27, 63)";
+            case "toyota":
+                return "rgb(255, 153, 20)";
+          }
+      })
+
+})
+
+</script>
