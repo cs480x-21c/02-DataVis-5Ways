@@ -16,6 +16,12 @@ function main() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
+    // Create tooltip div
+    let div = d3.select("body").append("div")
+        .attr("id", "tooltip")
+        .attr("class", "card")
+        .style("opacity", 0);
+
     // Load CSV data
     d3.csv("cars-sample.csv")
         .then(data => {
@@ -84,6 +90,27 @@ function main() {
                         default:
                             return "#000000";
                     }
+                })
+                .on("mouseover", function(e, d) {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", 1);
+                    div	.html("Car: " + d.Manufacturer + " " + d.Car + "<br/>"
+                    + "MPG: " + d.MPG + "<br/>"
+                    + "Cylinders: " + d.Cylinders + "<br/>"
+                    + "Displacement: " + d.Displacement + "<br/>"
+                    + "Horsepower: " + d.Horsepower + "<br/>"
+                    + "Weight: " + d.Weight + "<br/>"
+                    + "Acceleration: " + d.Acceleration + "<br/>"
+                    + "Model Year: " + d["Model.Year"] + "<br/>"
+                    + "Origin: " + d.Origin + "<br/>")
+                        .style("left", (e.pageX) + "px")
+                        .style("top", (e.pageY - 28) + "px");
+                })
+                .on("mouseout", function() {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", 0);
                 })
                 .style("opacity", 0.5);
         });

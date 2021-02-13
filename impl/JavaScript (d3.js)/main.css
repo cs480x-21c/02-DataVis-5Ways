@@ -10,3 +10,11 @@
 #title {
     font-size: 2em;
 }
+
+#tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px sans-serif;
+    pointer-events: none;
+}
