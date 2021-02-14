@@ -9,9 +9,10 @@ class TableauGraph extends Component {
 
     render() {
         return (
-            <div className="navigationMenu">
+            <div className="cs4802P2Div">
                 <div className="imagecontainer">
                     <img img src="/TableauGraph.PNG" alt="Tableau Graph"/>
+                    <h5>Made with Tableau</h5>
                 </div>
             </div>
         );

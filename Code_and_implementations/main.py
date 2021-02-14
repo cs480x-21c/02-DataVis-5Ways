@@ -1,6 +1,11 @@
-import plotly.express as px
+import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
+w = 4
+h = 4
+d = 300
+plt.figure(figsize=(w, h), dpi=d)
 cardata = pd.read_csv("cars-sample.csv")
 
 s = [n * 0.03 for n in cardata["Weight"]]
@@ -18,16 +23,10 @@ for man in cardata["Manufacturer"]:
 
 cardata['ColorMappingMan'] = colorMapping
 
-fig = px.scatter(cardata, x="Weight", y="MPG", size='Weight', color="ColorMappingMan")
-fig.update_layout(
-    xaxis = dict(
-        tickmode = 'array',
-        tickvals = [2000, 3000,4000, 5000]
-    ),
-    yaxis = dict(
-        tickmode = 'array',
-        tickvals = [10, 20, 30, 40]
-    )
-)
+plt.scatter(cardata["Weight"], cardata["MPG"], s=s, alpha=0.5, c=cardata['ColorMappingMan'])
 
-fig.show()
+plt.xlabel('Weight')
+plt.xticks([2000, 3000, 4000, 5000])
+plt.ylabel('MPG')
+plt.yticks([10,20,30,40])
+plt.savefig("out.png")

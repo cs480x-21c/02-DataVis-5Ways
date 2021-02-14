@@ -18,11 +18,14 @@ class D3Graph extends Component {
 
   componentDidMount() {
     //Responsive Sizing
-    window.addEventListener("resize", this.handleResize);
+    this.handleResize()
     let { windowWidth, windowHeight } = this.state; 
-    let w = windowWidth / 2;
-    let h = windowHeight / 2; 
+    let w = windowWidth / 3;
+    let h = windowHeight / 3; 
 
+    //The following code for a d3 scatterplot was created in tandom with this tutorial from the d3 site:
+    //https://www.d3-graph-gallery.com/graph/scatter_basic.html
+    //I added a custom method of mapping manufacturers to different colors and integrated it with react.
     var margin = {top: 10, right: 30, bottom: 30, left: 60};
 
     //Create Background Region
@@ -35,17 +38,17 @@ class D3Graph extends Component {
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-    var colors = ["#00008B",
-                  "#003EFF",
-                  "#00611C",
-                  "#00AF33",
-                  "#00CD00",
-                  "#00CED1",
-                  "#659D32",
-                  "#660198",
-                  "#68228B",
-                  "#687E5A",
-                  "#68838B",
+    var colors = ["red",
+                  "orange",
+                  "yellow",
+                  "green",
+                  "blue",
+                  "indigo",
+                  "violet",
+                  "pink",
+                  "grey",
+                  "cyan",
+                  "purple",
                   "#691F01",
                   "#964514"];
 
@@ -72,7 +75,7 @@ class D3Graph extends Component {
         
         svg.append("g")
             .attr("transform", "translate(0," + h + ")")
-            .call(d3.axisBottom(x).ticks(4));
+            .call(d3.axisBottom(x).tickValues([2000,3000,4000, 5000]));
         
         // Add Y axis
         var y = d3.scaleLinear()
@@ -98,7 +101,7 @@ class D3Graph extends Component {
             .text("Weight");      
 
         svg.append("g")
-        .call(d3.axisLeft(y));
+        .call(d3.axisLeft(y).tickValues([10, 20, 30, 40, 50, 60]));
 
         svg.append('g')
             .selectAll("dot")
@@ -107,7 +110,7 @@ class D3Graph extends Component {
             .append("circle")
             .attr("cx", function (d) { return x(d.Weight); } )
             .attr("cy", function (d) { return y(d.MPG); } )
-            .attr("r",  function (d) { return 0.003 * d.Weight; } )
+            .attr("r",  function (d) { return 0.0025 * d.Weight; } )
             .style("opacity", 0.5)
             .style("fill", function (d) { return colors[manufacturers.indexOf(d.Manufacturer)]; })
 
@@ -120,9 +123,12 @@ class D3Graph extends Component {
   } 
 
   render() {
-    return <div className="d3Graph">
-              <div ref={this.myRef}>
-              </div>  
+    return <div className="cs4802P2Div">
+                <div className="imagecontainer">
+                  <div id="d3image" ref={this.myRef}>
+                  </div>  
+                  <h5>Made with D3</h5>
+                </div>
            </div>
   }
 } 
