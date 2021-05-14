@@ -1,6 +1,6 @@
 # Assignment 2 - Data Visualization, 5 Ways
 
-See [https://nyoma-diamond.github.io/02-DataVis-5Ways/index.html](https://nyoma-diamond.github.io/02-DataVis-5Ways/index.html) for full / interactive versions of visualizations.
+See [https://nyoma-diamond.github.io/CS4802-02-DataVis-5Ways/](https://nyoma-diamond.github.io/CS4802-02-DataVis-5Ways/) for full / interactive versions of visualizations.
 
 ## Javascript + D3
 
