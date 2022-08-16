@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/r,web,node,python,jupyternotebooks,visualstudiocode,microsoftoffice
-# Edit at https://www.toptal.com/developers/gitignore?templates=r,web,node,python,jupyternotebooks,visualstudiocode,microsoftoffice
+# Created by https://www.toptal.com/developers/gitignore/api/r,node,python,jupyternotebooks,visualstudiocode,microsoftoffice
+# Edit at https://www.toptal.com/developers/gitignore?templates=r,node,python,jupyternotebooks,visualstudiocode,microsoftoffice
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
@@ -412,19 +412,4 @@ rsconnect/
 # Ignore code-workspaces
 *.code-workspace
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.wasm
-*.wat
-*.xhtml
-
-# End of https://www.toptal.com/developers/gitignore/api/r,python,jupyternotebooks,visualstudiocode,web,node
+# End of https://www.toptal.com/developers/gitignore/api/r,node,python,jupyternotebooks,visualstudiocode,microsoftoffice

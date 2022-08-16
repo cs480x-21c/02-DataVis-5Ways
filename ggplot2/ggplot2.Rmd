@@ -2,7 +2,11 @@
 title: "02-DataVis-5Ways R+ggplot2"
 author: "Rob Chiocchio"
 date: "8/13/2022"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +21,7 @@ library(kableExtra)
 
 ```{r load-data}
 df <- read.csv("../cars-sample.csv") %>% column_to_rownames(var="X")
-kbl(head(df)) %>% kable_styling(latex_options="striped", font_size=12)
+kbl(head(df)) %>% kable_styling(bootstrap_options="striped", font_size=12)
 ```
 
 ```{r plot}
